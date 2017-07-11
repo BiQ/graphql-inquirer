@@ -1,3 +1,3 @@
 'use strict';
 
-modules.export = require('./bin/application.js');
+module.exports = require('./bin/application.js');
