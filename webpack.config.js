@@ -1,6 +1,7 @@
 'use strict';
 
 var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = {
 
@@ -38,15 +39,25 @@ var config = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: 'css-loader'
+        })
       },
       {
         test: /\.s(a|c)ss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader']
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
       }
 
     ]
   },
+
+  plugins: [
+    new ExtractTextPlugin("styles.css"),
+  ]
 
 }
 
