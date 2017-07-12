@@ -1,10 +1,7 @@
 // Example es2015 code:
-const MyPackage = {
 
-  sayYo: () => {
-    console.log('Yo!');
-  }
-
+const sayYo = () => {
+  console.log('Yo!');
 }
 
-export default MyPackage;
+export default { sayYo };

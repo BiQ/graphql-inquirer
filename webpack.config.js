@@ -25,6 +25,7 @@ var config = {
     loaders: [
       {
         test: /\.jsx?$/,
+        exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -39,6 +40,7 @@ var config = {
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: 'css-loader'
@@ -46,6 +48,7 @@ var config = {
       },
       {
         test: /\.s(a|c)ss$/,
+        exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']

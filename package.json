@@ -2,7 +2,7 @@
   "name": "npm-module-webpack-template",
   "version": "1.0.0",
   "description": "A template for custom npm modules with webpack and babel",
-  "main": "index.js",
+  "main": "bin/application.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --verbose --display-reasons",
     "watch": "webpack --config webpack.config.js --watch",
