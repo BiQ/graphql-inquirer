@@ -29,3 +29,7 @@ import MyModule from 'my-module';
 
 MyModule.doStuff();
 ```
+
+## Notes
+
+The package is set up for Universal Module Definition (`umd`) exports, which means it should work with all the common module import methods, such as CommonJS and AMD. This has not really been tested, though.
