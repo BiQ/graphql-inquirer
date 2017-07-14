@@ -5,7 +5,7 @@ A template for modules that can be installed through npm, with webpack, babel (e
 ## Create
 
 1. Clone or fork this repository (Fork for business, clone for play)
-    * If cloning, remember to unlink git from this repo: `git remote rm origin`
+   * If cloning, remember to unlink git from this repo: `git remote rm origin`
 1. Run `$ npm install`
 1. Edit package.json
     * Name, description and version
