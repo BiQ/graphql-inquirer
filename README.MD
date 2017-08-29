@@ -44,7 +44,7 @@ When using via `<script>` you have to call `.default` on the object, so
 var myObject = new MyModule.default();
 
 // object
-MyModule.getSchwifty();
+MyModule.default.getSchwifty();
 ```
 
 This seems to be a quirk of Webpacks UMD implementation.
