@@ -28,8 +28,26 @@ Import and use:
 ```
 import MyModule from 'my-module';
 
+// if your module exports a class
+var myObject = new MyModule();
+
+// else if it exports an object
 MyModule.doStuff();
 ```
+
+### Script Tag
+
+When using via `<script>` you have to call `.default` on the object, so
+
+```
+// class
+var myObject = new MyModule.default();
+
+// object
+MyModule.getSchwifty();
+```
+
+This seems to be a quirk of Webpacks UMD implementation.
 
 ## Notes
 
