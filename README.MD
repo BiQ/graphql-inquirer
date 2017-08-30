@@ -12,6 +12,7 @@ A template for modules that can be installed through npm, with webpack, babel (e
     * Urls for repositories etc.
 1. Update `webpack.config.js`
     * Set output.library to a fitting name (no spaces or dashes, etc.)
+      * This will be the name of your module, eg. `"MyModule"` will result in `var obj = new MyModule()`
 1. Edit `src/application.js` to your hearts content
     * Wrapping everything in an object like the example is recommended (see below)
 1. Build the module with `$ npm run build` or watch the files with `$ npm run watch`
