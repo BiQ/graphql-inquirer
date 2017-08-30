@@ -14,7 +14,7 @@ A template for modules that can be installed through npm, with webpack, babel (e
     * Set output.library to a fitting name (no spaces or dashes, etc.)
 1. Edit `src/application.js` to your hearts content
     * Wrapping everything in an object like the example is recommended (see below)
-1. Build the module with `$ npm run build`
+1. Build the module with `$ npm run build` or watch the files with `$ npm run watch`
 1. Push to github
 
 ## Use
