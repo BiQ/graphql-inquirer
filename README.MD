@@ -5,16 +5,17 @@ A template for modules that can be installed through npm, with webpack, babel (e
 ## Create
 
 1. Clone or fork this repository (Fork for business, clone for play)
-    * If cloning, remember to unlink git from this repo: `git remote rm origin`
+   * If cloning, remember to unlink git from this repo: `git remote rm origin`
 1. Run `$ npm install`
 1. Edit package.json
     * Name, description and version
     * Urls for repositories etc.
 1. Update `webpack.config.js`
     * Set output.library to a fitting name (no spaces or dashes, etc.)
+    * This will be the name of your module, eg. `"MyModule"` will result in `var obj = new MyModule()`
 1. Edit `src/application.js` to your hearts content
     * Wrapping everything in an object like the example is recommended (see below)
-1. Build the module with `$ npm run build`
+1. Build the module with `$ npm run build` or watch the files with `$ npm run watch`
 1. Push to github
 
 ## Use
@@ -28,8 +29,26 @@ Import and use:
 ```
 import MyModule from 'my-module';
 
+// if your module exports a class
+var myObject = new MyModule();
+
+// else if it exports an object
 MyModule.doStuff();
 ```
+
+### Script Tag
+
+When using via `<script>` you have to call `.default` on the object, so
+
+```
+// class
+var myObject = new MyModule.default();
+
+// object
+MyModule.default.getSchwifty();
+```
+
+This seems to be a quirk of Webpacks UMD implementation.
 
 ## Notes
 
