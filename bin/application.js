@@ -84,15 +84,12 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 // Example es2015 code:
-var MyPackage = {
 
-  sayYo: function sayYo() {
-    console.log('Yo!');
-  }
-
+var sayYo = function sayYo() {
+  console.log('Yo!');
 };
 
-exports.default = MyPackage;
+exports.default = { sayYo: sayYo };
 
 /***/ })
 /******/ ]);
