@@ -1,7 +1,7 @@
 {
-  "name": "npm-module-webpack-template",
-  "version": "1.1.1",
-  "description": "A template for custom npm modules with webpack and babel",
+  "name": "graphql-inquirer",
+  "version": "0.0.1",
+  "description": "A visual browser for GraphQL APIs",
   "main": "bin/application.js",
   "scripts": {
     "build": "webpack --config webpack.config.js --verbose --display-reasons",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/BiQ/npm-module-webpack-template.git"
+    "url": "git+ssh://git@github.com:BiQ/graphql-inquirer.git"
   },
   "author": "Victor Eg Frølund",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/BiQ/npm-module-webpack-template/issues"
+    "url": "https://github.com/BiQ/graphql-inquirer/issues"
   },
-  "homepage": "https://github.com/BiQ/npm-module-webpack-template#readme",
+  "homepage": "https://github.com/BiQ/graphql-inquirer#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -29,5 +29,13 @@
     "style-loader": "^0.18.2",
     "webpack": "^3.8.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "bin": {
+    "graphql-inquirer": "application.js"
+  },
+  "keywords": [
+    "graphql",
+    "api",
+    "browser"
+  ]
 }
