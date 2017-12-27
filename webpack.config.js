@@ -13,7 +13,7 @@ var config = {
     publicPath: './bin/',
     filename: '[name].js',
     libraryTarget: 'umd',
-    library: 'CHANGE_ME'
+    library: 'GraphQLInquirer'
   },
 
   resolve: {
@@ -28,7 +28,7 @@ var config = {
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env']
+            presets: ['env', 'react']
           }
         }
       },
@@ -46,6 +46,11 @@ var config = {
         test: /\.s(a|c)ss$/,
         exclude: /node_modules/,
         use: ['style-loader', 'css-loader', 'sass-loader']
+      },
+      {
+        test: /\.(graphql|gql)$/,
+        exclude: /node_modules/,
+        use: 'graphql-tag/loader'
       }
 
     ]

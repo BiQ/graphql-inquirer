@@ -1,0 +1,9 @@
+query SwapiTest {
+  people {
+    name,
+    starships {
+      name,
+      length
+    }
+  }
+}

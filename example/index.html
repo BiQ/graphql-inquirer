@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GraphQL Enquirer</title>
+    <script src="../bin/application.js"></script>
+    <script>
+      
+      console.log('hul igennem');
+      var ginq = new GraphQLInquirer.default('#stage',
+                                            'https://1jzxrj179.lp.gql.zone/graphql' // Apollo's sandbox api 
+                                            //'https://api.deutschebahn.com/1bahnql/'
+                                            // 'https://swapi.co/api/planets'
+                                            );
+
+      window.onload = function() {
+        ginq.render();
+      }
+
+    </script>
+  </head>
+  <body>
+    <div id="stage">
+      Here we will yield our project
+    </div>
+  </body>
+</html>
