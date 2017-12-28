@@ -6,6 +6,9 @@ import {
 } from 'react-router-dom';
 
 import Sidebar from './sidebar.jsx';
+import Content from './content.jsx';
+
+import styles from '../Styles/app.scss';
 
 class App extends Component {
 
@@ -91,76 +94,28 @@ class App extends Component {
       subscriptions
     };
 
+    // todo
+    let contentProps = {
+      hej: 'halløj'
+    };
+
     return (
         <BrowserRouter>
-          <div>
-            <Sidebar {...sidebarProps}  />
-            <Route path="/" component={Test} />
-            <Link to="/test">Klik for test</Link>
-            <h1>GraphQL magic</h1>
-            <pre>
-              {JSON.stringify(this.state, null, '  ')}
-            </pre>
-          </div>
+          {/*<Route path="/" render={(routeProps) => (*/}
+            <div id="inquirer-app">
+              <div id="inquirer-header">GraphQL Inquirer</div>
+              <div id="inquirer-body">
+                <Sidebar {...sidebarProps} />
+                <Content {...contentProps} />
+              </div>
+            </div>
+          {/*)} /> */}
         </BrowserRouter>
       );
 
   }
-/*
-  const {
-    data
-  } = props;
 
-  if (data.__schema) {
-    const {
-      queryType,
-      mutationType,
-      subscriptionType,
-      types,
-      directives
-    } = data.__schema;
-
-    if (data && __schema  && !loading) {
-      if (types) {
-        //extract types
-        this.setState({types});
-        //extract queries
-        if (queryType && queryType.name) {
-          this.setState({
-            queries: find(types, (obj) => {return obj.name === queryType.name}).fields || []
-          });
-        }
-        if (mutationType && mutationType.name) {
-          this.setState({
-            mutations: find(types, (obj) => {return obj.name === mutationType.name}).fields || []
-          });
-        }
-        if (subscriptionType && subscriptionType.name) {
-          this.setState({
-            subscriptions: find(types, (obj) => {return obj.name === subscriptionType.name}).fields || []
-          });
-        }
-      }
-    }
-  }
-
-  console.log(props);
-
-  return (
-    <BrowserRouter>
-      <div>
-        <Sidebar />
-        <Route path="/" component={Test} />
-        <Link to="/test">Klik for test</Link>
-        <h1>GraphQL magic</h1>
-        <pre>
-          {JSON.stringify(data, null, '  ')}
-        </pre>
-      </div>
-    </BrowserRouter>
-  );
-*/
-};
+}
 
 export default App;
 
@@ -176,4 +131,4 @@ const Test = (props) => {
     </div>
   )
 
-}
+};
