@@ -1,5 +1,10 @@
-$header-height: 60px;
-$sidebar-width: 200px;
+$header-height: 40px;
+$sidebar-width: 250px;
+
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+$root-font: 'Lato', sans-serif;
+
+@import 'utility';
 
 #inquirer-app {
 
@@ -9,7 +14,9 @@ $sidebar-width: 200px;
   bottom: 0px;
   left: 0px;
 
-  background-color: limegreen;
+  font-family: $root-font;
+
+  //background-color: limegreen;
 
   #inquirer-header {
     position: absolute;
@@ -17,9 +24,17 @@ $sidebar-width: 200px;
     right: 0px;
     left: 0px;
 
-    height: $header-height;
+    background-color: #005172;
+    box-shadow: 0 1px 2px 0 grey;
 
-    background-color: yellow;
+    padding: 0px 10px;
+
+    color: white;
+
+    height: $header-height;
+    line-height: $header-height;
+
+    vertical-align: middle;
   }
 
   #inquirer-body {
@@ -34,10 +49,15 @@ $sidebar-width: 200px;
       top: 0px;
       bottom: 0px;
       left: 0px;
+
+      //border-right: 1px solid grey;
+      box-shadow: 1px 0 2px 0 grey;
       
       width: $sidebar-width;
 
-      background-color: lightsteelblue;
+      @import 'sidebar';
+
+      //background-color: lightsteelblue;
     }
 
     #inquirer-content {
@@ -47,7 +67,7 @@ $sidebar-width: 200px;
       bottom: 0px;
       left: $sidebar-width;
 
-      background-color: tan;
+      //background-color: tan;
     }
   }
 

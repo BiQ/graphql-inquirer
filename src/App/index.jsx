@@ -21,8 +21,10 @@ class App extends Component {
       subscriptions: [],
       activeQuery: null,
       gqlQuery: null,
-      outputFormat: 'separate'
-    }
+      outputFormat: 'separate',
+
+      loading: false
+    };
 
   }
 
@@ -78,7 +80,10 @@ class App extends Component {
 
     console.log('render app', this.props)
 
-    let data = this.props.data;
+    const { 
+      data,
+      loading
+    } = this.props;
 
     const {
       types,
@@ -88,6 +93,7 @@ class App extends Component {
     } = this.state;
 
     let sidebarProps = {
+      loading,
       types,
       queries,
       mutations,

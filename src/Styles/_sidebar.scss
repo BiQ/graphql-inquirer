@@ -1,0 +1,21 @@
+.sidebar-section {
+  //background-color: lightgrey;
+
+  .sidebar-section-title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 10px;
+
+    border: 1px solid gainsboro;
+    border-left: none;
+    border-right: none;
+  }
+
+  .sidebar-item {
+    padding: 2px 10px;
+
+    &:not(:last-of-type) {
+      border-bottom: 1px solid gainsboro;
+    }
+  }
+}

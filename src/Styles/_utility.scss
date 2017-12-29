@@ -1,0 +1,28 @@
+.ginq-load-spinner-wrapper {
+
+  width: 20px;
+  height: 20px;
+
+  .ginq-load-spinner {
+    width: 24px;
+    height: 24px;
+
+    border: 5px solid lightsteelblue;
+    
+    border-right-color: transparent;
+    border-left-color: transparent;
+
+    border-radius: 50%;
+
+    box-sizing: border-box;
+
+
+    @keyframes ginq-load-spinner-anim {
+      from { transform: rotate(0deg) }
+      to { transform: rotate(360deg) }
+    }
+
+    animation: 500ms linear 0s infinite ginq-load-spinner-anim;
+  }
+
+}

@@ -21,16 +21,12 @@ class GraphQLInquirer {
   render() {
 
     let stage = document.querySelector(this.selector);
-    
-    /*
-    fetchSchema(this.endpoint).then((result) => {
-      ReactDOM.render(<App data={result} />, stage);
-    });
-    */
 
-    ReactDOM.render(<AppWrapper endpoint={this.endpoint} />, stage);
-
-    //stage.innerHTML = 'We put something in stage';
+    if (stage) {
+      ReactDOM.render(<AppWrapper endpoint={this.endpoint} />, stage);
+    } else {
+      throw new Error('Couldn\'t mount GraphQL Inquirer. Selector was invalid.');
+    }
 
   }
 
@@ -53,9 +49,8 @@ class AppWrapper extends Component {
   }
 
   componentDidMount() {
-    console.log('spoing');
+
     fetchSchema(this.endpoint).then((result) => {
-      console.log(result);
       this.setState({
         loading: false,
         error: result.error ? 'An error occured' : false,
