@@ -1,8 +1,13 @@
 import React from 'react';
 import {
   Link,
+  NavLink,
   Route
 } from 'react-router-dom';
+
+import {
+  RecursiveType
+} from '../Utility/utility.jsx';
 
 import LoadSpinner from '../Utility/spinner.jsx';
 
@@ -20,11 +25,16 @@ const Sidebar = (props) => {
   console.log('sidebar', props);
 
   return (
-    <div id="inquirer-sidebar">
-      <SidebarSection title="Queries" items={queries} loading={loading} />
-      <SidebarSection title="Mutations" items={mutations} />
-      <SidebarSection title="Subscriptions" items={subscriptions} />
-    </div>
+    <Route path="/:action" children={({match}) => {
+      console.log('sidebar match', match);
+      return (
+        <div id="inquirer-sidebar">
+          <SidebarSection title="Queries" path="/queries" items={queries} loading={loading} />
+          <SidebarSection title="Mutations" path="/mutations" items={mutations} />
+          <SidebarSection title="Subscriptions" path="/subscriptions" items={subscriptions} />
+        </div>
+      );
+    }} />
   );
 
 };
@@ -36,6 +46,7 @@ const SidebarSection = (props) => {
   const {
     title,
     items,
+    path,
     loading
   } = props;
 
@@ -44,7 +55,7 @@ const SidebarSection = (props) => {
     itemElms = <LoadSpinner />;
   } else {
     itemElms = items.map((d, i) => (
-      <SidebarItem item={d} key={i} />
+      <SidebarItem path={path} item={d} key={i} />
     ));
   }
 
@@ -59,12 +70,20 @@ const SidebarSection = (props) => {
 
 const SidebarItem = (props) => {
 
-  console.log('sidebar item', props);
+  const { item, path } = props;
 
-  const { name } = props.item;
+  const {
+    name,
+    type,
+    description
+  } = item;
 
   return (
-    <div className="sidebar-item">{name}</div>
+    <NavLink to={`${path}/${name}`} className="sidebar-item">
+      <div className="sidebar-item-name">{name}</div>
+      <div className="sidebar-item-type"><RecursiveType type={type} /></div>
+      <div className="sidebar-item-description">{description}</div>
+    </NavLink>
   );
 
 };

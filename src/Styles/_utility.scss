@@ -1,7 +1,7 @@
 .ginq-load-spinner-wrapper {
 
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
 
   .ginq-load-spinner {
     width: 24px;
@@ -15,7 +15,6 @@
     border-radius: 50%;
 
     box-sizing: border-box;
-
 
     @keyframes ginq-load-spinner-anim {
       from { transform: rotate(0deg) }

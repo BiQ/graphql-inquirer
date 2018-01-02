@@ -92,12 +92,15 @@ class App extends Component {
       subscriptions
     } = this.state;
 
-    let sidebarProps = {
+    let sharedProps = {
       loading,
       types,
       queries,
       mutations,
       subscriptions
+    }
+
+    let sidebarProps = {
     };
 
     // todo
@@ -106,35 +109,21 @@ class App extends Component {
     };
 
     return (
-        <BrowserRouter>
-          {/*<Route path="/" render={(routeProps) => (*/}
-            <div id="inquirer-app">
-              <div id="inquirer-header">GraphQL Inquirer</div>
-              <div id="inquirer-body">
-                <Sidebar {...sidebarProps} />
-                <Content {...contentProps} />
-              </div>
+      <BrowserRouter>
+        {/*<Route path="/" render={(routeProps) => (*/}
+          <div id="inquirer-app">
+            <div id="inquirer-header">GraphQL Inquirer</div>
+            <div id="inquirer-body">
+              <Sidebar {...sharedProps} {...sidebarProps} />
+              <Content {...sharedProps} {...contentProps} />
             </div>
-          {/*)} /> */}
-        </BrowserRouter>
-      );
+          </div>
+        {/*)} /> */}
+      </BrowserRouter>
+    );
 
   }
 
 }
 
 export default App;
-
-const Test = (props) => {
-
-  const { match } = props;
-  console.log(props);
-
-  return (
-    <div>
-      <Route path={`/test`} render={() => (<h1>TEST</h1>)} />
-      Test
-    </div>
-  )
-
-};

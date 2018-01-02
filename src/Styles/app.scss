@@ -1,8 +1,15 @@
 $header-height: 40px;
 $sidebar-width: 250px;
 
+//Color variables
+$queryNameColor: #0066cc; //blue;
+$typeNameColor: #e69500; //orange;
+$argNameColor: #aa09aa; //purple;
+
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700');
 $root-font: 'Lato', sans-serif;
+
+$codeFontFamily: Menlo,Monaco,Consolas,Courier New,monospace;
 
 @import 'utility';
 
@@ -52,6 +59,8 @@ $root-font: 'Lato', sans-serif;
 
       //border-right: 1px solid grey;
       box-shadow: 1px 0 2px 0 grey;
+
+      overflow-x: scroll;
       
       width: $sidebar-width;
 
@@ -67,7 +76,30 @@ $root-font: 'Lato', sans-serif;
       bottom: 0px;
       left: $sidebar-width;
 
+      overflow-x: scroll;
+
+     @import 'query_main'; 
+
       //background-color: tan;
+    }
+  }
+
+  //Styles for types
+  .NON_NULL {
+    &::after {
+      content: "!";
+      color: black;
+    }
+  }
+
+  .LIST {
+    &::before {
+      content: "[";
+      color: black;
+    }
+    &::after {
+      content: "]";
+      color: black;
     }
   }
 

@@ -3,7 +3,10 @@ import ReactDOM from 'react-dom';
 
 //import { BrowserRouter } from 'react-router-dom';
 
-import { fetchSchema } from './Utility/fetcher.js';
+import { 
+  fetchSchema,
+  getSchemaFromUrl
+} from './Utility/fetcher.js';
 
 import App from './App';
 
@@ -49,6 +52,17 @@ class AppWrapper extends Component {
   }
 
   componentDidMount() {
+
+/*
+    getSchemaFromUrl(this.endpoint).then((result) => {
+      console.log('schema from url', result)
+      this.setState({
+        loading: false,
+        error: result.error ? 'An error occured' : false,
+        data: result.data || null
+      });
+    });
+*/
 
     fetchSchema(this.endpoint).then((result) => {
       this.setState({

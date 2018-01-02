@@ -32,6 +32,20 @@ const fetchSchema = (req_url) => {
 
 };
 
+const getSchemaFromUrl = (url) => {
+
+  return fetch(url).then((response) => {
+    if (response.ok) return response.json();
+    throw new Error(response.status)
+  }).then((result) => {
+    return result;
+  }).catch((error) => {
+    return { error: error };
+  });
+
+};
+
 module.exports = {
-  fetchSchema
+  fetchSchema,
+  getSchemaFromUrl
 };
