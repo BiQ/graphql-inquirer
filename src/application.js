@@ -1,87 +1,104 @@
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
+import {
+  Route,
+  BrowserRouter
+} from 'react-router-dom';
 
-//import { BrowserRouter } from 'react-router-dom';
+import Styles from './Styles/app.scss';
+import LoadSpinner from './Utility/spinner.jsx';
 
-import { 
-  fetchSchema,
-  getSchemaFromUrl
+import {
+  getSchemaWithFetcher,
+  transformSchema
 } from './Utility/fetcher.js';
 
-import App from './App';
+import Sidebar from './App/sidebar.jsx';
+import Content from './App/content.jsx';
 
-class GraphQLInquirer {
-  
-  constructor(selector, endpoint) {
-
-    this.selector = selector;
-    this.endpoint = endpoint;
-
-    console.log('GraphQLInquirer was born!');
-
-  }
-
-  render() {
-
-    let stage = document.querySelector(this.selector);
-
-    if (stage) {
-      ReactDOM.render(<AppWrapper endpoint={this.endpoint} />, stage);
-    } else {
-      throw new Error('Couldn\'t mount GraphQL Inquirer. Selector was invalid.');
-    }
-
-  }
-
-}
-
-export default GraphQLInquirer;
-
-class AppWrapper extends Component {
+class Inquirer extends React.Component {
 
   constructor(props) {
     super(props);
-
-    this.endpoint = props.endpoint;
-
+    
     this.state = {
+      fetcher: props.fetcher,
       loading: true,
-      error: false,
-      data: null
+      schema: null
     };
-  }
 
-  componentDidMount() {
+    console.log('props', typeof props.fetcher);
 
-/*
-    getSchemaFromUrl(this.endpoint).then((result) => {
-      console.log('schema from url', result)
-      this.setState({
-        loading: false,
-        error: result.error ? 'An error occured' : false,
-        data: result.data || null
+    getSchemaWithFetcher(props.fetcher)
+      .then((schema) => {
+        console.log('received schema');
+        this.setState({
+          schema: transformSchema(schema.schema),
+          loading: false
+        });
       });
-    });
-*/
-
-    fetchSchema(this.endpoint).then((result) => {
-      this.setState({
-        loading: false,
-        error: result.error ? 'An error occured' : false,
-        data: result.data || null
-      });
-    });
   }
 
   render() {
-    return (<App {...this.state} />);
+
+    const { loading, schema } = this.state;
+    let self = this;
+
+    const Markup = function(markupProps) {
+      if (loading) {
+        return (<div id="inquirer-body"><LoadSpinner /></div>);
+      } else {
+        console.log(loading, schema);
+
+        const { types, queries, mutations, subscriptions } = schema;
+
+        let sharedProps = {
+          types, 
+          queries, 
+          mutations,
+          subscriptions,
+          loading: self.state.loading
+        };
+
+        console.log(sharedProps, markupProps.routeProps)
+
+        return (
+          <div id="inquirer-body">
+            <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} />
+            <Content sharedProps={sharedProps} {...markupProps.routeProps} />
+          </div>
+        );
+      }
+    }
+/*
+    let markup = loading
+                  ? (<div id="inquirer-body"><LoadSpinner /></div>)
+                  : (<div id="inquirer-body">
+                      <Sidebar sharedProps={sharedProps} {...sidebarProps} {...routeProps} />
+                      <Content sharedProps={sharedProps} {...contentProps} {...routeProps} />
+                    </div>);
+*/
+    return (
+      <BrowserRouter>
+        <Route path="/" render={(routeProps) => {
+          return(
+          <div id="inquirer-app">
+            <div id="inquirer-header">GraphQL Inquirer</div>
+            
+            <Markup routeProps={routeProps} />
+
+          </div>)
+        }} />
+      </BrowserRouter>
+    );
   }
 
 }
 
+export default Inquirer;
+
 /*
 APPLICATION SHAPE
-App: (selector, fetcher) + runFunc
+App: (fetcher) + runFunc
 - Header: move controls here?
 - Body
   - Sidebar

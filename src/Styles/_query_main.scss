@@ -4,6 +4,8 @@ $maxWidth: 800px;
   max-width: $maxWidth;
   margin: 0px auto;
 
+  //box-sizing: content-box;
+
   font-family: $codeFontFamily;
 
   .query-meta {

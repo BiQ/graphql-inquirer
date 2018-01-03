@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Inquirer from '../V2/app.jsx';
+import Inquirer from '../application.js';
 
-let fetchFunc = (query) => {
+const fetchFunc = (query) => {
   
   let req_opts = {
     method: 'POST',
@@ -13,6 +13,7 @@ let fetchFunc = (query) => {
   
   let req_url = 'https://1jzxrj179.lp.gql.zone/graphql';
   //let req_url = 'https://swapi.co/api/people/schema';
+  //let req_url = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
   
   return fetch(req_url, req_opts).then((response) => (response.json()));
 
