@@ -15,14 +15,18 @@ const Sidebar = (props) => {
 
   const {
     loading,
+    sharedProps
+  } = props;
 
+  const {
     types,
     queries,
     mutations,
     subscriptions
-  } = props;
+  } = sharedProps;
 
   console.log('sidebar', props);
+
 
   return (
     <Route path="/:action" children={({match}) => {

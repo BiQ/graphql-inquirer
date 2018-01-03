@@ -8,28 +8,23 @@ import QueryBuilder from './QueryBuilder';
 
 const Content = (props) => {
 
-  const { 
-    types,
-    queries
+  const {
+    match,
+    sharedProps 
   } = props;
 
-  console.log('types', types, queries);
+  let pathString = `${match.url}/:action/:name`;
+  pathString = pathString.replace('//', '/');
 
   return (
     <div id="inquirer-content">
-      {/*<LoadSpinner />*/}
-      This is content! {props.hej}
-      <Route path="/queries/:name" render={(routeProps) => {
+      <Route path={pathString} render={(routeProps) => {
+        console.log('Spoing', routeProps);
         return (
-          <QueryBuilder {...routeProps} {...props} />
-        )
+          <QueryBuilder sharedProps={sharedProps} {...routeProps} />
+        );
       }} />
-      <Route path="/mutations/:name" render={(routeProps) => (
-        <div>A Mutation was picked: {routeProps.match.params.name}</div>
-      )} />
-      <Route path="/subscriptions/:name" render={(routeProps) => (
-        <div>A Subscription was picked: {routeProps.match.params.name}</div>
-      )} />
+
     </div>
   );
 };

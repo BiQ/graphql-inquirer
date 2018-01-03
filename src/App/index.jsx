@@ -98,27 +98,26 @@ class App extends Component {
       queries,
       mutations,
       subscriptions
-    }
-
-    let sidebarProps = {
     };
 
     // todo
+    let sidebarProps = {
+    };
     let contentProps = {
       hej: 'halløj'
     };
 
     return (
       <BrowserRouter>
-        {/*<Route path="/" render={(routeProps) => (*/}
+        <Route path="/" render={(routeProps) => (
           <div id="inquirer-app">
             <div id="inquirer-header">GraphQL Inquirer</div>
             <div id="inquirer-body">
-              <Sidebar {...sharedProps} {...sidebarProps} />
-              <Content {...sharedProps} {...contentProps} />
+              <Sidebar sharedProps={sharedProps} {...sidebarProps} {...routeProps} />
+              <Content sharedProps={sharedProps} {...contentProps} {...routeProps} />
             </div>
           </div>
-        {/*)} /> */}
+        )} />
       </BrowserRouter>
     );
 

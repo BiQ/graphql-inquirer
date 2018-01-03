@@ -78,3 +78,19 @@ class AppWrapper extends Component {
   }
 
 }
+
+/*
+APPLICATION SHAPE
+App: (selector, fetcher) + runFunc
+- Header: move controls here?
+- Body
+  - Sidebar
+  - Editor
+    - Split1: EditorBuilder
+    - Split2: EditorGenerated
+    - Split3: EditorResult
+
+
+STATE SHAPE
+
+ */
