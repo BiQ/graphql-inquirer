@@ -12,7 +12,6 @@ const fetchFunc = (query) => {
   };
   
   let req_url = 'https://1jzxrj179.lp.gql.zone/graphql';
-  //let req_url = 'https://swapi.co/api/people/schema';
   //let req_url = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
   
   return fetch(req_url, req_opts).then((response) => (response.json()));
@@ -21,4 +20,4 @@ const fetchFunc = (query) => {
 
 window.onload = function(){
   ReactDOM.render(<Inquirer fetcher={fetchFunc} />, document.getElementById('stage'));
-}
+};

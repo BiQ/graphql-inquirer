@@ -4,7 +4,7 @@ import {
 } from 'react-router-dom';
 
 import LoadSpinner from '../Utility/spinner.jsx';
-import QueryBuilder from './QueryBuilder';
+import InquirerEditor from './InquirerEditor';
 
 const Content = (props) => {
 
@@ -13,15 +13,22 @@ const Content = (props) => {
     sharedProps 
   } = props;
 
-  let pathString = `${match.url}/:action/:name`;
-  pathString = pathString.replace('//', '/');
+  let pathString = `/:action/:name`;
+  //pathString = pathString.replace('//', '/');
+
+  // TEMP
+  let strippedDummyQuery = dummyQuery.trim().replace(/\s*({|})\s*/g, '$1').replace(/\s+/g, '+');
+
+  console.log('normal', dummyQuery);
+  console.log('stripped', strippedDummyQuery);
+  console.log('encoded', encodeURI(dummyQuery));
+  console.log('both', encodeURIComponent(strippedDummyQuery));
 
   return (
     <div id="inquirer-content">
       <Route path={pathString} render={(routeProps) => {
-        console.log('Spoing', routeProps);
         return (
-          <QueryBuilder sharedProps={sharedProps} {...routeProps} />
+          <InquirerEditor sharedProps={sharedProps} {...routeProps} />
         );
       }} />
 
@@ -31,3 +38,10 @@ const Content = (props) => {
 
 export default Content;
 /*<div>A Query was picked: {routeProps.match.params.name}</div>*/
+
+const dummyQuery = `
+  posts {
+    name
+    description
+  }
+`;

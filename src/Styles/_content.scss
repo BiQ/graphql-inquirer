@@ -1,278 +1,175 @@
 $maxWidth: 990px;
 $toolbarHeight: 60px;
-/*
-#api-main {
-  //background-color: peachpuff;
 
-  position: relative;
+#editor-container {
+  position: absolute;
   width: 100%;
   height: 100%;
-*/
 
-  .api-main-container {
+  padding-top: $toolbarHeight;
+
+  box-sizing: border-box;
+
+  .editor-toolbar {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    background-color: whitesmoke;
+    border-bottom: 1px solid grey;
 
-    .api-main-toolbar {
-      position: relative;
-      background-color: whitesmoke;
-      border-bottom: 1px solid grey;
+    box-shadow: 0px 1px 2px 0px grey;
 
-      box-shadow: 0px 1px 2px 0px grey;
-
-      z-index: 999;
-      
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      right: 0px;
-
-      font-family: $codeFontFamily;
-
-      height: $toolbarHeight;
-      line-height: $toolbarHeight;
-
-      * {
-        vertical-align: middle;
-        //line-height: 1em;
-      }
-
-      .query-toolbar {
-/*
-        background-color: tan;
-        vertical-align: middle;
-*/
-        height: 100%;
-        line-height: $toolbarHeight;
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-
-      padding: 0px 20px;
-
-      //padding: ($toolbarHeight/2) 0px;
-
-      .query-header {
-        font-size: 18px;
-
-        display: inline-block;
-        //background-color: lightsteelblue;
-
-        //vertical-align: middle;
-        line-height: 1em;
-
-        div {
-          display: inline-block;
-          &.query-name {
-            color: $queryNameColor
-          }
-          &.query-type {
-            color: $typeNameColor;
-            margin-left: 10px;
-          }
-        }
-        
-        p {
-          font-size: 12px;
-          margin: 0px;
-          //margin: 10px 0px 0px 0px;
-        }
-      }
-
-      .query-controls {
-        text-align: right;
-        display: inline-block;
-        
-        line-height: 1em;
-
-        .query-control-picker {
-          display: inline-block;
-          margin-right: 30px;
-        }
-
-        .inline-vars-checkbox {
-          display: inline-block;
-          margin-right: 30px;
-
-          .thebox {
-            display: inherit;
-            position: relative;
-
-            width: 16px;
-            height: 16px;
-            //padding: 2px;
-
-            margin-right: 8px;
-
-            border: 1px solid grey;
-            background-color: white;
-
-            box-shadow: -1px 1px 2px 0px lightgrey inset;
-            border-radius: 10%;
-
-            //background-color: steelblue;
-            
-            .thecheck {
-              position: absolute;
-              top: 3px;
-              right: 3px;
-              bottom: 3px;
-              left: 3px;
-
-              border-radius: 10%;
-
-              //background-color: blue;
-
-              &.checked {
-                background-color: lightsteelblue;
-                border: 1px solid;
-                border-color: /*lightsteelblue lightsteelblue steelblue */steelblue;
-                box-shadow: none;
-              }
-
-            }
-          }
-        }
-
-        button {
-          padding: 8px 16px;
-          border: 1px solid grey;
-          background-color: whitesmoke;
-          border-radius: 4px;
-
-          &:disabled {
-            background-color: whitesmoke;
-            border-color: gainsboro;
-            color: gainsboro;
-          }
-        }
-      }
-
-    }
-  }
-
-  @mixin queryResult() {
-
-    display: block;
-    float: left;
-    width: 50%;
-    height: 100%;
-
-    overflow: scroll;
-
-    > div {
-      //@include query-panel();
-      white-space: pre;
-      display: block;
-      height: 100%;
-    }
-  }
-
-  .query-result-gql {
-    @include queryResult();  
-    padding-right: 2px;
-  }
-  .query-result-data {
-    @include queryResult();
-    padding-left: 2px;
-
-    .data-browser-error {
-      .error-title { 
-        font-weight: bold;
-        color: #990000; 
-      }
-      .error-body {
-        white-space: pre;
-      }
-    }
-  }
-
-  .api-main-query {
-
-    overflow: hidden;
-    padding-top: $toolbarHeight;
-
-    .query-editor {
-      padding: 10px;
-      overflow: scroll;
-      height: 100%;
-      float: left;
-    }
-    .query-generated {
-
-      height: 100%;
-      float: left;
-      padding: 0px;
-      margin: 0px;
-      overflow: hidden;
-
-      font-family: $codeFontFamily;
-      //padding: 10px;
-
-      .generated-content {
-        position: relative;
-        height: 100%;
-        padding: 0px;
-        margin: 0px;
-        overflow: hidden;
-
-        .query-result-gql {
-          width: 100%;
-          height: 100%;
-
-          padding: 0px;
-          margin: 0px;
-          overflow: hidden;
-
-          .gql-panel {
-          
-            padding: 10px;
-            overflow: scroll;
-
-            &.invalid {
-              //text-decoration: underline dashed red;
-              color: lightgrey;
-              //text-decoration-style: 1px dashed red;
-            }
-          }
-        }
-        .copy-button {
-          position: absolute;
-          top: 10px;
-          right: 10px;
-
-          button {
-            padding: 8px 16px;
-            border: 1px solid grey;
-            background-color: whitesmoke;
-            border-radius: 4px;
-            line-height: 1em;
-          }
-        }
-      }
-    }
-  }
-
-  .api-main-result {
-    background-color: white;
+    z-index: 999;
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
 
     font-family: $codeFontFamily;
 
+    height: $toolbarHeight;
+    line-height: $toolbarHeight;
+
+    * {
+      vertical-align: middle;
+    }
+
+    .action-toolbar {
+
+      height: 100%;
+      line-height: $toolbarHeight;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    padding: 0px 20px;
+
+    .action-header {
+      font-size: 18px;
+
+      display: inline-block;
+      line-height: 1em;
+
+      div {
+        display: inline-block;
+        &.action-name {
+          color: $queryNameColor
+        }
+        &.action-type {
+          color: $typeNameColor;
+          margin-left: 10px;
+        }
+      }
+      
+      p {
+        font-size: 12px;
+        margin: 0px;
+      }
+    }
+
+    .editor-controls {
+      text-align: right;
+      display: inline-block;
+      
+      line-height: 1em;
+
+      .editor-control-picker {
+        display: inline-block;
+        margin-right: 30px;
+      }
+
+      button {
+        padding: 8px 16px;
+        border: 1px solid grey;
+        background-color: whitesmoke;
+        border-radius: 4px;
+
+        &:disabled {
+          background-color: whitesmoke;
+          border-color: gainsboro;
+          color: gainsboro;
+        }
+      }
+    }
+
+  } // api-main-toolbar
+
+  #editor-panes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    @import 'creator_main';
+
+  }
+} // #editor-container
+
+@mixin queryResult() {
+
+  display: block;
+  float: left;
+  width: 50%;
+  height: 100%;
+
+  overflow: scroll;
+
+  > div {
+    white-space: pre;
+    display: block;
+    height: 100%;
+  }
+}
+
+.query-result-gql {
+  @include queryResult();  
+  padding-right: 2px;
+}
+.query-result-data {
+  @include queryResult();
+  padding-left: 2px;
+
+  .data-browser-error {
+    .error-title { 
+      font-weight: bold;
+      color: #990000; 
+    }
+    .error-body {
+      white-space: pre;
+    }
+  }
+}
+
+.api-main-query {
+
+  overflow: hidden;
+  padding-top: $toolbarHeight;
+
+  .query-editor {
+    padding: 10px;
+    overflow: scroll;
+    height: 100%;
+    float: left;
+  }
+  .query-generated {
+
+    height: 100%;
+    float: left;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
 
-    .query-result-data {
-      width: 100%;
+    font-family: $codeFontFamily;
+    //padding: 10px;
+
+    .generated-content {
+      position: relative;
       height: 100%;
       padding: 0px;
       margin: 0px;
       overflow: hidden;
 
-      .result-panel {
+      .query-result-gql {
         width: 100%;
         height: 100%;
 
@@ -280,17 +177,68 @@ $toolbarHeight: 60px;
         margin: 0px;
         overflow: hidden;
 
-        .result-data {
+        .gql-panel {
+        
           padding: 10px;
           overflow: scroll;
-          width: 100%;
-          height: 100%;
+
+          &.invalid {
+            //text-decoration: underline dashed red;
+            color: lightgrey;
+            //text-decoration-style: 1px dashed red;
+          }
+        }
+      }
+      .copy-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+
+        button {
+          padding: 8px 16px;
+          border: 1px solid grey;
+          background-color: whitesmoke;
+          border-radius: 4px;
+          line-height: 1em;
         }
       }
     }
-
   }
-//} // #api-main
+}
+
+.api-main-result {
+  background-color: white;
+
+  font-family: $codeFontFamily;
+
+  padding: 0px;
+  margin: 0px;
+  overflow: hidden;
+
+  .query-result-data {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+
+    .result-panel {
+      width: 100%;
+      height: 100%;
+
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
+
+      .result-data {
+        padding: 10px;
+        overflow: scroll;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+} // editor-container
 
 //Extracted from _api_browser
 .query-main {

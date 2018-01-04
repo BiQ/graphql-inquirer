@@ -1,6 +1,7 @@
 'use strict';
 
 var webpack = require('webpack');
+var path = require('path');
 
 var config = {
 
@@ -18,7 +19,12 @@ var config = {
   },
 
   resolve: {
-    extensions: ['.js','.jsx','.sass','.scss']
+    extensions: ['.js','.jsx','.sass','.scss'],
+    alias: {
+      AppPath: path.resolve(__dirname, 'src/App/'),
+      UtilityPath: path.resolve(__dirname, 'src/Utility/'),
+      StylePath: path.resolve(__dirname, 'src/Styles/')
+    }
   },
 
   module: {

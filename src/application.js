@@ -59,8 +59,6 @@ class Inquirer extends React.Component {
           loading: self.state.loading
         };
 
-        console.log(sharedProps, markupProps.routeProps)
-
         return (
           <div id="inquirer-body">
             <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} />
@@ -68,15 +66,8 @@ class Inquirer extends React.Component {
           </div>
         );
       }
-    }
-/*
-    let markup = loading
-                  ? (<div id="inquirer-body"><LoadSpinner /></div>)
-                  : (<div id="inquirer-body">
-                      <Sidebar sharedProps={sharedProps} {...sidebarProps} {...routeProps} />
-                      <Content sharedProps={sharedProps} {...contentProps} {...routeProps} />
-                    </div>);
-*/
+    };
+
     return (
       <BrowserRouter>
         <Route path="/" render={(routeProps) => {
@@ -86,7 +77,7 @@ class Inquirer extends React.Component {
             
             <Markup routeProps={routeProps} />
 
-          </div>)
+          </div>);
         }} />
       </BrowserRouter>
     );

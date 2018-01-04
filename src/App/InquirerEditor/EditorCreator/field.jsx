@@ -1,9 +1,9 @@
 import React from 'react';
 
-import QueryFieldset from './query_fieldset.jsx';
-import { RecursiveType } from '../../Utility/utility';
+import CreatorFieldset from './fieldset.jsx';
+import { RecursiveType } from 'UtilityPath/utility.jsx';
 
-const QueryField = (props) => {
+const CreatorField = (props) => {
 
   const {
     field,
@@ -16,21 +16,18 @@ const QueryField = (props) => {
     type
   } = field;
 
-  let isIncluded = field.include || false;
-
-  let isRequired = (type && type.kind === 'NON_NULL');
   let requiredClass = '';
 
   if (field.fields && Array.isArray(field.fields) && field.fields.length > 0) {
     requiredClass = ' needed';
     field.fields.forEach((d) => {
       if (d.include) requiredClass = '';
-    })
+    });
   }
 
   return (
-    <div className="query-field-container">
-      <div className="query-field" onClick={() => {toggle(field)}}>
+    <div className="creator-field-container">
+      <div className="creator-field" onClick={() => {toggle(field)}}>
         <div className="field-checkbox">
           <div className={"field-checkmark"+(field.include ? ' checked' : '')}></div>
         </div>
@@ -46,7 +43,7 @@ const QueryField = (props) => {
       </div>
       { field.fields && Array.isArray(field.fields) && (field.fields.length > 0) &&
         <div className="sub-fields">
-          <QueryFieldset fields={field.fields} toggle={toggle} />
+          <CreatorFieldset fields={field.fields} toggle={toggle} />
         </div>
       }
     </div>
@@ -54,4 +51,4 @@ const QueryField = (props) => {
 
 }
 
-export default QueryField;
+export default CreatorField;

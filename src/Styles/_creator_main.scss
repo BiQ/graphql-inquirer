@@ -1,21 +1,22 @@
 $maxWidth: 800px;
 
-.query-main {
+#creator-main {
   max-width: $maxWidth;
   margin: 0px auto;
 
-  //box-sizing: content-box;
+  padding: 10px;
 
   font-family: $codeFontFamily;
+  font-size: 14px;
 
-  .query-meta {
+  .creator-meta {
 
     border: 1px solid lightgrey;
     border-radius: 4px;
 
     margin-bottom: 10px;
 
-    .query-input {
+    .creator-input {
       padding: 5px 10px;
 
       .input-form {
@@ -64,7 +65,7 @@ $maxWidth: 800px;
       }
     }
 
-    .query-controls {
+    .creator-controls {
       text-align: right;
       button {
         padding: 8px 16px;
@@ -82,19 +83,21 @@ $maxWidth: 800px;
 
   } //query-meta
 
-  .query-body {
-    //@include query-panel();
+  .creator-body {
+    
     padding: 10px;
     border: 1px solid lightgrey;
     border-radius: 4px;
 
-    //margin-top: 10px; 
+    * {
+      box-sizing: border-box;
+    }
 
-    .query-fieldset {
+    .creator-fieldset {
 
-      .query-field-container {
+      .creator-field-container {
 
-        .query-field {
+        .creator-field {
           float: none;
           clear: both;
 
@@ -102,6 +105,8 @@ $maxWidth: 800px;
           line-height: 1.5em;
           margin: 2px 0px;
           border-radius: 2px;
+
+          overflow: hidden;
 
           cursor: pointer;
 
@@ -113,14 +118,14 @@ $maxWidth: 800px;
             width: 1.5em;
             height: 1.5em;
             padding: 7px;
-            //background-color: tan;
-
+            
             .field-checkmark {
               width: 100%;
               height: 100%;
 
               border: 1px solid grey;
               border-radius: 50%;
+
               &.checked {
                 background-color: grey;
               }
@@ -144,6 +149,8 @@ $maxWidth: 800px;
             margin-left: 5px;
             font-size: 12px;
             color: grey;
+
+            overflow: hidden;
           }
 
           > div { 
