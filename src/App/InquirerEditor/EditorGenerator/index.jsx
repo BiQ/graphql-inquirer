@@ -9,7 +9,7 @@ const EditorGenerator = (props) => {
 
   const {
     operation,
-    //inline,
+    operationType,
     outputFormat,
     valid
   } = props;
@@ -31,7 +31,7 @@ const EditorGenerator = (props) => {
       break;
   }
 
-  let qText = SplitQuery(operation, inline, requestBody);
+  let qText = SplitQuery(operation, inline, requestBody, operationType);
 
   return (
     <div id="query-generated">
@@ -62,7 +62,7 @@ const EditorGenerator = (props) => {
 
 export default EditorGenerator;
 
-const SplitQuery = (query, inline=false, requestBody=false) => {
+const SplitQuery = (query, inline=false, requestBody=false, operationType = null) => {
   
   var newlines = true;
 
@@ -70,6 +70,14 @@ const SplitQuery = (query, inline=false, requestBody=false) => {
     newlines = false;
     inline = false;
   }
+
+  let singularTypeList = {
+    queries: { lower:'query', upper:'Query' },
+    mutations: { lower: 'mutation', upper: 'Mutation' },
+    subscriptions: { lower: 'subscription', upper: 'Subscription'}
+  };
+
+  let singularType = singularTypeList[operationType] || {lower:'unknown', upper: 'Unknown'};
 
   //initiate; varArray, qString
   var qString = "";
@@ -159,7 +167,6 @@ const SplitQuery = (query, inline=false, requestBody=false) => {
     }
 
     return (fieldString != "" ? tChar.repeat(indent)+fieldString : "");
-    //return ((fieldString && fieldString !== "") ? `${fieldString.trim()}` : "");
 
   }
 
@@ -170,8 +177,6 @@ const SplitQuery = (query, inline=false, requestBody=false) => {
     gotVars = true;
   }
 
-  //console.log('gotVars?', gotVars, varArray, typeof(varArray), JSON.stringify(varArray));
-
   let argTypeString = "";
   let argObject = {};
 
@@ -181,16 +186,16 @@ const SplitQuery = (query, inline=false, requestBody=false) => {
     varArray.map((varInfo, i, a) => {
       if (!firstArg) argTypeString += ', ';
       else firstArg = false;
-      argTypeString += `\$${varInfo.name || 'fejl'}: ${(varInfo.type) || 'ups'}`;
+      argTypeString += `\$${varInfo.name || 'error'}: ${(varInfo.type) || 'oops'}`;
       argObject[varInfo.name] = varInfo.value;
     })
   }
 
   argTypeString = (argTypeString && argTypeString !== "") ? `(${argTypeString})` : '';
 
-  let operationName = GetTypeName(query.type)+'Query';
+  let operationName = GetTypeName(query.type)+singularType.upper;
 
-  qString = `query ${operationName}${argTypeString} {${nChar}`;
+  qString = `${singularType.lower} ${operationName}${argTypeString} {${nChar}`;
   qString += recursedString;
   qString += nChar+'}';
 
@@ -200,7 +205,7 @@ const SplitQuery = (query, inline=false, requestBody=false) => {
   console.log('varString', varString);
 
   if (requestBody) {
-    let escapedVars = varString;//.replace(/\"/g, "\"").replace(/\'/g, "\'").replace(/\n/g, " ");
+    let escapedVars = varString;
     let reqBodyObj = {
       query: qString,
       variables: escapedVars,

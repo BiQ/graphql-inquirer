@@ -70,7 +70,7 @@ class InquirerEditor extends React.Component {
 
     const {
       route
-    } = this.props;
+    } = newProps;
     const { params } = route.match;
     this.setActiveOperationFromParams(params);
 
@@ -87,6 +87,8 @@ class InquirerEditor extends React.Component {
     }
     
     let activeOp = this.state.activeOperation;
+
+    console.log('activeOp', activeOp);
 
     if (!activeOp) return <h1>No active operation</h1>
 
@@ -118,6 +120,7 @@ class InquirerEditor extends React.Component {
 
               <EditorGenerator 
                 operation={this.state.activeOperation}
+                operationType={this.state.activeOperationType}
                 valid={this.state.activeOperation.valid}
                 outputFormat={this.state.outputFormat}
               />
@@ -151,7 +154,7 @@ class InquirerEditor extends React.Component {
 
   }
 
-  setActiveOperation(op, op_type) {
+  setActiveOperation(op, op_type, op_action) {
     let newOperation = null;
 
     if (op && op_type) {
@@ -313,7 +316,7 @@ class InquirerEditor extends React.Component {
 
   BuildQuery(e) {
     e.preventDefault();
-    //console.log("Run Query, Run!")
+    
     var qHash = "q"+Math.random().toString(36).slice(2);
 
 
@@ -324,19 +327,25 @@ class InquirerEditor extends React.Component {
 
     var varObj = {};
 
-    //console.log('Query to be build:', this.state.activeOperation);
+    let singularTypeList = {
+      queries: { lower:'query', upper:'Query' },
+      mutations: { lower: 'mutation', upper: 'Mutation' },
+      subscriptions: { lower: 'subscription', upper: 'Subscription'}
+    };
+
+    let singularType = singularTypeList[this.state.activeOperationType] || {lower:'unknown', upper: 'Unknown'};
 
     if (this.state.activeOperation && this.state.activeOperation != {}) {
       
       var q = this.state.activeOperation;
-      let operationName = GetTypeName(q.type)+'Query';
+      let operationName = GetTypeName(q.type)+singularType.upper;
 
       console.log('operationName', operationName);
       
       if (q.name && q.type) {
         
         //add query with random name 
-        qString += "query "+operationName;
+        qString += singularType.lower+" "+operationName;
 
         qString += " {";
         qString += nChar;
@@ -348,7 +357,6 @@ class InquirerEditor extends React.Component {
 
           if (field.name && (field.include || field.valid)) {
             
-            console.log('tChar', tChar, typeof tChar)
             theString += tChar.repeat(indent);
             theString += field.name;
 
@@ -364,7 +372,6 @@ class InquirerEditor extends React.Component {
                 let needQuotes = (typeName === 'String' || typeName === 'ID');
                 
                 let valueString = needQuotes ? `"${value}"` : `${value}`;
-                //console.log('Input typename', typeName, needQuotes, valueString);
 
                 if (hasValue) {
                   argArray.push(`${d.name}: ${valueString}`);
@@ -438,13 +445,13 @@ class InquirerEditor extends React.Component {
   // FROM CIQ
   /*
     PickOutputFormat(format)
-    - SetActiveQuery(query)
+    - singularType.upperquery)
     ResetQuery()
     - ToggleField(obj)
     - UpdateInput(e)
     - ValidateActiveQuery()
     - ValidateQuery(query)
-    BuildQuery(e)
+   singularType.lower+ uery(e)
   */
 
 }
