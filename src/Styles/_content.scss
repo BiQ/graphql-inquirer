@@ -102,6 +102,81 @@ $toolbarHeight: 60px;
 
     @import 'creator_main';
 
+    #query-generated {
+
+      height: 100%;
+      float: left;
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
+
+      font-family: $codeFontFamily;
+      //padding: 10px;
+
+      .generated-content {
+        position: relative;
+        height: 100%;
+        padding: 0px;
+        margin: 0px;
+        overflow: hidden;
+
+        .query-result-gql {
+          width: 100%;
+          height: 100%;
+
+          padding: 0px;
+          margin: 0px;
+          overflow: hidden;
+
+          .gql-panel {
+          
+            padding: 10px;
+            overflow: scroll;
+
+            &.invalid {
+              //text-decoration: underline dashed red;
+              color: lightgrey;
+              //text-decoration-style: 1px dashed red;
+            }
+          }
+        }
+        .copy-button {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+
+          button {
+            padding: 8px 16px;
+            border: 1px solid grey;
+            background-color: whitesmoke;
+            border-radius: 4px;
+            line-height: 1em;
+          }
+        }
+      }
+    }
+
+    #editor-result {
+      
+      height: 100%;
+      float: left;
+      padding: 0px;
+      margin: 0px;
+      overflow: hidden;
+
+      font-family: $codeFontFamily;
+
+      .result-data {
+        width: 100%;
+        height: 100%;
+
+        padding: 10px;
+        overflow: scroll;
+
+        white-space: pre;
+      }
+
+    }
   }
 } // #editor-container
 

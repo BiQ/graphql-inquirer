@@ -45,6 +45,29 @@ const getSchemaFromUrl = (url) => {
 
 };
 
+
+const executeOperation = (fetcher, operation) => {
+  console.log(operation)
+  if (fetcher && typeof fetcher === 'function') {
+    return fetcher(operation)
+            .then((result) => {
+              if (!result || typeof result !== 'object') 
+                throw new Error('Result not of type \'object\'');
+
+              console.log(result);
+
+              const { data } = result;
+
+              if (!data || typeof data !== 'object') 
+                throw new Error('Result did not have property data of type \'object\'', result);
+
+              return result;
+            })
+  } else throw new Error('Failed to execute operation', operation);
+};
+
+
+
 const getSchemaWithFetcher = (fetcher) => {
   if (fetcher && typeof fetcher === 'function') {
     return fetcher({ query: GraphQL.introspectionQuery })
@@ -69,6 +92,8 @@ const getSchemaWithFetcher = (fetcher) => {
             });
   } else throw new Error('Fetcher was not a function');
 }
+
+
 
 const transformSchema = (schema) => {
 
@@ -106,10 +131,12 @@ const transformSchema = (schema) => {
 
 };
 
+
 module.exports = {
   fetchSchema,
   getSchemaFromUrl,
   getSchemaWithFetcher,
-  transformSchema
+  transformSchema,
+  executeOperation
 };
 

@@ -13,7 +13,7 @@ import {
 } from './Utility/fetcher.js';
 
 import Sidebar from './App/sidebar.jsx';
-import Content from './App/content.jsx';
+import InquirerEditor from 'AppPath/InquirerEditor';
 
 class Inquirer extends React.Component {
 
@@ -26,11 +26,8 @@ class Inquirer extends React.Component {
       schema: null
     };
 
-    console.log('props', typeof props.fetcher);
-
     getSchemaWithFetcher(props.fetcher)
       .then((schema) => {
-        console.log('received schema');
         this.setState({
           schema: transformSchema(schema.schema),
           loading: false
@@ -45,10 +42,14 @@ class Inquirer extends React.Component {
 
     const Markup = function(markupProps) {
       if (loading) {
-        return (<div id="inquirer-body"><LoadSpinner /></div>);
+        return (
+          <div id="inquirer-body">
+            <div id="inquirer-loader">
+              <LoadSpinner />
+            </div>
+          </div>
+        );
       } else {
-        console.log(loading, schema);
-
         const { types, queries, mutations, subscriptions } = schema;
 
         let sharedProps = {
@@ -59,10 +60,20 @@ class Inquirer extends React.Component {
           loading: self.state.loading
         };
 
+        let rp = markupProps.routeProps;
+
+        console.log('rp', rp);
+
         return (
           <div id="inquirer-body">
             <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} />
-            <Content sharedProps={sharedProps} {...markupProps.routeProps} />
+            <Route path={`/:action/:name`} render={(rpProps) => {
+              return (
+                <div id="inquirer-content">
+                  <InquirerEditor schema={schema} loading={loading} fetcher={self.state.fetcher} route={rpProps} />
+                </div>
+              );
+            }} />
           </div>
         );
       }

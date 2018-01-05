@@ -5,20 +5,22 @@ import { RecursiveType } from 'UtilityPath/utility.jsx';
 const EditorToolbar = (props) => {
 
   const {
-    actionObj,
+    activeOp,
     paneMode,
-    paneModeCallback
+    paneModeCallback,
+    pickOutputFormat,
+    buildOperation
   } = props;
   
   return (
     <div className="editor-toolbar">
       <div className="action-toolbar">
         <div className="action-header">
-          <div className="action-name">{actionObj.name}</div>
+          <div className="action-name">{activeOp.name}</div>
           <div className="action-type">
-            <span className="type-name">{actionObj.type && <RecursiveType type={actionObj.type} />}</span>
+            <span className="type-name">{activeOp.type && <RecursiveType type={activeOp.type} />}</span>
           </div>
-          <p>{actionObj.description}</p>
+          <p>{activeOp.description}</p>
         </div>
         <div className="editor-controls">
           <div className="editor-control-picker">
@@ -28,13 +30,13 @@ const EditorToolbar = (props) => {
             </select>
           </div>
           <div className="editor-control-picker">
-            <select name="output-format-picker">
+            <select name="output-format-picker" onChange={pickOutputFormat}>
               <option value="separate">Separate variables</option>
               <option value="inline">Inline variables</option>
               <option value="json">Formatted JSON request</option>
             </select>
           </div>
-          <button type="button" disabled="">Run</button>
+          <button type="button" disabled={!activeOp.valid} onClick={buildOperation}>Run</button>
         </div>
       </div>
     </div>

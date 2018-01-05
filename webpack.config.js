@@ -11,8 +11,8 @@ var config = {
   },
 
   output: {
-    path: __dirname+'/bin',
-    publicPath: './bin/',
+    path: path.join(__dirname+'/bin'),
+    publicPath: path.join(__dirname, '/bin/'),
     filename: '[name].js',
     libraryTarget: 'umd',
     library: 'GraphQLInquirer'
@@ -64,33 +64,10 @@ var config = {
   },
 
   devServer: {
-    contentBase: __dirname+'/example',
+    contentBase: path.join(__dirname, '/example'),
     publicPath: '/bin/',
     port: 9090,
     historyApiFallback: true
-    /*,
-    proxy: {
-      "/search/person": {
-        target: "https://staging.biq.dk/", //search/person.json
-        secure: false,
-        changeOrigin: true,
-        pathRewrite: function(path, req) {
-          let key_prepend = (path.indexOf('?') >= 0) ? '&' : '?';
-          let newPath = path+key_prepend+"key=UssNHH6YJvmzbvNbnfg6"
-          return newPath;
-        }
-      },
-      "/sixdegrees": {
-        target: "http://fodor.biq.dk/api/v1/",
-        secure: false,
-        changeOrigin: true,
-        pathRewrite: function(path, req) {
-          let key_prepend = (path.indexOf('?') >= 0) ? '&' : '?';
-          let newPath = path+key_prepend+"key=UssNHH6YJvmzbvNbnfg6"
-          return newPath;
-        }
-      }
-    }*/
   }
 
 }

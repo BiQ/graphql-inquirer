@@ -54,6 +54,16 @@ $codeFontFamily: Menlo,Monaco,Consolas,Courier New,monospace;
     bottom: 0px;
     left: 0px;
 
+    #inquirer-loader {
+      width: 100%;
+      padding-top: 50px;
+      text-align: center;
+
+      > div {
+        display: inline-block;
+      }
+    }
+
     #inquirer-sidebar {
       position: absolute;
       top: 0px;
