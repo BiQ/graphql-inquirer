@@ -38,8 +38,6 @@ class Inquirer extends React.Component {
 
   render() {
 
-    console.log('process', process);
-
     const { loading, schema } = this.state;
     let self = this;
 
@@ -79,7 +77,7 @@ class Inquirer extends React.Component {
     };
 
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL+'/'}>
+      <BrowserRouter>
         <Route path="/" render={(routeProps) => {
           return(
           <div id="inquirer-app">
