@@ -1,8 +1,6 @@
 import React from 'react';
 import SplitPane from 'react-split-pane';
 
-import { Route } from 'react-router-dom';
-
 import EditorToolbar from 'AppPath/InquirerEditor/EditorToolbar';
 import EditorCreator from 'AppPath/InquirerEditor/EditorCreator';
 import EditorGenerator from 'AppPath/InquirerEditor/EditorGenerator';
@@ -10,22 +8,17 @@ import EditorResult from 'AppPath/InquirerEditor/EditorResult';
 
 
 import {
-  RecursiveType, 
-  RecursiveTypeString,
   GetTypeName,
   isOfKind
 } from 'UtilityPath/utility.jsx';
 
 import { executeOperation } from 'UtilityPath/fetcher.js';
 
-//import QueryFieldset from './query_fieldset.jsx';
-
 class InquirerEditor extends React.Component {
 
   constructor(props) {
     super(props);
 
-    console.log('Editor is being constructed');
     const {
       types,
       queries,
@@ -43,9 +36,11 @@ class InquirerEditor extends React.Component {
       activeOperationType: null,
       activeResult: null,
 
+      resultLoading: false,
+
       outputFormat: 'separate',
       paneMode: 'vv',
-    }
+    };
 
     this.validOutputFormats = [
       'separate',
@@ -59,7 +54,6 @@ class InquirerEditor extends React.Component {
     const {
       route
     } = this.props;
-
 
     const { params } = route.match;
     this.setActiveOperationFromParams(params);
@@ -88,8 +82,6 @@ class InquirerEditor extends React.Component {
     
     let activeOp = this.state.activeOperation;
 
-    console.log('activeOp', activeOp);
-
     if (!activeOp) return <h1>No active operation</h1>
 
     let pane_class = this.state.paneMode === 'vv' ? 'vertical' : 'horizontal';
@@ -102,8 +94,8 @@ class InquirerEditor extends React.Component {
           activeOp={this.state.activeOperation} 
           paneMode={this.state.paneMode} 
           paneModeCallback={this.pickPaneMode.bind(this)}
-          pickOutputFormat={this.PickOutputFormat.bind(this)}
-          buildOperation={this.BuildQuery.bind(this)}
+          pickOutputFormat={this.pickOutputFormat.bind(this)}
+          buildOperation={this.buildQuery.bind(this)}
         />
       
         <div id="editor-panes">
@@ -114,8 +106,8 @@ class InquirerEditor extends React.Component {
                 name={activeOp.name} 
                 args={activeOp.args}
                 fields={activeOp.fields}
-                onInputChange={this.UpdateInput.bind(this)}
-                toggle={this.ToggleField.bind(this)}
+                onInputChange={this.updateInput.bind(this)}
+                toggle={this.toggleField.bind(this)}
               />
 
               <EditorGenerator 
@@ -127,7 +119,7 @@ class InquirerEditor extends React.Component {
 
             </SplitPane>
 
-            <EditorResult activeResult={this.state.activeResult} />
+            <EditorResult activeResult={this.state.activeResult} loading={this.state.resultLoading} />
 
           </SplitPane>
         </div>
@@ -142,7 +134,7 @@ class InquirerEditor extends React.Component {
     });
   }
 
-  PickOutputFormat(event) {
+  pickOutputFormat(event) {
 
     let format =  event.target.value;
 
@@ -173,7 +165,7 @@ class InquirerEditor extends React.Component {
 
       newOperation.include = true;
 
-      newOperation.valid = this.ValidateOperation(newOperation);
+      newOperation.valid = this.validateOperation(newOperation);
     }
 
     this.setState({
@@ -203,7 +195,7 @@ class InquirerEditor extends React.Component {
   }
 
 
-  ValidateOperation(operation) {
+  validateOperation(operation) {
 
     if (operation.args && Array.isArray(operation.args)) {
       
@@ -229,8 +221,6 @@ class InquirerEditor extends React.Component {
             break;
         }
 
-
-        console.log('required?', required, 'has value?', hasValue, 'value:', value);
         if (required && !hasValue) return false;
         if (hasValue && !correctDataType) return false;
       }
@@ -257,16 +247,14 @@ class InquirerEditor extends React.Component {
       // we would have returned false if a subfield was invalid - we should be alright
       return true;
 
-    }
+    };
 
     operation.include = true;
     return validate(operation);
 
   }
 
-  ToggleField(obj) {
-
-    console.log('obj');
+  toggleField(obj) {
 
     let shouldInclude = !obj.include;
 
@@ -286,46 +274,35 @@ class InquirerEditor extends React.Component {
 
     obj.include = shouldInclude;
 
-    this.state.activeOperation.valid = this.ValidateOperation(this.state.activeOperation);
-    //this.ValidateActiveOperation();
+    this.state.activeOperation.valid = this.validateOperation(this.state.activeOperation);
 
     this.forceUpdate();
   }
 
-  UpdateInput(e) {
+  updateInput(e) {
     const {
       name,
       value
     } = e.target;
-
-    console.log('updating input', e.target, value, name)
-
     if (name && (value !== null) && this.state.activeOperation) {
       let operationArgs = this.state.activeOperation && this.state.activeOperation.args;
       let currentArg = operationArgs.find((d) => { return (d.name == name); });
-      console.log('blib:')
       if (currentArg) {
-        console.log('changed value:', value)
         currentArg.value = value;
       }
     }
 
-    this.state.activeOperation.valid = this.ValidateOperation(this.state.activeOperation);
+    this.state.activeOperation.valid = this.validateOperation(this.state.activeOperation);
     this.forceUpdate();
   }
 
-  BuildQuery(e) {
+  buildQuery(e) {
     e.preventDefault();
     
-    var qHash = "q"+Math.random().toString(36).slice(2);
-
-
     const nChar = "\n";
-    const tChar = "  "; //"\t";
+    const tChar = "  ";
 
     var qString = "";
-
-    var varObj = {};
 
     let singularTypeList = {
       queries: { lower:'query', upper:'Query' },
@@ -339,12 +316,9 @@ class InquirerEditor extends React.Component {
       
       var q = this.state.activeOperation;
       let operationName = GetTypeName(q.type)+singularType.upper;
-
-      console.log('operationName', operationName);
       
       if (q.name && q.type) {
         
-        //add query with random name 
         qString += singularType.lower+" "+operationName;
 
         qString += " {";
@@ -414,7 +388,7 @@ class InquirerEditor extends React.Component {
           }
 
           return theString;
-        }
+        };
         // End of recursive function
 
         qString += fieldString(q, 1);
@@ -423,8 +397,6 @@ class InquirerEditor extends React.Component {
       }
     }
     
-    console.log(qString);
-    //this.setState({activeResult: qString});
     this.runOperation(qString);
     
   }
@@ -433,33 +405,21 @@ class InquirerEditor extends React.Component {
 
     let qOp = {query: qString};
 
+    this.setState({resultLoading: true});
+
     executeOperation(this.props.fetcher, qOp)
       .then((result) => {
-        const { data } = result;
+        const { data, errors } = result;
         if (!data || typeof data !== 'object') throw new Error('Result had no data property');
-        this.setState({activeResult: data});
+        let resultObj = data;
+        if (errors) resultObj = errors;
+        this.setState({activeResult: resultObj, resultLoading: false});
+      }).catch((error) => {
+        this.setState({activeResult: {error}, resultLoading: false});
       });
   }
-
-
-  // FROM CIQ
-  /*
-    PickOutputFormat(format)
-    - singularType.upperquery)
-    ResetQuery()
-    - ToggleField(obj)
-    - UpdateInput(e)
-    - ValidateActiveQuery()
-    - ValidateQuery(query)
-   singularType.lower+ uery(e)
-  */
 
 }
 
 export default InquirerEditor;
 
-const ValidOutputFormats = [
-  { key: 'separate', name: 'Separate variable' }, 
-  { key: 'inline', name: 'Inline variable' }, 
-  { key: 'json', name: 'Formatteret JSON request' }
-];

@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 
 import Styles from './Styles/app.scss';
+
 import LoadSpinner from './Utility/spinner.jsx';
 
 import {
@@ -60,10 +61,6 @@ class Inquirer extends React.Component {
           loading: self.state.loading
         };
 
-        let rp = markupProps.routeProps;
-
-        console.log('rp', rp);
-
         return (
           <div id="inquirer-body">
             <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} />
@@ -100,16 +97,13 @@ export default Inquirer;
 
 /*
 APPLICATION SHAPE
-App: (fetcher) + runFunc
-- Header: move controls here?
+-----------------
+App
+- Header
 - Body
   - Sidebar
   - Editor
     - Split1: EditorBuilder
     - Split2: EditorGenerated
     - Split3: EditorResult
-
-
-STATE SHAPE
-
  */

@@ -40,13 +40,11 @@ $maxWidth: 800px;
               }
             }
 
-            input {
-              
+            input {              
               width: 100%;
               border: 1px solid $queryNameColor;
               border-radius: 4px;
               box-sizing: border-box;
-
             }
 
             .input-field-type {
@@ -81,7 +79,7 @@ $maxWidth: 800px;
       }
     }
 
-  } //query-meta
+  } //creator-meta
 
   .creator-body {
     
@@ -159,7 +157,6 @@ $maxWidth: 800px;
             padding: 0px;
             height: 20px;
             float: left;
-            //background-color: lightsteelblue;
           }
         }
 
@@ -173,7 +170,7 @@ $maxWidth: 800px;
       }
 
     }
-  } //query-body
+  } //creator-body
 
 
-} //query-main
+} //creator-main

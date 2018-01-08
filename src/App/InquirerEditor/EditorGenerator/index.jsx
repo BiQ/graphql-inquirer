@@ -34,15 +34,12 @@ const EditorGenerator = (props) => {
   let qText = SplitQuery(operation, inline, requestBody, operationType);
 
   return (
-    <div id="query-generated">
+    <div id="operation-generated">
       <div className="generated-content">
         <div className="copy-button">
-        {/*
-          <ClipboardButton data-clipboard-text={qText}>Kopiér</ClipboardButton>
-        */}
         </div>
         { operation &&
-          <div className="query-result-gql">
+          <div className="operation-result-gql">
             <div className={("gql-panel"+(valid ? '' : ' invalid'))}>
               {qText}
             </div>
@@ -50,12 +47,8 @@ const EditorGenerator = (props) => {
         }
       </div>
     </div>
-  )
-  /*
-  return (
-    <h3>Weeeee! I Am Generator!</h3>
   );
-  */
+  
 };
 
 
@@ -79,7 +72,6 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
 
   let singularType = singularTypeList[operationType] || {lower:'unknown', upper: 'Unknown'};
 
-  //initiate; varArray, qString
   var qString = "";
   var varObj = {};
   var varArray = [];
@@ -120,7 +112,6 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
           if (hasValue) {
             var varName = argName;
 
-            console.log(varName)
             var i = 0;
             while (varObj.hasOwnProperty(varName)) {
               varName = varName+i;
@@ -134,12 +125,12 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
               varObj[varName] = {
                 value: argValue,
                 type: typeString 
-              }
+              };
               varArray.push({
                 name: varName,
                 value: argValue,
                 type: typeString
-              })
+              });
             }
 
             if (argString !== "") argString += ", ";
@@ -168,7 +159,7 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
 
     return (fieldString != "" ? tChar.repeat(indent)+fieldString : "");
 
-  }
+  };
 
   let recursedString = qFields(query, 1);
 
@@ -188,7 +179,7 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
       else firstArg = false;
       argTypeString += `\$${varInfo.name || 'error'}: ${(varInfo.type) || 'oops'}`;
       argObject[varInfo.name] = varInfo.value;
-    })
+    });
   }
 
   argTypeString = (argTypeString && argTypeString !== "") ? `(${argTypeString})` : '';
@@ -202,18 +193,16 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
   let varString = gotVars ? JSON.stringify(argObject, null, tChar) : "";
   let whiteSpace = gotVars ? '\n\n' : '';
 
-  console.log('varString', varString);
-
   if (requestBody) {
     let escapedVars = varString;
     let reqBodyObj = {
       query: qString,
       variables: escapedVars,
       operationName
-    }
+    };
 
     let reqBodyString = JSON.stringify(reqBodyObj, null, 2);
-    console.log('reqBodyString', reqBodyString);
+
     return reqBodyString;
   } else return varString+whiteSpace+qString;
-}
+};

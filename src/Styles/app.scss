@@ -24,8 +24,6 @@ $codeFontFamily: Menlo,Monaco,Consolas,Courier New,monospace;
 
   font-family: $root-font;
 
-  //background-color: limegreen;
-
   #inquirer-header {
     position: absolute;
     top: 0px;
@@ -90,12 +88,8 @@ $codeFontFamily: Menlo,Monaco,Consolas,Courier New,monospace;
       bottom: 0px;
       left: $sidebar-width;
 
-      //overflow-x: scroll;
-
-      //@import 'query_main'; 
       @import 'content';
 
-      //background-color: tan;
     }
   }
 

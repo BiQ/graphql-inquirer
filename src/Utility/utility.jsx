@@ -68,7 +68,7 @@ const isOfKind = (type, kind) => {
     'INPUT_OBJECT',
     'LIST',
     'NON_NULL'
-  ]
+  ];
 
   if (accepted.indexOf(kind) < 0) return false;
 

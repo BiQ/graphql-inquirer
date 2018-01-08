@@ -19,18 +19,13 @@ const Sidebar = (props) => {
   } = props;
 
   const {
-    types,
     queries,
     mutations,
     subscriptions
   } = sharedProps;
 
-  console.log('sidebar', props);
-
-
   return (
     <Route path="/:action" children={({match}) => {
-      console.log('sidebar match', match);
       return (
         <div id="inquirer-sidebar">
           <SidebarSection title="Queries" path="/queries" items={queries} loading={loading} />
