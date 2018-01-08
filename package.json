@@ -45,7 +45,7 @@
     "react-split-pane": "^0.1.74"
   },
   "bin": {
-    "graphql-inquirer": "application.js"
+    "graphql-inquirer": "bin/application.js"
   },
   "keywords": [
     "graphql",
