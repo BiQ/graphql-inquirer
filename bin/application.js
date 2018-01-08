@@ -27047,9 +27047,7 @@ var Sidebar = function Sidebar(props) {
       subscriptions = sharedProps.subscriptions;
 
 
-  return _react2.default.createElement(_reactRouterDom.Route, { path: '/:action', children: function children(_ref) {
-      var match = _ref.match;
-
+  return _react2.default.createElement(_reactRouterDom.Route, { path: '/:action', children: function children() {
       return _react2.default.createElement(
         'div',
         { id: 'inquirer-sidebar' },

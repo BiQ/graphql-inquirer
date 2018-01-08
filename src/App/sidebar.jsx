@@ -25,7 +25,7 @@ const Sidebar = (props) => {
   } = sharedProps;
 
   return (
-    <Route path="/:action" children={({match}) => {
+    <Route path="/:action" children={() => {
       return (
         <div id="inquirer-sidebar">
           <SidebarSection title="Queries" path="/queries" items={queries} loading={loading} />
