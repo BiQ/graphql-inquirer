@@ -79,7 +79,7 @@ class Inquirer extends React.Component {
     };
 
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <BrowserRouter basename={process.env.PUBLIC_URL+'/'}>
         <Route path="/" render={(routeProps) => {
           return(
           <div id="inquirer-app">
