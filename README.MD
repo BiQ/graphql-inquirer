@@ -1,55 +1,51 @@
-# NPM Module Webpack Template
+# GraphQL Inquirer
 
-A template for modules that can be installed through npm, with webpack, babel (es6) and basic loaders.
+A visual data browser for GraphQL APIs.
 
-## Create
+Demo (**TODO**)
 
-1. Clone this repository
-   * Remember to unlink git from this repo: `git remote rm origin`
-1. Run `$ npm install`
-1. Edit package.json
-    * Name, description and version
-    * Urls for repositories etc.
-1. Update `webpack.config.js`
-    * Set output.library to a fitting name (no spaces or dashes, etc.)
-    * This will be the name of your module, eg. `"MyModule"` will result in `var obj = new MyModule()`
-1. Edit `src/application.js` to your hearts content
-    * Wrapping everything in an object like the example is recommended (see below)
-1. Build the module with `$ npm run build` or watch the files with `$ npm run watch`
-1. Push to github
+**Disclaimer:**  
+This project is still under development and may not perform as expected. Use at your own risk.
 
 ## Use
 
-Install with npm (with SSH key for private repos):
+Install via NPM (**TODO**)
 
-`$ npm install git+ssh://git@github.com:USER/REPO.git`
+`$ npm install graphql-inquirer`
 
-Import and use:
+Set up a fetcher function. It must point to a valid introspectable GraphQL API, take a query as input and return a Promise.
 
-```
-import MyModule from 'my-module';
+```javascript
+// with Fetch API
+function MyFetcher(query) {
 
-// if your module exports a class
-var myObject = new MyModule();
+  var request_options = {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(query)
+  }
 
-// else if it exports an object
-MyModule.doStuff();
-```
-
-### Script Tag
-
-When using via `<script>` you have to call `.default` on the object, so
-
-```
-// class
-var myObject = new MyModule.default();
-
-// object
-MyModule.default.getSchwifty();
+  return fetch('url://to.your.api', request_options).then((response) => (response.json()));
+}
 ```
 
-This seems to be a quirk of Webpacks UMD implementation.
+Import and render with React
 
-## Notes
+```javascript
+import React from 'react';
+import ReactDOM from 'react-dom'
 
-The package is set up for Universal Module Definition (`umd`) exports, which means it should work with all the common module import methods, such as CommonJS and AMD. This has not really been tested, though.
+import GraphQLInquirer from 'graphql-inquirer';
+
+ReactDOM.render(<GraphQLInquirer fetcher={MyFetcher} />, document.getElementById('my-root-component'));
+```
+
+## Development
+
+Clone or fork the repository and run `$ npm install`
+
+Run `$ npm run serve` to start Webpack Dev Server
+
+Develop to your heart's content
+
+Run `$ npm run build` to build the project
