@@ -45958,8 +45958,8 @@ var fetchFunc = function fetchFunc(query) {
     body: JSON.stringify(query)
   };
 
-  //let req_url = 'https://1jzxrj179.lp.gql.zone/graphql';
-  var req_url = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
+  var req_url = 'https://1jzxrj179.lp.gql.zone/graphql';
+  //let req_url = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
 
   return fetch(req_url, req_opts).then(function (response) {
     return response.json();
