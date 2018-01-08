@@ -2,7 +2,7 @@
 
 A visual data browser for GraphQL APIs.
 
-Demo (**TODO**) pointing to Apollos example API mentioned here:  
+[DEMO](https://biq.github.io) pointing to Apollos example API mentioned here:  
 https://dev-blog.apollodata.com/4-simple-ways-to-call-a-graphql-api-a6807bcdb355
 
 **Disclaimer:**  
@@ -10,7 +10,7 @@ This project is still under development and may not perform as expected. Use at 
 
 ## Use
 
-Install via NPM (**TODO**)
+Install via NPM
 
 `$ npm install graphql-inquirer`
 
