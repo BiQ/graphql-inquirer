@@ -2,7 +2,8 @@
 
 A visual data browser for GraphQL APIs.
 
-Demo (**TODO**)
+Demo (**TODO**) pointing to Apollos example API mentioned here:  
+https://dev-blog.apollodata.com/4-simple-ways-to-call-a-graphql-api-a6807bcdb355
 
 **Disclaimer:**  
 This project is still under development and may not perform as expected. Use at your own risk.
@@ -42,10 +43,10 @@ ReactDOM.render(<GraphQLInquirer fetcher={MyFetcher} />, document.getElementById
 
 ## Development
 
-Clone or fork the repository and run `$ npm install`
+1. Clone or fork the repository and run `$ npm install`
 
-Run `$ npm run serve` to start Webpack Dev Server
+1. Run `$ npm run serve` to start Webpack Dev Server
 
-Develop to your heart's content
+1. Do your thing
 
-Run `$ npm run build` to build the project
+1. Run `$ npm run build` to build the project
