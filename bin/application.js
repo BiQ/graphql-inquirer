@@ -17724,7 +17724,7 @@ var Inquirer = function (_React$Component) {
       };
 
       return _react2.default.createElement(
-        _reactRouterDom.BrowserRouter,
+        _reactRouterDom.HashRouter,
         null,
         _react2.default.createElement(_reactRouterDom.Route, { path: '/', render: function render(routeProps) {
             return _react2.default.createElement(
