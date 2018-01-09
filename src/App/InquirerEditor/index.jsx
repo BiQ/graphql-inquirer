@@ -236,7 +236,7 @@ class InquirerEditor extends React.Component {
       if (subFields === null || field.fields.length <= 0) return true; // this is not a subfield kind of field. all good
 
       // if we got 'em we gotta check 'em
-      let subsIncluded = find(subFields, (d) => { return (d.include || false); });
+      let subsIncluded = subFields.find((d) => { return (d.include || false); });
       if (typeof(subsIncluded) === 'undefined') return false; // none of the subs are included - now we're mad!
 
       // we shouldn't be here if there were no included subfields, so lets check 'em!

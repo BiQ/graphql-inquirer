@@ -27402,7 +27402,7 @@ var InquirerEditor = function (_React$Component) {
         if (subFields === null || field.fields.length <= 0) return true; // this is not a subfield kind of field. all good
 
         // if we got 'em we gotta check 'em
-        var subsIncluded = find(subFields, function (d) {
+        var subsIncluded = subFields.find(function (d) {
           return d.include || false;
         });
         if (typeof subsIncluded === 'undefined') return false; // none of the subs are included - now we're mad!
