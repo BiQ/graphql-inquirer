@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   Route,
-  BrowserRouter
+  HashRouter
 } from 'react-router-dom';
 
 import Styles from './Styles/app.scss';
@@ -77,7 +77,7 @@ class Inquirer extends React.Component {
     };
 
     return (
-      <BrowserRouter>
+      <HashRouter>
         <Route path="/" render={(routeProps) => {
           return(
           <div id="inquirer-app">
@@ -87,7 +87,7 @@ class Inquirer extends React.Component {
 
           </div>);
         }} />
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 

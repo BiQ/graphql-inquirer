@@ -67,7 +67,7 @@ var config = {
     contentBase: path.join(__dirname, '/example'),
     publicPath: '/bin/',
     port: 9090,
-    historyApiFallback: true
+    //historyApiFallback: true
   }
 
 }
