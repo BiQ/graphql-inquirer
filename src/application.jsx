@@ -61,10 +61,17 @@ class Inquirer extends React.Component {
           loading: self.state.loading
         };
 
+        let {
+          match: {
+            url
+          }
+        } = markupProps.routeProps;
+
         return (
           <div id="inquirer-body">
             <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} />
-            <Route path={'/:action/:name'} render={(rpProps) => {
+            <Route path={`${url[url.length-1] === '/' ? url : url+'/'}:action/:name`} render={(rpProps) => {
+              console.log(rpProps);
               return (
                 <div id="inquirer-content">
                   <InquirerEditor schema={schema} loading={loading} fetcher={self.state.fetcher} route={rpProps} />
