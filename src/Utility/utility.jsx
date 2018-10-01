@@ -81,10 +81,16 @@ const isOfKind = (type, kind) => {
   }
 };
 
+const trimSlash = (str) => {
+  while (str[str.length-1]==='/') str = str.substring(0, str.length-1);
+  return str;
+};
+
 export { 
   RecursiveType,
   RecursiveTypeString,
   GetTypeName,
   isList,
-  isOfKind
+  isOfKind,
+  trimSlash
 };

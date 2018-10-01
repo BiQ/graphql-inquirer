@@ -23,6 +23,7 @@ class Inquirer extends React.Component {
     
     this.state = {
       fetcher: props.fetcher,
+      root_path: props.path || '/',
       loading: true,
       schema: null
     };
@@ -69,7 +70,7 @@ class Inquirer extends React.Component {
 
         return (
           <div id="inquirer-body">
-            <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} />
+            <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} rootPath={self.state.root_path} />
             <Route path={`${url[url.length-1] === '/' ? url : url+'/'}:action/:name`} render={(rpProps) => {
               console.log(rpProps);
               return (

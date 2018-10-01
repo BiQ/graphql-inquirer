@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
   NavLink,
-  Route
+  Route,
+  withRouter
 } from 'react-router-dom';
 
 import {
-  RecursiveType
+  RecursiveType,
+  trimSlash
 } from '../Utility/utility.jsx';
 
 import LoadSpinner from '../Utility/spinner.jsx';
@@ -15,7 +17,8 @@ const Sidebar = (props) => {
 
   const {
     loading,
-    sharedProps
+    sharedProps,
+    match
   } = props;
 
   const {
@@ -25,12 +28,12 @@ const Sidebar = (props) => {
   } = sharedProps;
 
   return (
-    <Route path="/:action?" render={() => {
+    <Route path={`${trimSlash(match.url)}/:action?`} render={() => {
       return (
         <div id="inquirer-sidebar">
-          <SidebarSection title="Queries" path="/queries" items={queries} loading={loading} />
-          <SidebarSection title="Mutations" path="/mutations" items={mutations} />
-          <SidebarSection title="Subscriptions" path="/subscriptions" items={subscriptions} />
+          <SidebarSection title="Queries" path="/queries" items={queries} loading={loading} root={trimSlash(match.url)} />
+          <SidebarSection title="Mutations" path="/mutations" items={mutations} root={trimSlash(match.url)} />
+          <SidebarSection title="Subscriptions" path="/subscriptions" items={subscriptions} root={trimSlash(match.url)} />
         </div>
       );
     }} />
@@ -39,10 +42,11 @@ const Sidebar = (props) => {
 
 Sidebar.propTypes = {
   loading: PropTypes.bool,
-  sharedProps: PropTypes.any
+  sharedProps: PropTypes.any,
+  match: PropTypes.object
 };
 
-export default Sidebar;
+export default withRouter(Sidebar);
 
 const SidebarSection = (props) => {
 
@@ -50,7 +54,8 @@ const SidebarSection = (props) => {
     title,
     items,
     path,
-    loading
+    loading,
+    root
   } = props;
 
   let itemElms;
@@ -58,7 +63,7 @@ const SidebarSection = (props) => {
     itemElms = <LoadSpinner />;
   } else {
     itemElms = items.map((d, i) => (
-      <SidebarItem path={path} item={d} key={i} />
+      <SidebarItem path={root+path} item={d} key={i} />
     ));
   }
 
@@ -75,7 +80,8 @@ SidebarSection.propTypes = {
   title: PropTypes.string,
   items: PropTypes.array,
   path: PropTypes.string,
-  loading: PropTypes.bool
+  loading: PropTypes.bool,
+  root: PropTypes.string
 };
 
 const SidebarItem = (props) => {
