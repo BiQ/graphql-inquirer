@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import LoadSpinner from 'UtilityPath/spinner.jsx';
 
@@ -23,7 +24,11 @@ const EditorResult = (props) => {
       </div>
     </div>
   );
+};
 
+EditorResult.propTypes = {
+  activeResult: PropTypes.object,
+  loading: PropTypes.bool
 };
 
 export default EditorResult;

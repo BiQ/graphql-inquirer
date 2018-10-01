@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { RecursiveType } from 'UtilityPath/utility.jsx'; 
 
@@ -41,6 +42,14 @@ const EditorToolbar = (props) => {
       </div>
     </div>
   );
+};
+
+EditorToolbar.propTypes = {
+  activeOp: PropTypes.object,
+  paneMode: PropTypes.string,
+  paneModeCallback: PropTypes.func,
+  pickOutputFormat: PropTypes.func,
+  buildOperation: PropTypes.func
 };
 
 export default EditorToolbar;

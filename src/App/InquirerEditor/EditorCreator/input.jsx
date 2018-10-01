@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import {
   RecursiveType
@@ -39,6 +40,12 @@ const CreatorInput = (props) => {
       </form>
     </div>
   );
+};
+
+CreatorInput.propTypes = {
+  operationName: PropTypes.string,
+  onChange: PropTypes.func,
+  args: PropTypes.array
 };
 
 export default CreatorInput;

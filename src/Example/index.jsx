@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Inquirer from '../application.js';
+import Inquirer from '../application.jsx';
 
 const fetchFunc = (query) => {
   

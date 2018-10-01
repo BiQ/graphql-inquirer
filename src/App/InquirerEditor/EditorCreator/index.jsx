@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import CreatorInput from './input.jsx';
 import CreatorFieldset from './fieldset.jsx';
@@ -29,7 +30,14 @@ const EditorCreator = (props) => {
       </div>
     </div>
   );
+};
 
+EditorCreator.propTypes = {
+  name: PropTypes.string, // the operation name
+  args: PropTypes.array, // argument list
+  onInputChange: PropTypes.func, // callback for updating inputs
+  fields: PropTypes.array, // The list of fields
+  toggle: PropTypes.func // the toggle callback
 };
 
 export default EditorCreator;

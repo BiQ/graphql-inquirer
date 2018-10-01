@@ -1,6 +1,6 @@
 import React from 'react';
 
-const LoadSpinner = (props) => {
+const LoadSpinner = () => {
 
   return (
     <div className="ginq-load-spinner-wrapper">

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { 
   GetTypeName,
@@ -40,7 +41,7 @@ const EditorGenerator = (props) => {
         </div>
         { operation &&
           <div className="operation-result-gql">
-            <div className={("gql-panel"+(valid ? '' : ' invalid'))}>
+            <div className={('gql-panel'+(valid ? '' : ' invalid'))}>
               {qText}
             </div>
           </div>
@@ -48,10 +49,14 @@ const EditorGenerator = (props) => {
       </div>
     </div>
   );
-  
 };
 
-
+EditorGenerator.propTypes = {
+  operation: PropTypes.object,
+  operationType: PropTypes.string,
+  outputFormat: PropTypes.string,
+  valid: PropTypes.bool
+};
 
 export default EditorGenerator;
 
@@ -72,7 +77,7 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
 
   let singularType = singularTypeList[operationType] || {lower:'unknown', upper: 'Unknown'};
 
-  var qString = "";
+  var qString = '';
   var varObj = {};
   var varArray = [];
 
@@ -81,16 +86,16 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
 
   const qFields = (field, indent=0) => {
 
-    var fieldString = "";
+    var fieldString = '';
 
     if (field.name && field.include) {
 
       var args = field.args;
-      var argString = "";
+      var argString = '';
 
       if (args && Array.isArray(args)) {
 
-        args.map((d,i) => {
+        args.map((d) => {
           var argName = d.name;
           var argValue = d.value;
           var hasValue = (argValue && typeof(argValue) === 'string' && argValue != '');
@@ -112,13 +117,13 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
           if (hasValue) {
             var varName = argName;
 
-            var i = 0;
+            var ii = 0;
             while (varObj.hasOwnProperty(varName)) {
-              varName = varName+i;
-              i++;
+              varName = varName+ii;
+              ii++;
             }
 
-            var inlineValue = "$"+varName;
+            var inlineValue = '$'+varName;
             if (inline) {
               inlineValue = JSON.stringify(argValue);
             } else {
@@ -133,31 +138,31 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
               });
             }
 
-            if (argString !== "") argString += ", ";
+            if (argString !== '') argString += ', ';
             argString += `${argName}: ${inlineValue}`;
           }
-        })
+        });
       }
 
       let subFields = field.fields;
-      let subFieldString = "";
+      let subFieldString = '';
 
       if (subFields && Array.isArray(subFields) && subFields.length > 0) {
-        subFields.map((d, i) => {
+        subFields.map((d) => {
           let sfs = qFields(d, indent+1);
-          subFieldString += ((sfs && sfs != "") ? `${nChar}${sfs}` : "");
-        })
-        if (subFieldString !== "") subFieldString += nChar;
+          subFieldString += ((sfs && sfs != '') ? `${nChar}${sfs}` : '');
+        });
+        if (subFieldString !== '') subFieldString += nChar;
       }
       
 
       fieldString += field.name;
-      if (argString !== "") fieldString += `(${argString})`;
-      if (subFieldString !== "") fieldString += ` {${subFieldString+(tChar.repeat(indent))}}`;
+      if (argString !== '') fieldString += `(${argString})`;
+      if (subFieldString !== '') fieldString += ` {${subFieldString+(tChar.repeat(indent))}}`;
 
     }
 
-    return (fieldString != "" ? tChar.repeat(indent)+fieldString : "");
+    return (fieldString != '' ? tChar.repeat(indent)+fieldString : '');
 
   };
 
@@ -168,21 +173,21 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
     gotVars = true;
   }
 
-  let argTypeString = "";
+  let argTypeString = '';
   let argObject = {};
 
   
   if (gotVars) {
     let firstArg = true;
-    varArray.map((varInfo, i, a) => {
+    varArray.map((varInfo) => {
       if (!firstArg) argTypeString += ', ';
       else firstArg = false;
-      argTypeString += `\$${varInfo.name || 'error'}: ${(varInfo.type) || 'oops'}`;
+      argTypeString += `$${varInfo.name || 'error'}: ${(varInfo.type) || 'oops'}`;
       argObject[varInfo.name] = varInfo.value;
     });
   }
 
-  argTypeString = (argTypeString && argTypeString !== "") ? `(${argTypeString})` : '';
+  argTypeString = (argTypeString && argTypeString !== '') ? `(${argTypeString})` : '';
 
   let operationName = GetTypeName(query.type)+singularType.upper;
 
@@ -190,7 +195,7 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
   qString += recursedString;
   qString += nChar+'}';
 
-  let varString = gotVars ? JSON.stringify(argObject, null, tChar) : "";
+  let varString = gotVars ? JSON.stringify(argObject, null, tChar) : '';
   let whiteSpace = gotVars ? '\n\n' : '';
 
   if (requestBody) {

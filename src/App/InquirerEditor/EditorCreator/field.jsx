@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import CreatorFieldset from './fieldset.jsx';
 import { RecursiveType } from 'UtilityPath/utility.jsx';
@@ -27,11 +28,11 @@ const CreatorField = (props) => {
 
   return (
     <div className="creator-field-container">
-      <div className="creator-field" onClick={() => {toggle(field)}}>
+      <div className="creator-field" onClick={() => {toggle(field);}}>
         <div className="field-checkbox">
-          <div className={"field-checkmark"+(field.include ? ' checked' : '')}></div>
+          <div className={'field-checkmark'+(field.include ? ' checked' : '')}></div>
         </div>
-        <div className={"field-name"+requiredClass}>
+        <div className={'field-name'+requiredClass}>
           {name || 'ukendt'}
         </div>
         <div className="field-type">
@@ -48,7 +49,15 @@ const CreatorField = (props) => {
       }
     </div>
   );
+};
 
-}
+CreatorField.propTypes = {
+  field: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    type: PropTypes.object
+  }),
+  toggle: PropTypes.func
+};
 
 export default CreatorField;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const RecursiveType = (props) => {
   const {
@@ -11,8 +12,11 @@ const RecursiveType = (props) => {
                   : type.name;
     
   return (<span className={className}>{content}</span>);
+};
 
-}
+RecursiveType.propTypes = {
+  type: PropTypes.object
+};
 
 const RecursiveTypeString = (type) => {
 
@@ -23,18 +27,17 @@ const RecursiveTypeString = (type) => {
       case 'NON_NULL':
         return `${RecursiveTypeString(type.ofType)}!`;
       default:
-        return RecursiveTypeString(type.ofType)
+        return RecursiveTypeString(type.ofType);
     }
-  } else if (type.name && type.name != "") {
+  } else if (type.name && type.name != '') {
     return type.name;
   } else {
-    return "";
+    return '';
   }
 
-}
+};
 
 const GetTypeName = (type) => {
-
   if (type.name != null) {
     return type.name;
   } else if (type.ofType != null) {
@@ -42,20 +45,17 @@ const GetTypeName = (type) => {
   } else {
     return null;
   }
-
-}
+};
 
 const isList = (type) => {
-
-  if (type && type.kind && type.kind === "LIST") {
+  if (type && type.kind && type.kind === 'LIST') {
     return true;
   } else if (type.ofType) {
     return isList(type.ofType);
   } else {
     return false;
   }
-
-}
+};
 
 const isOfKind = (type, kind) => {
 
@@ -79,8 +79,7 @@ const isOfKind = (type, kind) => {
   } else {
     return false;
   }
-
-}
+};
 
 export { 
   RecursiveType,

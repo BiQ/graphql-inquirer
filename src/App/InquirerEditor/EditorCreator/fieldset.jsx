@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import CreatorField from './field.jsx';
 
 const CreatorFieldset = (props) => {
@@ -18,7 +18,11 @@ const CreatorFieldset = (props) => {
       }
     </div>
   );
+};
 
-}
+CreatorFieldset.propTypes = {
+  fields: PropTypes.array,
+  toggle: PropTypes.func
+};
 
 export default CreatorFieldset;

@@ -4,7 +4,7 @@ import {
   HashRouter
 } from 'react-router-dom';
 
-import Styles from './Styles/app.scss';
+import './Styles/app.scss';
 
 import LoadSpinner from './Utility/spinner.jsx';
 
@@ -64,7 +64,7 @@ class Inquirer extends React.Component {
         return (
           <div id="inquirer-body">
             <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} />
-            <Route path={`/:action/:name`} render={(rpProps) => {
+            <Route path={'/:action/:name'} render={(rpProps) => {
               return (
                 <div id="inquirer-content">
                   <InquirerEditor schema={schema} loading={loading} fetcher={self.state.fetcher} route={rpProps} />

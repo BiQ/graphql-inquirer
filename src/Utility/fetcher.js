@@ -1,7 +1,6 @@
 import fetch from 'isomorphic-fetch';
 
 import { introspectionQuery } from 'graphql';
-//let introspectionQuery = '{}';
 
 const fetchSchema = (req_url) => {
 
@@ -11,33 +10,22 @@ const fetchSchema = (req_url) => {
     body: JSON.stringify({ query: introspectionQuery }),
   };
 
-  let res_data = {};
-
   return fetch(req_url, req_opts)
           .then((response) => {
-            //console.log('response', response);
             if (response.ok) return response.json();
             throw new Error(response.status);
           }).then((result) => {
-            //console.log('got results', result);
             return result;
           }).catch((error) => {
-            //console.log('got an error', error);
             return { error: error };
-          })/*.finally(() => {
-            console.log('Finally!');
-            return res_data;
-            //ReactDOM.render(<GinqExample body={res_data} />, elm);
-          });*/
-
-
+          });
 };
 
 const getSchemaFromUrl = (url) => {
 
   return fetch(url).then((response) => {
     if (response.ok) return response.json();
-    throw new Error(response.status)
+    throw new Error(response.status);
   }).then((result) => {
     return result;
   }).catch((error) => {
@@ -46,16 +34,12 @@ const getSchemaFromUrl = (url) => {
 
 };
 
-
 const executeOperation = (fetcher, operation) => {
-  console.log(operation)
   if (fetcher && typeof fetcher === 'function') {
     return fetcher(operation)
             .then((result) => {
               if (!result || typeof result !== 'object') 
                 throw new Error('Result not of type \'object\'');
-
-              console.log(result);
 
               const { data } = result;
 
@@ -63,11 +47,9 @@ const executeOperation = (fetcher, operation) => {
                 throw new Error('Result did not have property data of type \'object\'', result);
 
               return result;
-            })
+            });
   } else throw new Error('Failed to execute operation', operation);
 };
-
-
 
 const getSchemaWithFetcher = (fetcher) => {
   if (fetcher && typeof fetcher === 'function') {
@@ -92,20 +74,16 @@ const getSchemaWithFetcher = (fetcher) => {
               throw new Error('Failed to fetch schema from resource', error);
             });
   } else throw new Error('Fetcher was not a function');
-}
-
-
+};
 
 const transformSchema = (schema) => {
-
-  console.log('schema', schema);
 
   const {
     queryType,
     mutationType,
     subscriptionType,
     types,
-    directives
+    //directives
   } = schema;
 
   let ts = { 

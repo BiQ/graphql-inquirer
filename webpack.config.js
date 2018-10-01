@@ -10,7 +10,7 @@ var config = {
   mode: 'development',
 
   entry: {
-    application: ['@babel/polyfill', './src/application.js'],
+    application: ['@babel/polyfill', './src/application.jsx'],
     example: './src/Example/index.jsx'
   },
 

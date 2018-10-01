@@ -1,6 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
-  Link,
   NavLink,
   Route
 } from 'react-router-dom';
@@ -25,7 +25,7 @@ const Sidebar = (props) => {
   } = sharedProps;
 
   return (
-    <Route path="/:action" children={() => {
+    <Route path="/:action?" render={() => {
       return (
         <div id="inquirer-sidebar">
           <SidebarSection title="Queries" path="/queries" items={queries} loading={loading} />
@@ -35,7 +35,11 @@ const Sidebar = (props) => {
       );
     }} />
   );
+};
 
+Sidebar.propTypes = {
+  loading: PropTypes.bool,
+  sharedProps: PropTypes.any
 };
 
 export default Sidebar;
@@ -67,6 +71,13 @@ const SidebarSection = (props) => {
 
 };
 
+SidebarSection.propTypes = {
+  title: PropTypes.string,
+  items: PropTypes.array,
+  path: PropTypes.string,
+  loading: PropTypes.bool
+};
+
 const SidebarItem = (props) => {
 
   const { item, path } = props;
@@ -84,5 +95,13 @@ const SidebarItem = (props) => {
       <div className="sidebar-item-description">{description}</div>
     </NavLink>
   );
+};
 
+SidebarItem.propTypes = {
+  item: PropTypes.shape({
+    name: PropTypes.string, 
+    type: PropTypes.object, 
+    description: PropTypes.string
+  }),
+  path: PropTypes.string
 };
