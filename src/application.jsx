@@ -1,7 +1,8 @@
 import React from 'react';
 import {
   Route,
-  HashRouter
+  HashRouter,
+  withRouter
 } from 'react-router-dom';
 
 import './Styles/app.scss';
@@ -13,6 +14,8 @@ import {
   transformSchema
 } from './Utility/fetcher.js';
 
+import { trimSlash } from './Utility/utility';
+
 import Sidebar from './App/sidebar.jsx';
 import InquirerEditor from 'AppPath/InquirerEditor';
 
@@ -23,7 +26,6 @@ class Inquirer extends React.Component {
     
     this.state = {
       fetcher: props.fetcher,
-      root_path: props.path || '/',
       loading: true,
       schema: null
     };
@@ -71,8 +73,7 @@ class Inquirer extends React.Component {
         return (
           <div id="inquirer-body">
             <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} rootPath={self.state.root_path} />
-            <Route path={`${url[url.length-1] === '/' ? url : url+'/'}:action/:name`} render={(rpProps) => {
-              console.log(rpProps);
+            <Route path={`${trimSlash(url)}/:action/:name`} render={(rpProps) => {
               return (
                 <div id="inquirer-content">
                   <InquirerEditor schema={schema} loading={loading} fetcher={self.state.fetcher} route={rpProps} />
@@ -84,24 +85,32 @@ class Inquirer extends React.Component {
       }
     };
 
-    return (
-      <HashRouter>
-        <Route path="/" render={(routeProps) => {
-          return(
-          <div id="inquirer-app">
-            <div id="inquirer-header">GraphQL Inquirer</div>
-            
-            <Markup routeProps={routeProps} />
+    console.log(self.props);
 
-          </div>);
-        }} />
-      </HashRouter>
+    return (
+      <Route path={self.props.match.url} render={(routeProps) => {
+        return(
+        <div id="inquirer-app">
+          <div id="inquirer-header">GraphQL Inquirer</div>
+          
+          <Markup routeProps={routeProps} />
+
+        </div>);
+      }} />
     );
   }
 
 }
 
-export default Inquirer;
+const InquirerWrapped = (props) => {
+
+  let WR = withRouter(Inquirer);
+
+  return props.isInARouter ? <WR {...props} /> : <HashRouter><WR {...props} /></HashRouter>;
+
+};
+
+export default InquirerWrapped;
 
 /*
 APPLICATION SHAPE

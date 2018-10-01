@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { HashRouter, Route } from 'react-router-dom';
 
 import Inquirer from '../application.jsx';
 
@@ -18,6 +19,18 @@ const fetchFunc = (query) => {
 
 };
 
+// An example using the router within the Inquirer
+const App = <Inquirer fetcher={fetchFunc} />;
+
+// An example of putting Inquirer inside an existing router
+const RoutedApp = (
+  <HashRouter>
+    <Route path="/stuff/" component={() =>
+      <Inquirer fetcher={fetchFunc} isInARouter />
+    } />
+  </HashRouter>
+);
+
 window.onload = function(){
-  ReactDOM.render(<Inquirer fetcher={fetchFunc} />, document.getElementById('stage'));
+  ReactDOM.render(RoutedApp, document.getElementById('stage'));
 };

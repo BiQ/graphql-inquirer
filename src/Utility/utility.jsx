@@ -82,6 +82,7 @@ const isOfKind = (type, kind) => {
 };
 
 const trimSlash = (str) => {
+  if (!str || str === '') return '';
   while (str[str.length-1]==='/') str = str.substring(0, str.length-1);
   return str;
 };
