@@ -1,12 +1,16 @@
+/* global __dirname */
 'use strict';
 
-var webpack = require('webpack');
+require('webpack');
+require('@babel/polyfill');
 var path = require('path');
 
 var config = {
 
+  mode: 'development',
+
   entry: {
-    application: ['babel-polyfill', './src/application.js'],
+    application: ['@babel/polyfill', './src/application.js'],
     example: './src/Example/index.jsx'
   },
 
@@ -19,23 +23,25 @@ var config = {
   },
 
   resolve: {
-    extensions: ['.js','.jsx','.sass','.scss'],
+    extensions: ['.mjs', '.js','.jsx','.sass','.scss'],
+    
     alias: {
       AppPath: path.resolve(__dirname, 'src/App/'),
       UtilityPath: path.resolve(__dirname, 'src/Utility/'),
       StylePath: path.resolve(__dirname, 'src/Styles/')
     }
+    
   },
 
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.jsx?$/,
-        exclude: /node_modules/,
+        exclude: [/node_modules/],
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['env', 'react']
+            presets: ['@babel/preset-env', '@babel/preset-react']
           }
         }
       },
@@ -66,10 +72,8 @@ var config = {
   devServer: {
     contentBase: path.join(__dirname, '/example'),
     publicPath: '/bin/',
-    port: 9090,
-    //historyApiFallback: true
+    port: 9090
   }
-
-}
+};
 
 module.exports = config;

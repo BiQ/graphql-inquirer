@@ -1,13 +1,14 @@
 import fetch from 'isomorphic-fetch';
 
-import * as GraphQL from 'graphql';
+import { introspectionQuery } from 'graphql';
+//let introspectionQuery = '{}';
 
 const fetchSchema = (req_url) => {
 
   let req_opts = {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ query: GraphQL.introspectionQuery }),
+    body: JSON.stringify({ query: introspectionQuery }),
   };
 
   let res_data = {};
@@ -70,7 +71,7 @@ const executeOperation = (fetcher, operation) => {
 
 const getSchemaWithFetcher = (fetcher) => {
   if (fetcher && typeof fetcher === 'function') {
-    return fetcher({ query: GraphQL.introspectionQuery })
+    return fetcher({ query: introspectionQuery })
             .then((result) => {
               if (!result || typeof result !== 'object') 
                 throw new Error('Result not of type \'object\'');
@@ -131,12 +132,10 @@ const transformSchema = (schema) => {
 
 };
 
-
-module.exports = {
+export {
   fetchSchema,
   getSchemaFromUrl,
   getSchemaWithFetcher,
   transformSchema,
   executeOperation
 };
-
