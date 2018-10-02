@@ -72,7 +72,7 @@ class Inquirer extends React.Component {
 
         return (
           <div id="inquirer-body">
-            <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} rootPath={self.state.root_path} />
+            <Sidebar sharedProps={sharedProps} {...markupProps.routeProps} />
             <Route path={`${trimSlash(url)}/:action/:name`} render={(rpProps) => {
               return (
                 <div id="inquirer-content">
