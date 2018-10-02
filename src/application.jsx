@@ -85,10 +85,8 @@ class Inquirer extends React.Component {
       }
     };
 
-    console.log(self.props);
-
     return (
-      <Route path={self.props.match.url} render={(routeProps) => {
+      <Route path={`${self.props.match.url}`} component={(routeProps) => {
         return(
         <div id="inquirer-app">
           <div id="inquirer-header">GraphQL Inquirer</div>
@@ -104,9 +102,11 @@ class Inquirer extends React.Component {
 
 const InquirerWrapped = (props) => {
 
-  let WR = withRouter(Inquirer);
+  let InquirerWithRouter = withRouter(Inquirer);
 
-  return props.isInARouter ? <WR {...props} /> : <HashRouter><WR {...props} /></HashRouter>;
+  return props.isInARouter 
+          ? <InquirerWithRouter {...props} /> 
+          : <HashRouter><InquirerWithRouter {...props} /></HashRouter>;
 
 };
 
