@@ -2,7 +2,7 @@
 'use strict';
 
 require('webpack');
-require('@babel/polyfill');
+require('@babel/polyfill/noConflict');
 var path = require('path');
 
 var config = {
@@ -10,7 +10,7 @@ var config = {
   mode: 'development',
 
   entry: {
-    application: ['@babel/polyfill', './src/application.jsx'],
+    application: ['@babel/polyfill/noConflict', './src/application.jsx'],
     example: './src/Example/index.jsx'
   },
 

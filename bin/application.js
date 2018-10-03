@@ -96,15 +96,26 @@ return /******/ (function(modules) { // webpackBootstrap
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/@babel/polyfill/lib/index.js":
-/*!***************************************************!*\
-  !*** ./node_modules/@babel/polyfill/lib/index.js ***!
-  \***************************************************/
+/***/ "./node_modules/@babel/polyfill/lib/noConflict.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@babel/polyfill/lib/noConflict.js ***!
+  \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(global) {\n\n__webpack_require__(/*! core-js/es6 */ \"./node_modules/core-js/es6/index.js\");\n\n__webpack_require__(/*! core-js/fn/array/includes */ \"./node_modules/core-js/fn/array/includes.js\");\n\n__webpack_require__(/*! core-js/fn/string/pad-start */ \"./node_modules/core-js/fn/string/pad-start.js\");\n\n__webpack_require__(/*! core-js/fn/string/pad-end */ \"./node_modules/core-js/fn/string/pad-end.js\");\n\n__webpack_require__(/*! core-js/fn/symbol/async-iterator */ \"./node_modules/core-js/fn/symbol/async-iterator.js\");\n\n__webpack_require__(/*! core-js/fn/object/get-own-property-descriptors */ \"./node_modules/core-js/fn/object/get-own-property-descriptors.js\");\n\n__webpack_require__(/*! core-js/fn/object/values */ \"./node_modules/core-js/fn/object/values.js\");\n\n__webpack_require__(/*! core-js/fn/object/entries */ \"./node_modules/core-js/fn/object/entries.js\");\n\n__webpack_require__(/*! core-js/fn/promise/finally */ \"./node_modules/core-js/fn/promise/finally.js\");\n\n__webpack_require__(/*! core-js/web */ \"./node_modules/core-js/web/index.js\");\n\n__webpack_require__(/*! regenerator-runtime/runtime */ \"./node_modules/regenerator-runtime/runtime.js\");\n\nif (global._babelPolyfill && typeof console !== \"undefined\" && console.warn) {\n  console.warn(\"@babel/polyfill is loaded more than once on this page. This is probably not desirable/intended \" + \"and may have consequences if different versions of the polyfills are applied sequentially. \" + \"If you do need to load the polyfill more than once, use @babel/polyfill/noConflict \" + \"instead to bypass the warning.\");\n}\n\nglobal._babelPolyfill = true;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../webpack/buildin/global.js */ \"./node_modules/webpack/buildin/global.js\")))\n\n//# sourceURL=webpack://GraphQLInquirer/./node_modules/@babel/polyfill/lib/index.js?");
+eval("\n\n__webpack_require__(/*! core-js/es6 */ \"./node_modules/core-js/es6/index.js\");\n\n__webpack_require__(/*! core-js/fn/array/includes */ \"./node_modules/core-js/fn/array/includes.js\");\n\n__webpack_require__(/*! core-js/fn/string/pad-start */ \"./node_modules/core-js/fn/string/pad-start.js\");\n\n__webpack_require__(/*! core-js/fn/string/pad-end */ \"./node_modules/core-js/fn/string/pad-end.js\");\n\n__webpack_require__(/*! core-js/fn/symbol/async-iterator */ \"./node_modules/core-js/fn/symbol/async-iterator.js\");\n\n__webpack_require__(/*! core-js/fn/object/get-own-property-descriptors */ \"./node_modules/core-js/fn/object/get-own-property-descriptors.js\");\n\n__webpack_require__(/*! core-js/fn/object/values */ \"./node_modules/core-js/fn/object/values.js\");\n\n__webpack_require__(/*! core-js/fn/object/entries */ \"./node_modules/core-js/fn/object/entries.js\");\n\n__webpack_require__(/*! core-js/fn/promise/finally */ \"./node_modules/core-js/fn/promise/finally.js\");\n\n__webpack_require__(/*! core-js/web */ \"./node_modules/core-js/web/index.js\");\n\n__webpack_require__(/*! regenerator-runtime/runtime */ \"./node_modules/regenerator-runtime/runtime.js\");\n\n//# sourceURL=webpack://GraphQLInquirer/./node_modules/@babel/polyfill/lib/noConflict.js?");
+
+/***/ }),
+
+/***/ "./node_modules/@babel/polyfill/noConflict.js":
+/*!****************************************************!*\
+  !*** ./node_modules/@babel/polyfill/noConflict.js ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("__webpack_require__(/*! ./lib/noConflict */ \"./node_modules/@babel/polyfill/lib/noConflict.js\");\n\n\n//# sourceURL=webpack://GraphQLInquirer/./node_modules/@babel/polyfill/noConflict.js?");
 
 /***/ }),
 
@@ -5657,17 +5668,6 @@ eval("module.exports = function() {\r\n\tthrow new Error(\"define cannot be used
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("var g;\r\n\r\n// This works in non-strict mode\r\ng = (function() {\r\n\treturn this;\r\n})();\r\n\r\ntry {\r\n\t// This works if eval is allowed (see CSP)\r\n\tg = g || Function(\"return this\")() || (1, eval)(\"this\");\r\n} catch (e) {\r\n\t// This works if the window reference is available\r\n\tif (typeof window === \"object\") g = window;\r\n}\r\n\r\n// g can still be undefined, but nothing to do about it...\r\n// We return undefined, instead of nothing here, so it's\r\n// easier to handle this case. if(!global) { ...}\r\n\r\nmodule.exports = g;\r\n\n\n//# sourceURL=webpack://GraphQLInquirer/(webpack)/buildin/global.js?");
-
-/***/ }),
-
 /***/ "./node_modules/whatwg-fetch/fetch.js":
 /*!********************************************!*\
   !*** ./node_modules/whatwg-fetch/fetch.js ***!
@@ -5848,13 +5848,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ }),
 
 /***/ 0:
-/*!***************************************************!*\
-  !*** multi @babel/polyfill ./src/application.jsx ***!
-  \***************************************************/
+/*!**************************************************************!*\
+  !*** multi @babel/polyfill/noConflict ./src/application.jsx ***!
+  \**************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! @babel/polyfill */\"./node_modules/@babel/polyfill/lib/index.js\");\nmodule.exports = __webpack_require__(/*! ./src/application.jsx */\"./src/application.jsx\");\n\n\n//# sourceURL=webpack://GraphQLInquirer/multi_@babel/polyfill_./src/application.jsx?");
+eval("__webpack_require__(/*! @babel/polyfill/noConflict */\"./node_modules/@babel/polyfill/noConflict.js\");\nmodule.exports = __webpack_require__(/*! ./src/application.jsx */\"./src/application.jsx\");\n\n\n//# sourceURL=webpack://GraphQLInquirer/multi_@babel/polyfill/noConflict_./src/application.jsx?");
 
 /***/ })
 
