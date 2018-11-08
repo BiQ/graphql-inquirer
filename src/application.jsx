@@ -54,13 +54,15 @@ class Inquirer extends React.Component {
           </div>
         );
       } else {
-        const { types, queries, mutations, subscriptions } = schema;
+        const { types, queries/*, mutations, subscriptions*/ } = schema;
 
         let sharedProps = {
           types, 
-          queries, 
+          queries,
+          /*
           mutations,
           subscriptions,
+          */
           loading: self.state.loading
         };
 
