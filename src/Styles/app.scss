@@ -71,7 +71,8 @@ $codeFontFamily: Menlo,Monaco,Consolas,Courier New,monospace;
       //border-right: 1px solid grey;
       box-shadow: 1px 0 2px 0 grey;
 
-      overflow-x: scroll;
+      //overflow-x: scroll;
+      overflow: auto;
       
       width: $sidebar-width;
 
