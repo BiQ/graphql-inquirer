@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Clipboard from 'react-clipboard.js';
 
 import LoadSpinner from 'UtilityPath/spinner.jsx';
 
@@ -19,7 +20,12 @@ const EditorResult = (props) => {
 
   return (
     <div id="editor-result">
-      <div className="result-data">
+      <div className="copy-button">
+        <Clipboard data-clipboard-target="#query-result-data">
+          Copy
+        </Clipboard>
+      </div>
+      <div className="result-data" id="query-result-data">
         {markup}
       </div>
     </div>

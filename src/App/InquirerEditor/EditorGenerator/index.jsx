@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Clipboard from 'react-clipboard.js';
 
 import { 
   GetTypeName,
@@ -38,10 +39,13 @@ const EditorGenerator = (props) => {
     <div id="operation-generated">
       <div className="generated-content">
         <div className="copy-button">
+          <Clipboard data-clipboard-target="#operation-result">
+            Copy
+          </Clipboard>
         </div>
         { operation &&
           <div className="operation-result-gql">
-            <div className={('gql-panel'+(valid ? '' : ' invalid'))}>
+            <div id="operation-result" className={('gql-panel'+(valid ? '' : ' invalid'))}>
               {qText}
             </div>
           </div>
