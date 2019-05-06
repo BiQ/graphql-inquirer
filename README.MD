@@ -2,9 +2,6 @@
 
 A visual data browser for GraphQL APIs.
 
-[DEMO](https://biq.github.io) pointing to Apollos example API mentioned here:  
-https://dev-blog.apollodata.com/4-simple-ways-to-call-a-graphql-api-a6807bcdb355
-
 **Disclaimer:**  
 This project is still under development and may not perform as expected. Use at your own risk.
 
@@ -38,8 +35,25 @@ import ReactDOM from 'react-dom'
 
 import GraphQLInquirer from 'graphql-inquirer';
 
-ReactDOM.render(<GraphQLInquirer fetcher={MyFetcher} />, document.getElementById('my-root-component'));
+ReactDOM.render(<GraphQLInquirer fetcher={MyFetcher} />, document.getElementById('my-root-component'))
 ```
+
+## Using with an existing React Router
+
+If you already have a React Router set up in yout project, just add `isInARouter` as a prop:
+
+```javascript
+const RoutedApp = (
+  <HashRouter>
+    <Route path="/stuff/" component={() =>
+      <Inquirer fetcher={MyFetcher} isInARouter />
+    } />
+  </HashRouter>
+)
+
+ReactDOM.render(RoutedApp, document.getElementById('my-root-component'))
+```
+
 
 ## Development
 
