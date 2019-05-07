@@ -7,7 +7,8 @@
     "build": "webpack --config webpack.config.js --verbose --display-reasons",
     "watch": "webpack --config webpack.config.js --watch",
     "serve": "webpack-dev-server --config webpack.config.js --watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preversion": "npm run build"
   },
   "repository": {
     "type": "git",
