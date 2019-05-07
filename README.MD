@@ -11,6 +11,9 @@ Install via NPM
 
 `$ npm install graphql-inquirer`
 
+**Note**
+You must `npm install --save react-router-dom@5.0.0` in the parent project, or manually in this project if you are running the example. This is because `react-router-dom` needs to be a peer dependency to not conflict with the parents installation when using in a routed app. 
+
 Set up a fetcher function. It must point to a valid introspectable GraphQL API, take a query as input and return a Promise.
 
 ```javascript
