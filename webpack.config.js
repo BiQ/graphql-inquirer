@@ -34,11 +34,13 @@ var config = {
     }
 
   },
-/*
+
   externals: {
     'react-router-dom': 'react-router-dom'
   },
-*/
+
+  devtool: 'source-map',
+
   module: {
     rules: [
       {

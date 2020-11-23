@@ -4,7 +4,7 @@
   "description": "A visual browser for GraphQL APIs",
   "main": "bin/application.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js --verbose --display-reasons",
+    "build": "webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch",
     "serve": "webpack serve --config webpack.config.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -43,7 +43,6 @@
     "isomorphic-fetch": "^3.0.0",
     "prop-types": "^15.7.2",
     "react-clipboard.js": "^2.0.16",
-    "react-router-dom": "^5.2.0",
     "react-split-pane": "^0.1.92"
   },
   "peerDependencies": {
