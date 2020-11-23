@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --config webpack.config.js --verbose --display-reasons",
     "watch": "webpack --config webpack.config.js --watch",
-    "serve": "webpack-dev-server --config webpack.config.js --watch",
+    "serve": "webpack serve --config webpack.config.js --watch",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preversion": "npm run build"
   },
@@ -21,29 +21,30 @@
   },
   "homepage": "https://github.com/BiQ/graphql-inquirer#readme",
   "devDependencies": {
-    "@babel/core": "^7.4.4",
-    "@babel/preset-env": "^7.4.4",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.5",
-    "css-loader": "^2.1.1",
-    "file-loader": "^3.0.1",
-    "node-sass": "^4.12.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "webpack": "^4.30.0",
-    "webpack-cli": "^3.3.2",
-    "webpack-dev-server": "^3.3.1"
+    "@babel/core": "^7.12.7",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "babel-loader": "^8.2.1",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "node-sass": "^5.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.6.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
-    "graphql": "^14.2.1",
-    "graphql-tag": "^2.10.1",
-    "isomorphic-fetch": "^2.2.1",
+    "@babel/polyfill": "^7.12.1",
+    "graphql": "^15.4.0",
+    "graphql-tag": "^2.11.0",
+    "isomorphic-fetch": "^3.0.0",
     "prop-types": "^15.7.2",
-    "react-clipboard.js": "^2.0.7",
-    "react-split-pane": "^0.1.87"
+    "react-clipboard.js": "^2.0.16",
+    "react-router-dom": "^5.2.0",
+    "react-split-pane": "^0.1.92"
   },
   "peerDependencies": {
     "react-router-dom": "^5.0.0"

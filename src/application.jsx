@@ -23,7 +23,7 @@ class Inquirer extends React.Component {
 
   constructor(props) {
     super(props);
-    
+
     this.state = {
       fetcher: props.fetcher,
       loading: true,
@@ -57,7 +57,7 @@ class Inquirer extends React.Component {
         const { types, queries/*, mutations, subscriptions*/ } = schema;
 
         let sharedProps = {
-          types, 
+          types,
           queries,
           /*
           mutations,
@@ -92,7 +92,7 @@ class Inquirer extends React.Component {
         return(
         <div id="inquirer-app">
           <div id="inquirer-header">GraphQL Inquirer</div>
-          
+
           <Markup routeProps={routeProps} />
 
         </div>);
@@ -106,8 +106,8 @@ const InquirerWrapped = (props) => {
 
   let InquirerWithRouter = withRouter(Inquirer);
 
-  return props.isInARouter 
-          ? <InquirerWithRouter {...props} /> 
+  return props.isInARouter
+          ? <InquirerWithRouter {...props} />
           : <HashRouter><InquirerWithRouter {...props} /></HashRouter>;
 
 };

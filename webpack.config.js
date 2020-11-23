@@ -24,21 +24,21 @@ var config = {
 
   resolve: {
     extensions: ['.mjs', '.js','.jsx','.sass','.scss'],
-    
+
     alias: {
       AppPath: path.resolve(__dirname, 'src/App/'),
       UtilityPath: path.resolve(__dirname, 'src/Utility/'),
       StylePath: path.resolve(__dirname, 'src/Styles/'),
 
-      'react-router-dom': path.resolve(path.join(__dirname, './node_modules/react-router-dom'))
+      'react-router-dom': path.resolve(__dirname, './node_modules/react-router-dom')
     }
-    
-  },
 
+  },
+/*
   externals: {
     'react-router-dom': 'react-router-dom'
   },
-
+*/
   module: {
     rules: [
       {
