@@ -8,6 +8,7 @@ var path = require('path');
 var config = {
 
   mode: 'development',
+  target: ['web', 'es5'],
 
   entry: {
     application: ['@babel/polyfill/noConflict', './src/application.jsx'],
