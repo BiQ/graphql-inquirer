@@ -30,14 +30,8 @@ var config = {
       AppPath: path.resolve(__dirname, 'src/App/'),
       UtilityPath: path.resolve(__dirname, 'src/Utility/'),
       StylePath: path.resolve(__dirname, 'src/Styles/'),
-
-      'react-router-dom': path.resolve(__dirname, './node_modules/react-router-dom')
     }
 
-  },
-
-  externals: {
-    'react-router-dom': 'react-router-dom'
   },
 
   devtool: 'source-map',

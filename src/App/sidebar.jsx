@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import {
   NavLink,
   Route,
-  withRouter
 } from 'react-router-dom';
+import {
+  withRouter
+} from 'react-router';
 
 import {
   RecursiveType,
@@ -109,8 +111,8 @@ const SidebarItem = (props) => {
 
 SidebarItem.propTypes = {
   item: PropTypes.shape({
-    name: PropTypes.string, 
-    type: PropTypes.object, 
+    name: PropTypes.string,
+    type: PropTypes.object,
     description: PropTypes.string
   }),
   path: PropTypes.string
