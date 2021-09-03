@@ -5,9 +5,11 @@ require('webpack');
 require('@babel/polyfill/noConflict');
 var path = require('path');
 
+const env = process.env.NODE_ENV || 'development';
+
 var config = {
 
-  mode: 'development',
+  mode: env === 'development' ? 'development' : 'production',
   target: ['web', 'es5'],
 
   entry: {
