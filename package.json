@@ -1,13 +1,13 @@
 {
   "name": "graphql-inquirer",
-  "version": "0.7.1",
+  "version": "0.6.2",
   "description": "A visual browser for GraphQL APIs",
   "main": "bin/application.js",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "build": "NODE_ENV=production webpack --config webpack.config.js",
     "watch": "webpack --config webpack.config.js --watch",
     "serve": "webpack serve --config webpack.config.js",
-    "start": "npm run watch & live-server",
+    "start": "npm run watch & live-server --entry-file=example/index.html --no-browser",
     "test": "echo \"Error: no test specified\" && exit 1",
     "preversion": "npm run build"
   },
