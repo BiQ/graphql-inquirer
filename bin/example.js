@@ -2518,17 +2518,17 @@ module.exports.TinyEmitter = E;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/sourceMaps.js */ "./node_modules/css-loader/dist/runtime/sourceMaps.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
 /* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
 // Imports
 
 
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_sourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));
 ___CSS_LOADER_EXPORT___.push([module.id, "@import url(https://fonts.googleapis.com/css?family=Lato:400,700);"]);
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".ginq-load-spinner-wrapper {\n  width: 24px;\n  height: 24px; }\n  .ginq-load-spinner-wrapper .ginq-load-spinner {\n    width: 24px;\n    height: 24px;\n    border: 5px solid lightsteelblue;\n    border-right-color: transparent;\n    border-left-color: transparent;\n    border-radius: 50%;\n    box-sizing: border-box;\n    animation: 500ms linear 0s infinite ginq-load-spinner-anim; }\n\n@keyframes ginq-load-spinner-anim {\n  from {\n    transform: rotate(0deg); }\n  to {\n    transform: rotate(360deg); } }\n\n.SplitPane .Resizer {\n  background-color: gainsboro; }\n  .SplitPane .Resizer.vertical {\n    width: 5px;\n    min-width: 5px;\n    border-left: 1px solid lightgrey;\n    border-right: 1px solid lightgrey;\n    cursor: col-resize; }\n  .SplitPane .Resizer.horizontal {\n    height: 5px;\n    min-height: 5px;\n    border-top: 1px solid lightgrey;\n    border-bottom: 1px solid lightgrey;\n    cursor: row-resize; }\n\n.SplitPane .Pane {\n  overflow: hidden; }\n\n#inquirer-app {\n  position: fixed;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  font-family: \"Lato\", sans-serif; }\n  #inquirer-app #inquirer-header {\n    position: absolute;\n    top: 0px;\n    right: 0px;\n    left: 0px;\n    background-color: #005172;\n    box-shadow: 0 1px 2px 0 grey;\n    padding: 0px 10px;\n    color: white;\n    height: 40px;\n    line-height: 40px;\n    vertical-align: middle;\n    z-index: 1001; }\n  #inquirer-app #inquirer-body {\n    position: absolute;\n    top: 40px;\n    right: 0px;\n    bottom: 0px;\n    left: 0px; }\n    #inquirer-app #inquirer-body #inquirer-loader {\n      width: 100%;\n      padding-top: 50px;\n      text-align: center; }\n      #inquirer-app #inquirer-body #inquirer-loader > div {\n        display: inline-block; }\n    #inquirer-app #inquirer-body #inquirer-sidebar {\n      position: absolute;\n      top: 0px;\n      bottom: 0px;\n      left: 0px;\n      box-shadow: 1px 0 2px 0 grey;\n      overflow: auto;\n      width: 250px;\n      z-index: 1000; }\n      #inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-section-title {\n        font-size: 16px;\n        font-weight: bold;\n        padding: 5px 10px;\n        border: 1px solid gainsboro;\n        border-left: none;\n        border-right: none; }\n      #inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item {\n        padding: 10px 10px;\n        display: block;\n        text-decoration: none;\n        font-size: 12px;\n        font-weight: bold;\n        font-family: Menlo, Monaco, Consolas, Courier New, monospace;\n        color: black; }\n        #inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item .sidebar-item-name {\n          color: #0066cc; }\n        #inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item .sidebar-item-type {\n          margin: 5px 0;\n          padding-left: 10px;\n          color: #e69500; }\n        #inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item .sidebar-item-description {\n          font-size: 10px;\n          font-weight: normal; }\n        #inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item:not(:last-of-type) {\n          border-bottom: 1px solid gainsboro; }\n        #inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item.active {\n          background-color: gainsboro; }\n    #inquirer-app #inquirer-body #inquirer-content {\n      position: absolute;\n      top: 0px;\n      right: 0px;\n      bottom: 0px;\n      left: 250px; }\n      #inquirer-app #inquirer-body #inquirer-content #editor-container {\n        position: absolute;\n        width: 100%;\n        height: 100%;\n        padding-top: 60px;\n        box-sizing: border-box; }\n        #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar {\n          position: absolute;\n          background-color: whitesmoke;\n          border-bottom: 1px solid grey;\n          box-shadow: 0px 1px 2px 0px grey;\n          z-index: 999;\n          position: absolute;\n          top: 0px;\n          left: 0px;\n          right: 0px;\n          padding: 0px 20px;\n          font-family: Menlo, Monaco, Consolas, Courier New, monospace;\n          height: 60px;\n          line-height: 60px; }\n          #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar * {\n            vertical-align: middle; }\n          #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar {\n            height: 100%;\n            line-height: 60px;\n            display: flex;\n            justify-content: space-between;\n            align-items: center; }\n            #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .action-header {\n              font-size: 18px;\n              display: inline-block;\n              line-height: 1em; }\n              #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .action-header div {\n                display: inline-block; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .action-header div.action-name {\n                  color: #0066cc; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .action-header div.action-type {\n                  color: #e69500;\n                  margin-left: 10px; }\n              #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .action-header p {\n                font-size: 12px;\n                margin: 0px; }\n            #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .editor-controls {\n              text-align: right;\n              display: inline-block;\n              line-height: 1em; }\n              #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .editor-controls .editor-control-picker {\n                display: inline-block;\n                margin-right: 30px; }\n              #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .editor-controls button {\n                padding: 8px 16px;\n                border: 1px solid grey;\n                background-color: whitesmoke;\n                border-radius: 4px; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .editor-controls button:disabled {\n                  background-color: whitesmoke;\n                  border-color: gainsboro;\n                  color: gainsboro; }\n        #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes {\n          position: relative;\n          width: 100%;\n          height: 100%; }\n          #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main {\n            max-width: 800px;\n            margin: 0px auto;\n            padding: 10px;\n            font-family: Menlo, Monaco, Consolas, Courier New, monospace;\n            font-size: 14px;\n            position: absolute;\n            top: 0;\n            right: 0;\n            bottom: 0;\n            left: 0;\n            overflow: auto; }\n            #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta {\n              border: 1px solid lightgrey;\n              border-radius: 4px;\n              margin-bottom: 10px; }\n              #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input {\n                padding: 5px 10px; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form::before {\n                  content: \"Input: {\"; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form::after {\n                  content: \"}\"; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table {\n                  margin-left: 20px;\n                  border-collapse: separate;\n                  border-spacing: 5px; }\n                  #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field .input-field-name {\n                    color: #aa09aa; }\n                    #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field .input-field-name::after {\n                      content: \": \"; }\n                  #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field input {\n                    width: 100%;\n                    border: 1px solid #0066cc;\n                    border-radius: 4px;\n                    box-sizing: border-box; }\n                  #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field .input-field-type::before {\n                    content: \" (\"; }\n                  #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field .input-field-type::after {\n                    content: \")\"; }\n                  #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field .input-field-type .type-name {\n                    color: #e69500; }\n              #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-controls {\n                text-align: right; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-controls button {\n                  padding: 8px 16px;\n                  border: 1px solid grey;\n                  background-color: whitesmoke;\n                  border-radius: 4px; }\n                  #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-controls button:disabled {\n                    background-color: whitesmoke;\n                    border-color: gainsboro;\n                    color: gainsboro; }\n            #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body {\n              padding: 10px;\n              border: 1px solid lightgrey;\n              border-radius: 4px; }\n              #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body * {\n                box-sizing: border-box; }\n              #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field {\n                float: none;\n                clear: both;\n                height: 1.5em;\n                line-height: 1.5em;\n                margin: 2px 0px;\n                border-radius: 2px;\n                overflow: hidden;\n                cursor: pointer; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field:hover {\n                  background-color: gainsboro; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-checkbox {\n                  width: 1.5em;\n                  height: 1.5em;\n                  padding: 7px; }\n                  #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-checkbox .field-checkmark {\n                    width: 100%;\n                    height: 100%;\n                    border: 1px solid grey;\n                    border-radius: 50%; }\n                    #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-checkbox .field-checkmark.checked {\n                      background-color: grey; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-name {\n                  color: #0066cc; }\n                  #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-name.needed {\n                    border-bottom: 1px dashed red; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-type {\n                  margin-left: 5px; }\n                  #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-type .type-name {\n                    color: #e69500; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-description {\n                  margin-left: 5px;\n                  font-size: 12px;\n                  color: grey;\n                  overflow: hidden; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field > div {\n                  display: block;\n                  margin: 0px;\n                  padding: 0px;\n                  height: 20px;\n                  float: left; }\n              #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .sub-fields {\n                margin-left: 30px;\n                display: block;\n                float: none;\n                clear: both; }\n          #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated {\n            position: absolute;\n            top: 0;\n            right: 0;\n            bottom: 0;\n            left: 0;\n            float: left;\n            padding: 0px;\n            margin: 0px;\n            overflow: hidden;\n            font-family: Menlo, Monaco, Consolas, Courier New, monospace; }\n            #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated .generated-content {\n              position: relative;\n              height: 100%;\n              padding: 0px;\n              margin: 0px;\n              overflow: hidden; }\n              #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated .generated-content .operation-result-gql {\n                width: 100%;\n                height: 100%;\n                padding: 0px;\n                margin: 0px;\n                overflow: hidden;\n                display: block;\n                float: left;\n                height: 100%;\n                padding-right: 2px; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated .generated-content .operation-result-gql > div {\n                  white-space: pre;\n                  display: block;\n                  height: 100%; }\n                #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated .generated-content .operation-result-gql .gql-panel {\n                  padding: 10px;\n                  overflow: auto; }\n                  #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated .generated-content .operation-result-gql .gql-panel.invalid {\n                    color: lightgrey; }\n          #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes .copy-button {\n            position: absolute;\n            top: 10px;\n            right: 25px; }\n            #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes .copy-button button {\n              padding: 8px 16px;\n              border: 1px solid grey;\n              background-color: whitesmoke;\n              border-radius: 4px;\n              line-height: 1em; }\n          #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #editor-result {\n            position: absolute;\n            top: 0;\n            right: 0;\n            bottom: 0;\n            left: 0;\n            float: left;\n            padding: 0px;\n            margin: 0px;\n            overflow: hidden;\n            font-family: Menlo, Monaco, Consolas, Courier New, monospace; }\n            #inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #editor-result .result-data {\n              width: 100%;\n              height: 100%;\n              padding: 10px;\n              overflow: auto;\n              white-space: pre; }\n  #inquirer-app .NON_NULL::after {\n    content: \"!\";\n    color: black; }\n  #inquirer-app .LIST::before {\n    content: \"[\";\n    color: black; }\n  #inquirer-app .LIST::after {\n    content: \"]\";\n    color: black; }\n", "",{"version":3,"sources":["webpack://./src/Styles/_utility.scss","webpack://./src/Styles/_split_pane.scss","webpack://./src/Styles/app.scss","webpack://./src/Styles/_sidebar.scss","webpack://./src/Styles/_content.scss","webpack://./src/Styles/_creator_main.scss"],"names":[],"mappings":"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","sourcesContent":[".ginq-load-spinner-wrapper {\n\n  width: 24px;\n  height: 24px;\n\n  .ginq-load-spinner {\n    width: 24px;\n    height: 24px;\n\n    border: 5px solid lightsteelblue;\n    \n    border-right-color: transparent;\n    border-left-color: transparent;\n\n    border-radius: 50%;\n\n    box-sizing: border-box;\n\n    @keyframes ginq-load-spinner-anim {\n      from { transform: rotate(0deg) }\n      to { transform: rotate(360deg) }\n    }\n\n    animation: 500ms linear 0s infinite ginq-load-spinner-anim;\n  }\n\n}\n",".SplitPane {\n  .Resizer {\n    background-color: gainsboro;\n\n    &.vertical {\n      width: 5px;\n      min-width: 5px;\n      border-left: 1px solid lightgrey;\n      border-right: 1px solid lightgrey;\n      cursor: col-resize;\n    }\n\n    &.horizontal {\n      height: 5px;\n      min-height: 5px;\n      border-top: 1px solid lightgrey;\n      border-bottom: 1px solid lightgrey;\n      cursor: row-resize;\n    }\n\n  }\n\n  .Pane {\n    //overflow: scroll;\n    overflow: hidden;\n  }\n}","$header-height: 40px;\n$sidebar-width: 250px;\n\n//Color variables\n$queryNameColor: #0066cc; //blue;\n$typeNameColor: #e69500; //orange;\n$argNameColor: #aa09aa; //purple;\n\n@import url('https://fonts.googleapis.com/css?family=Lato:400,700');\n$root-font: 'Lato', sans-serif;\n\n$codeFontFamily: Menlo,Monaco,Consolas,Courier New,monospace;\n\n@import 'utility';\n@import 'split_pane';\n\n#inquirer-app {\n\n  position: fixed;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n\n  font-family: $root-font;\n\n  #inquirer-header {\n    position: absolute;\n    top: 0px;\n    right: 0px;\n    left: 0px;\n\n    background-color: #005172;\n    box-shadow: 0 1px 2px 0 grey;\n\n    padding: 0px 10px;\n\n    color: white;\n\n    height: $header-height;\n    line-height: $header-height;\n\n    vertical-align: middle;\n\n    z-index: 1001;\n  }\n\n  #inquirer-body {\n    position: absolute;\n    top: $header-height;\n    right: 0px;\n    bottom: 0px;\n    left: 0px;\n\n    #inquirer-loader {\n      width: 100%;\n      padding-top: 50px;\n      text-align: center;\n\n      > div {\n        display: inline-block;\n      }\n    }\n\n    #inquirer-sidebar {\n      position: absolute;\n      top: 0px;\n      bottom: 0px;\n      left: 0px;\n\n      //border-right: 1px solid grey;\n      box-shadow: 1px 0 2px 0 grey;\n\n      //overflow-x: scroll;\n      overflow: auto;\n      \n      width: $sidebar-width;\n\n      @import 'sidebar';\n\n      z-index: 1000;\n      //background-color: lightsteelblue;\n    }\n\n    #inquirer-content {\n      position: absolute;\n      top: 0px;\n      right: 0px;\n      bottom: 0px;\n      left: $sidebar-width;\n\n      @import 'content';\n\n    }\n  }\n\n  //Styles for types\n  .NON_NULL {\n    &::after {\n      content: \"!\";\n      color: black;\n    }\n  }\n\n  .LIST {\n    &::before {\n      content: \"[\";\n      color: black;\n    }\n    &::after {\n      content: \"]\";\n      color: black;\n    }\n  }\n\n}",".sidebar-section {\n\n  .sidebar-section-title {\n    font-size: 16px;\n    font-weight: bold;\n    padding: 5px 10px;\n\n    border: 1px solid gainsboro;\n    border-left: none;\n    border-right: none;\n  }\n\n  .sidebar-item {\n    padding: 10px 10px;\n    display: block;\n    text-decoration: none;\n\n    font-size: 12px;\n    font-weight: bold;\n    font-family: $codeFontFamily;\n    color: black;\n\n    .sidebar-item-name {\n      color: $queryNameColor;\n    }\n\n    .sidebar-item-type {\n      margin: 5px 0;\n      padding-left: 10px;\n      color: $typeNameColor;\n    }\n\n    .sidebar-item-description {\n      font-size: 10px;\n      font-weight: normal;\n    }\n\n    &:not(:last-of-type) {\n      border-bottom: 1px solid gainsboro;\n    }\n\n    &.active {\n      background-color: gainsboro;\n    }\n  }\n}","$maxWidth: 990px;\n$toolbarHeight: 60px;\n\n\n@mixin operationResult() {\n  display: block;\n  float: left;\n  //width: 50%;\n  height: 100%;\n\n  //overflow: scroll;\n\n  > div {\n    white-space: pre;\n    display: block;\n    height: 100%;\n  }\n}\n\n#editor-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n\n  padding-top: $toolbarHeight;\n\n  box-sizing: border-box;\n\n  .editor-toolbar {\n    position: absolute;\n    background-color: whitesmoke;\n    border-bottom: 1px solid grey;\n\n    box-shadow: 0px 1px 2px 0px grey;\n\n    z-index: 999;\n    \n    position: absolute;\n    top: 0px;\n    left: 0px;\n    right: 0px;\n\n    padding: 0px 20px;\n\n    font-family: $codeFontFamily;\n\n    height: $toolbarHeight;\n    line-height: $toolbarHeight;\n\n    * {\n      vertical-align: middle;\n    }\n\n    .action-toolbar {\n\n      height: 100%;\n      line-height: $toolbarHeight;\n\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    \n      .action-header {\n        font-size: 18px;\n\n        display: inline-block;\n        line-height: 1em;\n\n        div {\n          display: inline-block;\n          &.action-name {\n            color: $queryNameColor\n          }\n          &.action-type {\n            color: $typeNameColor;\n            margin-left: 10px;\n          }\n        }\n        \n        p {\n          font-size: 12px;\n          margin: 0px;\n        }\n      }\n\n      .editor-controls {\n        text-align: right;\n        display: inline-block;\n        \n        line-height: 1em;\n\n        .editor-control-picker {\n          display: inline-block;\n          margin-right: 30px;\n        }\n\n        button {\n          padding: 8px 16px;\n          border: 1px solid grey;\n          background-color: whitesmoke;\n          border-radius: 4px;\n\n          &:disabled {\n            background-color: whitesmoke;\n            border-color: gainsboro;\n            color: gainsboro;\n          }\n        }\n      }\n    }\n\n  } // api-main-toolbar\n\n  #editor-panes {\n    position: relative;\n    width: 100%;\n    height: 100%;\n\n    @import 'creator_main';\n\n    #operation-generated {\n\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n\n      float: left;\n      padding: 0px;\n      margin: 0px;\n      overflow: hidden;\n\n      font-family: $codeFontFamily;\n\n      .generated-content {\n        position: relative;\n        height: 100%;\n        padding: 0px;\n        margin: 0px;\n        overflow: hidden;\n\n        .operation-result-gql {\n          width: 100%;\n          height: 100%;\n\n          padding: 0px;\n          margin: 0px;\n          overflow: hidden;\n\n          @include operationResult();  \n          padding-right: 2px;\n\n          .gql-panel {\n          \n            padding: 10px;\n            overflow: auto;\n\n            &.invalid {\n              color: lightgrey;\n              //text-decoration-style: 1px dashed red;\n            }\n          }\n        }\n      }\n    }\n        .copy-button {\n          position: absolute;\n          top: 10px;\n          right: 25px;\n\n          button {\n            padding: 8px 16px;\n            border: 1px solid grey;\n            background-color: whitesmoke;\n            border-radius: 4px;\n            line-height: 1em;\n          }\n        }\n\n    #editor-result {\n      \n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n\n//      height: 100%;\n      float: left;\n      padding: 0px;\n      margin: 0px;\n      overflow: hidden;\n\n      font-family: $codeFontFamily;\n\n      .result-data {\n        width: 100%;\n        height: 100%;\n\n        padding: 10px;\n        overflow: auto;\n\n        white-space: pre;\n      }\n\n    }\n  }\n} // #editor-container","$maxWidth: 800px;\n\n#creator-main {\n  max-width: $maxWidth;\n  margin: 0px auto;\n\n  padding: 10px;\n\n  font-family: $codeFontFamily;\n  font-size: 14px;\n\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n\n  overflow: auto;\n\n  .creator-meta {\n\n    border: 1px solid lightgrey;\n    border-radius: 4px;\n\n    margin-bottom: 10px;\n\n    .creator-input {\n      padding: 5px 10px;\n\n      .input-form {\n        &::before {\n          content: \"Input: {\";\n        }\n        &::after {\n          content: \"}\";\n        }\n        table { \n          margin-left: 20px;\n\n          border-collapse: separate;\n          border-spacing: 5px; \n          \n          .input-field {\n            .input-field-name {\n              color: $argNameColor;\n              &::after {\n                content: \": \"\n              }\n            }\n\n            input {              \n              width: 100%;\n              border: 1px solid $queryNameColor;\n              border-radius: 4px;\n              box-sizing: border-box;\n            }\n\n            .input-field-type {\n              &::before {\n                content: \" (\";\n              }\n              &::after {\n                content: \")\"\n              }\n              .type-name {\n                color: $typeNameColor;\n              }\n            }\n          }\n        }\n      }\n    }\n\n    .creator-controls {\n      text-align: right;\n      button {\n        padding: 8px 16px;\n        border: 1px solid grey;\n        background-color: whitesmoke;\n        border-radius: 4px;\n\n        &:disabled {\n          background-color: whitesmoke;\n          border-color: gainsboro;\n          color: gainsboro;\n        }\n      }\n    }\n\n  } //creator-meta\n\n  .creator-body {\n    \n    padding: 10px;\n    border: 1px solid lightgrey;\n    border-radius: 4px;\n\n    * {\n      box-sizing: border-box;\n    }\n\n    .creator-fieldset {\n\n      .creator-field-container {\n\n        .creator-field {\n          float: none;\n          clear: both;\n\n          height: 1.5em;\n          line-height: 1.5em;\n          margin: 2px 0px;\n          border-radius: 2px;\n\n          overflow: hidden;\n\n          cursor: pointer;\n\n          &:hover {\n            background-color: gainsboro;\n          }\n\n          .field-checkbox {\n            width: 1.5em;\n            height: 1.5em;\n            padding: 7px;\n            \n            .field-checkmark {\n              width: 100%;\n              height: 100%;\n\n              border: 1px solid grey;\n              border-radius: 50%;\n\n              &.checked {\n                background-color: grey;\n              }\n            }\n          }\n\n          .field-name {\n            color: $queryNameColor;\n            &.needed {\n              border-bottom: 1px dashed red;\n            }\n          }\n          .field-type {\n            margin-left: 5px;\n            .type-name {\n              color: $typeNameColor;\n            }\n          }\n\n          .field-description {\n            margin-left: 5px;\n            font-size: 12px;\n            color: grey;\n\n            overflow: hidden;\n          }\n\n          > div { \n            display: block;\n            margin: 0px;\n            padding: 0px;\n            height: 20px;\n            float: left;\n          }\n        }\n\n        .sub-fields {\n          margin-left: 30px;\n          display: block;\n          float: none;\n          clear: both;\n        }\n        \n      }\n\n    }\n  } //creator-body\n\n\n} //creator-main"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".ginq-load-spinner-wrapper {\n  width: 24px;\n  height: 24px;\n}\n.ginq-load-spinner-wrapper .ginq-load-spinner {\n  width: 24px;\n  height: 24px;\n  border: 5px solid lightsteelblue;\n  border-right-color: transparent;\n  border-left-color: transparent;\n  border-radius: 50%;\n  box-sizing: border-box;\n  animation: 500ms linear 0s infinite ginq-load-spinner-anim;\n}\n@keyframes ginq-load-spinner-anim {\n  from {\n    transform: rotate(0deg);\n  }\n  to {\n    transform: rotate(360deg);\n  }\n}\n\n.SplitPane .Resizer {\n  background-color: gainsboro;\n}\n.SplitPane .Resizer.vertical {\n  width: 5px;\n  min-width: 5px;\n  border-left: 1px solid lightgrey;\n  border-right: 1px solid lightgrey;\n  cursor: col-resize;\n}\n.SplitPane .Resizer.horizontal {\n  height: 5px;\n  min-height: 5px;\n  border-top: 1px solid lightgrey;\n  border-bottom: 1px solid lightgrey;\n  cursor: row-resize;\n}\n.SplitPane .Pane {\n  overflow: hidden;\n}\n\n#inquirer-app {\n  position: fixed;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n  font-family: \"Lato\", sans-serif;\n}\n#inquirer-app #inquirer-header {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  left: 0px;\n  background-color: #005172;\n  box-shadow: 0 1px 2px 0 grey;\n  padding: 0px 10px;\n  color: white;\n  height: 40px;\n  line-height: 40px;\n  vertical-align: middle;\n  z-index: 1001;\n}\n#inquirer-app #inquirer-body {\n  position: absolute;\n  top: 40px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n}\n#inquirer-app #inquirer-body #inquirer-loader {\n  width: 100%;\n  padding-top: 50px;\n  text-align: center;\n}\n#inquirer-app #inquirer-body #inquirer-loader > div {\n  display: inline-block;\n}\n#inquirer-app #inquirer-body #inquirer-sidebar {\n  position: absolute;\n  top: 0px;\n  bottom: 0px;\n  left: 0px;\n  box-shadow: 1px 0 2px 0 grey;\n  overflow: auto;\n  width: 250px;\n  z-index: 1000;\n}\n#inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-section-title {\n  font-size: 16px;\n  font-weight: bold;\n  padding: 5px 10px;\n  border: 1px solid gainsboro;\n  border-left: none;\n  border-right: none;\n}\n#inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item {\n  padding: 10px 10px;\n  display: block;\n  text-decoration: none;\n  font-size: 12px;\n  font-weight: bold;\n  font-family: Menlo, Monaco, Consolas, Courier New, monospace;\n  color: black;\n}\n#inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item .sidebar-item-name {\n  color: #0066cc;\n}\n#inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item .sidebar-item-type {\n  margin: 5px 0;\n  padding-left: 10px;\n  color: #e69500;\n}\n#inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item .sidebar-item-description {\n  font-size: 10px;\n  font-weight: normal;\n}\n#inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item:not(:last-of-type) {\n  border-bottom: 1px solid gainsboro;\n}\n#inquirer-app #inquirer-body #inquirer-sidebar .sidebar-section .sidebar-item.active {\n  background-color: gainsboro;\n}\n#inquirer-app #inquirer-body #inquirer-content {\n  position: absolute;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 250px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  padding-top: 60px;\n  box-sizing: border-box;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar {\n  position: absolute;\n  background-color: whitesmoke;\n  border-bottom: 1px solid grey;\n  box-shadow: 0px 1px 2px 0px grey;\n  z-index: 999;\n  position: absolute;\n  top: 0px;\n  left: 0px;\n  right: 0px;\n  padding: 0px 20px;\n  font-family: Menlo, Monaco, Consolas, Courier New, monospace;\n  height: 60px;\n  line-height: 60px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar * {\n  vertical-align: middle;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar {\n  height: 100%;\n  line-height: 60px;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .action-header {\n  font-size: 18px;\n  display: inline-block;\n  line-height: 1em;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .action-header div {\n  display: inline-block;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .action-header div.action-name {\n  color: #0066cc;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .action-header div.action-type {\n  color: #e69500;\n  margin-left: 10px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .action-header p {\n  font-size: 12px;\n  margin: 0px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .editor-controls {\n  text-align: right;\n  display: inline-block;\n  line-height: 1em;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .editor-controls .editor-control-picker {\n  display: inline-block;\n  margin-right: 30px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .editor-controls button {\n  padding: 8px 16px;\n  border: 1px solid grey;\n  background-color: whitesmoke;\n  border-radius: 4px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container .editor-toolbar .action-toolbar .editor-controls button:disabled {\n  background-color: whitesmoke;\n  border-color: gainsboro;\n  color: gainsboro;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes {\n  position: relative;\n  width: 100%;\n  height: 100%;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main {\n  max-width: 800px;\n  margin: 0px auto;\n  padding: 10px;\n  font-family: Menlo, Monaco, Consolas, Courier New, monospace;\n  font-size: 14px;\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  overflow: auto;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta {\n  border: 1px solid lightgrey;\n  border-radius: 4px;\n  margin-bottom: 10px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input {\n  padding: 5px 10px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form::before {\n  content: \"Input: {\";\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form::after {\n  content: \"}\";\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table {\n  margin-left: 20px;\n  border-collapse: separate;\n  border-spacing: 5px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field .input-field-name {\n  color: #aa09aa;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field .input-field-name::after {\n  content: \": \";\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field input {\n  width: 100%;\n  border: 1px solid #0066cc;\n  border-radius: 4px;\n  box-sizing: border-box;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field .input-field-type::before {\n  content: \" (\";\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field .input-field-type::after {\n  content: \")\";\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-input .input-form table .input-field .input-field-type .type-name {\n  color: #e69500;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-controls {\n  text-align: right;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-controls button {\n  padding: 8px 16px;\n  border: 1px solid grey;\n  background-color: whitesmoke;\n  border-radius: 4px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-meta .creator-controls button:disabled {\n  background-color: whitesmoke;\n  border-color: gainsboro;\n  color: gainsboro;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body {\n  padding: 10px;\n  border: 1px solid lightgrey;\n  border-radius: 4px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body * {\n  box-sizing: border-box;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field {\n  float: none;\n  clear: both;\n  height: 1.5em;\n  line-height: 1.5em;\n  margin: 2px 0px;\n  border-radius: 2px;\n  overflow: hidden;\n  cursor: pointer;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field:hover {\n  background-color: gainsboro;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-checkbox {\n  width: 1.5em;\n  height: 1.5em;\n  padding: 7px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-checkbox .field-checkmark {\n  width: 100%;\n  height: 100%;\n  border: 1px solid grey;\n  border-radius: 50%;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-checkbox .field-checkmark.checked {\n  background-color: grey;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-name {\n  color: #0066cc;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-name.needed {\n  border-bottom: 1px dashed red;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-type {\n  margin-left: 5px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-type .type-name {\n  color: #e69500;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field .field-description {\n  margin-left: 5px;\n  font-size: 12px;\n  color: grey;\n  overflow: hidden;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .creator-field > div {\n  display: block;\n  margin: 0px;\n  padding: 0px;\n  height: 20px;\n  float: left;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #creator-main .creator-body .creator-fieldset .creator-field-container .sub-fields {\n  margin-left: 30px;\n  display: block;\n  float: none;\n  clear: both;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  float: left;\n  padding: 0px;\n  margin: 0px;\n  overflow: hidden;\n  font-family: Menlo, Monaco, Consolas, Courier New, monospace;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated .generated-content {\n  position: relative;\n  height: 100%;\n  padding: 0px;\n  margin: 0px;\n  overflow: hidden;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated .generated-content .operation-result-gql {\n  width: 100%;\n  height: 100%;\n  padding: 0px;\n  margin: 0px;\n  overflow: hidden;\n  display: block;\n  float: left;\n  height: 100%;\n  padding-right: 2px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated .generated-content .operation-result-gql > div {\n  white-space: pre;\n  display: block;\n  height: 100%;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated .generated-content .operation-result-gql .gql-panel {\n  padding: 10px;\n  overflow: auto;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #operation-generated .generated-content .operation-result-gql .gql-panel.invalid {\n  color: lightgrey;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes .copy-button {\n  position: absolute;\n  top: 10px;\n  right: 25px;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes .copy-button button {\n  padding: 8px 16px;\n  border: 1px solid grey;\n  background-color: whitesmoke;\n  border-radius: 4px;\n  line-height: 1em;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #editor-result {\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n  float: left;\n  padding: 0px;\n  margin: 0px;\n  overflow: hidden;\n  font-family: Menlo, Monaco, Consolas, Courier New, monospace;\n}\n#inquirer-app #inquirer-body #inquirer-content #editor-container #editor-panes #editor-result .result-data {\n  width: 100%;\n  height: 100%;\n  padding: 10px;\n  overflow: auto;\n  white-space: pre;\n}\n#inquirer-app .NON_NULL::after {\n  content: \"!\";\n  color: black;\n}\n#inquirer-app .LIST::before {\n  content: \"[\";\n  color: black;\n}\n#inquirer-app .LIST::after {\n  content: \"]\";\n  color: black;\n}", "",{"version":3,"sources":["webpack://./src/Styles/_utility.scss","webpack://./src/Styles/app.scss","webpack://./src/Styles/_split_pane.scss","webpack://./src/Styles/_sidebar.scss","webpack://./src/Styles/_content.scss","webpack://./src/Styles/_creator_main.scss"],"names":[],"mappings":"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","sourcesContent":[".ginq-load-spinner-wrapper {\n\n  width: 24px;\n  height: 24px;\n\n  .ginq-load-spinner {\n    width: 24px;\n    height: 24px;\n\n    border: 5px solid lightsteelblue;\n    \n    border-right-color: transparent;\n    border-left-color: transparent;\n\n    border-radius: 50%;\n\n    box-sizing: border-box;\n\n    @keyframes ginq-load-spinner-anim {\n      from { transform: rotate(0deg) }\n      to { transform: rotate(360deg) }\n    }\n\n    animation: 500ms linear 0s infinite ginq-load-spinner-anim;\n  }\n\n}\n","$header-height: 40px;\n$sidebar-width: 250px;\n\n//Color variables\n$queryNameColor: #0066cc; //blue;\n$typeNameColor: #e69500; //orange;\n$argNameColor: #aa09aa; //purple;\n\n@import url('https://fonts.googleapis.com/css?family=Lato:400,700');\n$root-font: 'Lato', sans-serif;\n\n$codeFontFamily: Menlo,Monaco,Consolas,Courier New,monospace;\n\n@import 'utility';\n@import 'split_pane';\n\n#inquirer-app {\n\n  position: fixed;\n  top: 0px;\n  right: 0px;\n  bottom: 0px;\n  left: 0px;\n\n  font-family: $root-font;\n\n  #inquirer-header {\n    position: absolute;\n    top: 0px;\n    right: 0px;\n    left: 0px;\n\n    background-color: #005172;\n    box-shadow: 0 1px 2px 0 grey;\n\n    padding: 0px 10px;\n\n    color: white;\n\n    height: $header-height;\n    line-height: $header-height;\n\n    vertical-align: middle;\n\n    z-index: 1001;\n  }\n\n  #inquirer-body {\n    position: absolute;\n    top: $header-height;\n    right: 0px;\n    bottom: 0px;\n    left: 0px;\n\n    #inquirer-loader {\n      width: 100%;\n      padding-top: 50px;\n      text-align: center;\n\n      > div {\n        display: inline-block;\n      }\n    }\n\n    #inquirer-sidebar {\n      position: absolute;\n      top: 0px;\n      bottom: 0px;\n      left: 0px;\n\n      //border-right: 1px solid grey;\n      box-shadow: 1px 0 2px 0 grey;\n\n      //overflow-x: scroll;\n      overflow: auto;\n      \n      width: $sidebar-width;\n\n      @import 'sidebar';\n\n      z-index: 1000;\n      //background-color: lightsteelblue;\n    }\n\n    #inquirer-content {\n      position: absolute;\n      top: 0px;\n      right: 0px;\n      bottom: 0px;\n      left: $sidebar-width;\n\n      @import 'content';\n\n    }\n  }\n\n  //Styles for types\n  .NON_NULL {\n    &::after {\n      content: \"!\";\n      color: black;\n    }\n  }\n\n  .LIST {\n    &::before {\n      content: \"[\";\n      color: black;\n    }\n    &::after {\n      content: \"]\";\n      color: black;\n    }\n  }\n\n}",".SplitPane {\n  .Resizer {\n    background-color: gainsboro;\n\n    &.vertical {\n      width: 5px;\n      min-width: 5px;\n      border-left: 1px solid lightgrey;\n      border-right: 1px solid lightgrey;\n      cursor: col-resize;\n    }\n\n    &.horizontal {\n      height: 5px;\n      min-height: 5px;\n      border-top: 1px solid lightgrey;\n      border-bottom: 1px solid lightgrey;\n      cursor: row-resize;\n    }\n\n  }\n\n  .Pane {\n    //overflow: scroll;\n    overflow: hidden;\n  }\n}",".sidebar-section {\n\n  .sidebar-section-title {\n    font-size: 16px;\n    font-weight: bold;\n    padding: 5px 10px;\n\n    border: 1px solid gainsboro;\n    border-left: none;\n    border-right: none;\n  }\n\n  .sidebar-item {\n    padding: 10px 10px;\n    display: block;\n    text-decoration: none;\n\n    font-size: 12px;\n    font-weight: bold;\n    font-family: $codeFontFamily;\n    color: black;\n\n    .sidebar-item-name {\n      color: $queryNameColor;\n    }\n\n    .sidebar-item-type {\n      margin: 5px 0;\n      padding-left: 10px;\n      color: $typeNameColor;\n    }\n\n    .sidebar-item-description {\n      font-size: 10px;\n      font-weight: normal;\n    }\n\n    &:not(:last-of-type) {\n      border-bottom: 1px solid gainsboro;\n    }\n\n    &.active {\n      background-color: gainsboro;\n    }\n  }\n}","$maxWidth: 990px;\n$toolbarHeight: 60px;\n\n\n@mixin operationResult() {\n  display: block;\n  float: left;\n  //width: 50%;\n  height: 100%;\n\n  //overflow: scroll;\n\n  > div {\n    white-space: pre;\n    display: block;\n    height: 100%;\n  }\n}\n\n#editor-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n\n  padding-top: $toolbarHeight;\n\n  box-sizing: border-box;\n\n  .editor-toolbar {\n    position: absolute;\n    background-color: whitesmoke;\n    border-bottom: 1px solid grey;\n\n    box-shadow: 0px 1px 2px 0px grey;\n\n    z-index: 999;\n    \n    position: absolute;\n    top: 0px;\n    left: 0px;\n    right: 0px;\n\n    padding: 0px 20px;\n\n    font-family: $codeFontFamily;\n\n    height: $toolbarHeight;\n    line-height: $toolbarHeight;\n\n    * {\n      vertical-align: middle;\n    }\n\n    .action-toolbar {\n\n      height: 100%;\n      line-height: $toolbarHeight;\n\n      display: flex;\n      justify-content: space-between;\n      align-items: center;\n    \n      .action-header {\n        font-size: 18px;\n\n        display: inline-block;\n        line-height: 1em;\n\n        div {\n          display: inline-block;\n          &.action-name {\n            color: $queryNameColor\n          }\n          &.action-type {\n            color: $typeNameColor;\n            margin-left: 10px;\n          }\n        }\n        \n        p {\n          font-size: 12px;\n          margin: 0px;\n        }\n      }\n\n      .editor-controls {\n        text-align: right;\n        display: inline-block;\n        \n        line-height: 1em;\n\n        .editor-control-picker {\n          display: inline-block;\n          margin-right: 30px;\n        }\n\n        button {\n          padding: 8px 16px;\n          border: 1px solid grey;\n          background-color: whitesmoke;\n          border-radius: 4px;\n\n          &:disabled {\n            background-color: whitesmoke;\n            border-color: gainsboro;\n            color: gainsboro;\n          }\n        }\n      }\n    }\n\n  } // api-main-toolbar\n\n  #editor-panes {\n    position: relative;\n    width: 100%;\n    height: 100%;\n\n    @import 'creator_main';\n\n    #operation-generated {\n\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n\n      float: left;\n      padding: 0px;\n      margin: 0px;\n      overflow: hidden;\n\n      font-family: $codeFontFamily;\n\n      .generated-content {\n        position: relative;\n        height: 100%;\n        padding: 0px;\n        margin: 0px;\n        overflow: hidden;\n\n        .operation-result-gql {\n          width: 100%;\n          height: 100%;\n\n          padding: 0px;\n          margin: 0px;\n          overflow: hidden;\n\n          @include operationResult();  \n          padding-right: 2px;\n\n          .gql-panel {\n          \n            padding: 10px;\n            overflow: auto;\n\n            &.invalid {\n              color: lightgrey;\n              //text-decoration-style: 1px dashed red;\n            }\n          }\n        }\n      }\n    }\n        .copy-button {\n          position: absolute;\n          top: 10px;\n          right: 25px;\n\n          button {\n            padding: 8px 16px;\n            border: 1px solid grey;\n            background-color: whitesmoke;\n            border-radius: 4px;\n            line-height: 1em;\n          }\n        }\n\n    #editor-result {\n      \n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n\n//      height: 100%;\n      float: left;\n      padding: 0px;\n      margin: 0px;\n      overflow: hidden;\n\n      font-family: $codeFontFamily;\n\n      .result-data {\n        width: 100%;\n        height: 100%;\n\n        padding: 10px;\n        overflow: auto;\n\n        white-space: pre;\n      }\n\n    }\n  }\n} // #editor-container","$maxWidth: 800px;\n\n#creator-main {\n  max-width: $maxWidth;\n  margin: 0px auto;\n\n  padding: 10px;\n\n  font-family: $codeFontFamily;\n  font-size: 14px;\n\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n\n  overflow: auto;\n\n  .creator-meta {\n\n    border: 1px solid lightgrey;\n    border-radius: 4px;\n\n    margin-bottom: 10px;\n\n    .creator-input {\n      padding: 5px 10px;\n\n      .input-form {\n        &::before {\n          content: \"Input: {\";\n        }\n        &::after {\n          content: \"}\";\n        }\n        table { \n          margin-left: 20px;\n\n          border-collapse: separate;\n          border-spacing: 5px; \n          \n          .input-field {\n            .input-field-name {\n              color: $argNameColor;\n              &::after {\n                content: \": \"\n              }\n            }\n\n            input {              \n              width: 100%;\n              border: 1px solid $queryNameColor;\n              border-radius: 4px;\n              box-sizing: border-box;\n            }\n\n            .input-field-type {\n              &::before {\n                content: \" (\";\n              }\n              &::after {\n                content: \")\"\n              }\n              .type-name {\n                color: $typeNameColor;\n              }\n            }\n          }\n        }\n      }\n    }\n\n    .creator-controls {\n      text-align: right;\n      button {\n        padding: 8px 16px;\n        border: 1px solid grey;\n        background-color: whitesmoke;\n        border-radius: 4px;\n\n        &:disabled {\n          background-color: whitesmoke;\n          border-color: gainsboro;\n          color: gainsboro;\n        }\n      }\n    }\n\n  } //creator-meta\n\n  .creator-body {\n    \n    padding: 10px;\n    border: 1px solid lightgrey;\n    border-radius: 4px;\n\n    * {\n      box-sizing: border-box;\n    }\n\n    .creator-fieldset {\n\n      .creator-field-container {\n\n        .creator-field {\n          float: none;\n          clear: both;\n\n          height: 1.5em;\n          line-height: 1.5em;\n          margin: 2px 0px;\n          border-radius: 2px;\n\n          overflow: hidden;\n\n          cursor: pointer;\n\n          &:hover {\n            background-color: gainsboro;\n          }\n\n          .field-checkbox {\n            width: 1.5em;\n            height: 1.5em;\n            padding: 7px;\n            \n            .field-checkmark {\n              width: 100%;\n              height: 100%;\n\n              border: 1px solid grey;\n              border-radius: 50%;\n\n              &.checked {\n                background-color: grey;\n              }\n            }\n          }\n\n          .field-name {\n            color: $queryNameColor;\n            &.needed {\n              border-bottom: 1px dashed red;\n            }\n          }\n          .field-type {\n            margin-left: 5px;\n            .type-name {\n              color: $typeNameColor;\n            }\n          }\n\n          .field-description {\n            margin-left: 5px;\n            font-size: 12px;\n            color: grey;\n\n            overflow: hidden;\n          }\n\n          > div { \n            display: block;\n            margin: 0px;\n            padding: 0px;\n            height: 20px;\n            float: left;\n          }\n        }\n\n        .sub-fields {\n          margin-left: 30px;\n          display: block;\n          float: none;\n          clear: both;\n        }\n        \n      }\n\n    }\n  } //creator-body\n\n\n} //creator-main"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ __webpack_exports__["default"] = (___CSS_LOADER_EXPORT___);
 
@@ -2548,37 +2548,55 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".ginq-load-spinner-wrapper {\n  width:
   MIT License http://www.opensource.org/licenses/mit-license.php
   Author Tobias Koppers @sokra
 */
-// css base code, injected by the css-loader
-// eslint-disable-next-line func-names
 module.exports = function (cssWithMappingToString) {
   var list = []; // return the list of modules as css string
 
   list.toString = function toString() {
     return this.map(function (item) {
-      var content = cssWithMappingToString(item);
+      var content = "";
+      var needLayer = typeof item[5] !== "undefined";
+
+      if (item[4]) {
+        content += "@supports (".concat(item[4], ") {");
+      }
 
       if (item[2]) {
-        return "@media ".concat(item[2], " {").concat(content, "}");
+        content += "@media ".concat(item[2], " {");
+      }
+
+      if (needLayer) {
+        content += "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {");
+      }
+
+      content += cssWithMappingToString(item);
+
+      if (needLayer) {
+        content += "}";
+      }
+
+      if (item[2]) {
+        content += "}";
+      }
+
+      if (item[4]) {
+        content += "}";
       }
 
       return content;
     }).join("");
   }; // import a list of modules into the list
-  // eslint-disable-next-line func-names
 
 
-  list.i = function (modules, mediaQuery, dedupe) {
+  list.i = function i(modules, media, dedupe, supports, layer) {
     if (typeof modules === "string") {
-      // eslint-disable-next-line no-param-reassign
-      modules = [[null, modules, ""]];
+      modules = [[null, modules, undefined]];
     }
 
     var alreadyImportedModules = {};
 
     if (dedupe) {
-      for (var i = 0; i < this.length; i++) {
-        // eslint-disable-next-line prefer-destructuring
-        var id = this[i][0];
+      for (var k = 0; k < this.length; k++) {
+        var id = this[k][0];
 
         if (id != null) {
           alreadyImportedModules[id] = true;
@@ -2586,19 +2604,37 @@ module.exports = function (cssWithMappingToString) {
       }
     }
 
-    for (var _i = 0; _i < modules.length; _i++) {
-      var item = [].concat(modules[_i]);
+    for (var _k = 0; _k < modules.length; _k++) {
+      var item = [].concat(modules[_k]);
 
       if (dedupe && alreadyImportedModules[item[0]]) {
-        // eslint-disable-next-line no-continue
         continue;
       }
 
-      if (mediaQuery) {
-        if (!item[2]) {
-          item[2] = mediaQuery;
+      if (typeof layer !== "undefined") {
+        if (typeof item[5] === "undefined") {
+          item[5] = layer;
         } else {
-          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+          item[1] = "@layer".concat(item[5].length > 0 ? " ".concat(item[5]) : "", " {").concat(item[1], "}");
+          item[5] = layer;
+        }
+      }
+
+      if (media) {
+        if (!item[2]) {
+          item[2] = media;
+        } else {
+          item[1] = "@media ".concat(item[2], " {").concat(item[1], "}");
+          item[2] = media;
+        }
+      }
+
+      if (supports) {
+        if (!item[4]) {
+          item[4] = "".concat(supports);
+        } else {
+          item[1] = "@supports (".concat(item[4], ") {").concat(item[1], "}");
+          item[4] = supports;
         }
       }
 
@@ -2611,38 +2647,24 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
-/***/ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js":
-/*!************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/runtime/cssWithMappingToString.js ***!
-  \************************************************************************/
+/***/ "./node_modules/css-loader/dist/runtime/sourceMaps.js":
+/*!************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/sourceMaps.js ***!
+  \************************************************************/
 /***/ (function(module) {
 
 "use strict";
 
 
-function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
-
-function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-
-function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
-
-function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
-
-function _iterableToArrayLimit(arr, i) { var _i = arr && (typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]); if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
-
-function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
-
-module.exports = function cssWithMappingToString(item) {
-  var _item = _slicedToArray(item, 4),
-      content = _item[1],
-      cssMapping = _item[3];
+module.exports = function (item) {
+  var content = item[1];
+  var cssMapping = item[3];
 
   if (!cssMapping) {
     return content;
   }
 
   if (typeof btoa === "function") {
-    // eslint-disable-next-line no-undef
     var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(cssMapping))));
     var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
     var sourceMapping = "/*# ".concat(data, " */");
@@ -37876,20 +37898,45 @@ if (false) {} else {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
 /* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_app_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./app.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/Styles/app.scss");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ "./node_modules/style-loader/dist/runtime/styleDomAPI.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertBySelector.js */ "./node_modules/style-loader/dist/runtime/insertBySelector.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ "./node_modules/style-loader/dist/runtime/insertStyleElement.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ "./node_modules/style-loader/dist/runtime/styleTagTransform.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_app_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!../../node_modules/sass-loader/dist/cjs.js!./app.scss */ "./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/Styles/app.scss");
 
-            
+      
+      
+      
+      
+      
+      
+      
+      
+      
 
 var options = {};
 
-options.insert = "head";
-options.singleton = false;
+options.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());
+options.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());
 
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_app_scss__WEBPACK_IMPORTED_MODULE_1__["default"], options);
+      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, "head");
+    
+options.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());
+options.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_app_scss__WEBPACK_IMPORTED_MODULE_6__["default"], options);
 
 
 
-/* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_app_scss__WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+       /* harmony default export */ __webpack_exports__["default"] = (_node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_app_scss__WEBPACK_IMPORTED_MODULE_6__["default"] && _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_app_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals ? _node_modules_css_loader_dist_cjs_js_node_modules_sass_loader_dist_cjs_js_app_scss__WEBPACK_IMPORTED_MODULE_6__["default"].locals : undefined);
+
 
 /***/ }),
 
@@ -37897,58 +37944,18 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /*!****************************************************************************!*\
   !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
   \****************************************************************************/
-/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+/***/ (function(module) {
 
 "use strict";
 
 
-var isOldIE = function isOldIE() {
-  var memo;
-  return function memorize() {
-    if (typeof memo === 'undefined') {
-      // Test for IE <= 9 as proposed by Browserhacks
-      // @see http://browserhacks.com/#hack-e71d8692f65334173fee715c222cb805
-      // Tests for existence of standard globals is to allow style-loader
-      // to operate correctly into non-standard environments
-      // @see https://github.com/webpack-contrib/style-loader/issues/177
-      memo = Boolean(window && document && document.all && !window.atob);
-    }
-
-    return memo;
-  };
-}();
-
-var getTarget = function getTarget() {
-  var memo = {};
-  return function memorize(target) {
-    if (typeof memo[target] === 'undefined') {
-      var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
-
-      if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
-        try {
-          // This will throw an exception if access to iframe is blocked
-          // due to cross-origin restrictions
-          styleTarget = styleTarget.contentDocument.head;
-        } catch (e) {
-          // istanbul ignore next
-          styleTarget = null;
-        }
-      }
-
-      memo[target] = styleTarget;
-    }
-
-    return memo[target];
-  };
-}();
-
-var stylesInDom = [];
+var stylesInDOM = [];
 
 function getIndexByIdentifier(identifier) {
   var result = -1;
 
-  for (var i = 0; i < stylesInDom.length; i++) {
-    if (stylesInDom[i].identifier === identifier) {
+  for (var i = 0; i < stylesInDOM.length; i++) {
+    if (stylesInDOM[i].identifier === identifier) {
       result = i;
       break;
     }
@@ -37967,20 +37974,24 @@ function modulesToDom(list, options) {
     var count = idCountMap[id] || 0;
     var identifier = "".concat(id, " ").concat(count);
     idCountMap[id] = count + 1;
-    var index = getIndexByIdentifier(identifier);
+    var indexByIdentifier = getIndexByIdentifier(identifier);
     var obj = {
       css: item[1],
       media: item[2],
-      sourceMap: item[3]
+      sourceMap: item[3],
+      supports: item[4],
+      layer: item[5]
     };
 
-    if (index !== -1) {
-      stylesInDom[index].references++;
-      stylesInDom[index].updater(obj);
+    if (indexByIdentifier !== -1) {
+      stylesInDOM[indexByIdentifier].references++;
+      stylesInDOM[indexByIdentifier].updater(obj);
     } else {
-      stylesInDom.push({
+      var updater = addElementStyle(obj, options);
+      options.byIndex = i;
+      stylesInDOM.splice(i, 0, {
         identifier: identifier,
-        updater: addStyle(obj, options),
+        updater: updater,
         references: 1
       });
     }
@@ -37991,165 +38002,36 @@ function modulesToDom(list, options) {
   return identifiers;
 }
 
-function insertStyleElement(options) {
-  var style = document.createElement('style');
-  var attributes = options.attributes || {};
+function addElementStyle(obj, options) {
+  var api = options.domAPI(options);
+  api.update(obj);
 
-  if (typeof attributes.nonce === 'undefined') {
-    var nonce =  true ? __webpack_require__.nc : 0;
-
-    if (nonce) {
-      attributes.nonce = nonce;
-    }
-  }
-
-  Object.keys(attributes).forEach(function (key) {
-    style.setAttribute(key, attributes[key]);
-  });
-
-  if (typeof options.insert === 'function') {
-    options.insert(style);
-  } else {
-    var target = getTarget(options.insert || 'head');
-
-    if (!target) {
-      throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
-    }
-
-    target.appendChild(style);
-  }
-
-  return style;
-}
-
-function removeStyleElement(style) {
-  // istanbul ignore if
-  if (style.parentNode === null) {
-    return false;
-  }
-
-  style.parentNode.removeChild(style);
-}
-/* istanbul ignore next  */
-
-
-var replaceText = function replaceText() {
-  var textStore = [];
-  return function replace(index, replacement) {
-    textStore[index] = replacement;
-    return textStore.filter(Boolean).join('\n');
-  };
-}();
-
-function applyToSingletonTag(style, index, remove, obj) {
-  var css = remove ? '' : obj.media ? "@media ".concat(obj.media, " {").concat(obj.css, "}") : obj.css; // For old IE
-
-  /* istanbul ignore if  */
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = replaceText(index, css);
-  } else {
-    var cssNode = document.createTextNode(css);
-    var childNodes = style.childNodes;
-
-    if (childNodes[index]) {
-      style.removeChild(childNodes[index]);
-    }
-
-    if (childNodes.length) {
-      style.insertBefore(cssNode, childNodes[index]);
-    } else {
-      style.appendChild(cssNode);
-    }
-  }
-}
-
-function applyToTag(style, options, obj) {
-  var css = obj.css;
-  var media = obj.media;
-  var sourceMap = obj.sourceMap;
-
-  if (media) {
-    style.setAttribute('media', media);
-  } else {
-    style.removeAttribute('media');
-  }
-
-  if (sourceMap && typeof btoa !== 'undefined') {
-    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
-  } // For old IE
-
-  /* istanbul ignore if  */
-
-
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    while (style.firstChild) {
-      style.removeChild(style.firstChild);
-    }
-
-    style.appendChild(document.createTextNode(css));
-  }
-}
-
-var singleton = null;
-var singletonCounter = 0;
-
-function addStyle(obj, options) {
-  var style;
-  var update;
-  var remove;
-
-  if (options.singleton) {
-    var styleIndex = singletonCounter++;
-    style = singleton || (singleton = insertStyleElement(options));
-    update = applyToSingletonTag.bind(null, style, styleIndex, false);
-    remove = applyToSingletonTag.bind(null, style, styleIndex, true);
-  } else {
-    style = insertStyleElement(options);
-    update = applyToTag.bind(null, style, options);
-
-    remove = function remove() {
-      removeStyleElement(style);
-    };
-  }
-
-  update(obj);
-  return function updateStyle(newObj) {
+  var updater = function updater(newObj) {
     if (newObj) {
-      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap) {
+      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {
         return;
       }
 
-      update(obj = newObj);
+      api.update(obj = newObj);
     } else {
-      remove();
+      api.remove();
     }
   };
+
+  return updater;
 }
 
 module.exports = function (list, options) {
-  options = options || {}; // Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-  // tags it will allow on a page
-
-  if (!options.singleton && typeof options.singleton !== 'boolean') {
-    options.singleton = isOldIE();
-  }
-
+  options = options || {};
   list = list || [];
   var lastIdentifiers = modulesToDom(list, options);
   return function update(newList) {
     newList = newList || [];
 
-    if (Object.prototype.toString.call(newList) !== '[object Array]') {
-      return;
-    }
-
     for (var i = 0; i < lastIdentifiers.length; i++) {
       var identifier = lastIdentifiers[i];
       var index = getIndexByIdentifier(identifier);
-      stylesInDom[index].references--;
+      stylesInDOM[index].references--;
     }
 
     var newLastIdentifiers = modulesToDom(newList, options);
@@ -38159,16 +38041,214 @@ module.exports = function (list, options) {
 
       var _index = getIndexByIdentifier(_identifier);
 
-      if (stylesInDom[_index].references === 0) {
-        stylesInDom[_index].updater();
+      if (stylesInDOM[_index].references === 0) {
+        stylesInDOM[_index].updater();
 
-        stylesInDom.splice(_index, 1);
+        stylesInDOM.splice(_index, 1);
       }
     }
 
     lastIdentifiers = newLastIdentifiers;
   };
 };
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
+  \********************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+var memo = {};
+/* istanbul ignore next  */
+
+function getTarget(target) {
+  if (typeof memo[target] === "undefined") {
+    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself
+
+    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {
+      try {
+        // This will throw an exception if access to iframe is blocked
+        // due to cross-origin restrictions
+        styleTarget = styleTarget.contentDocument.head;
+      } catch (e) {
+        // istanbul ignore next
+        styleTarget = null;
+      }
+    }
+
+    memo[target] = styleTarget;
+  }
+
+  return memo[target];
+}
+/* istanbul ignore next  */
+
+
+function insertBySelector(insert, style) {
+  var target = getTarget(insert);
+
+  if (!target) {
+    throw new Error("Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.");
+  }
+
+  target.appendChild(style);
+}
+
+module.exports = insertBySelector;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
+  \**********************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function insertStyleElement(options) {
+  var element = document.createElement("style");
+  options.setAttributes(element, options.attributes);
+  options.insert(element, options.options);
+  return element;
+}
+
+module.exports = insertStyleElement;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
+  \**********************************************************************************/
+/***/ (function(module, __unused_webpack_exports, __webpack_require__) {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function setAttributesWithoutAttributes(styleElement) {
+  var nonce =  true ? __webpack_require__.nc : 0;
+
+  if (nonce) {
+    styleElement.setAttribute("nonce", nonce);
+  }
+}
+
+module.exports = setAttributesWithoutAttributes;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
+  \***************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function apply(styleElement, options, obj) {
+  var css = "";
+
+  if (obj.supports) {
+    css += "@supports (".concat(obj.supports, ") {");
+  }
+
+  if (obj.media) {
+    css += "@media ".concat(obj.media, " {");
+  }
+
+  var needLayer = typeof obj.layer !== "undefined";
+
+  if (needLayer) {
+    css += "@layer".concat(obj.layer.length > 0 ? " ".concat(obj.layer) : "", " {");
+  }
+
+  css += obj.css;
+
+  if (needLayer) {
+    css += "}";
+  }
+
+  if (obj.media) {
+    css += "}";
+  }
+
+  if (obj.supports) {
+    css += "}";
+  }
+
+  var sourceMap = obj.sourceMap;
+
+  if (sourceMap && typeof btoa !== "undefined") {
+    css += "\n/*# sourceMappingURL=data:application/json;base64,".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), " */");
+  } // For old IE
+
+  /* istanbul ignore if  */
+
+
+  options.styleTagTransform(css, styleElement, options.options);
+}
+
+function removeStyleElement(styleElement) {
+  // istanbul ignore if
+  if (styleElement.parentNode === null) {
+    return false;
+  }
+
+  styleElement.parentNode.removeChild(styleElement);
+}
+/* istanbul ignore next  */
+
+
+function domAPI(options) {
+  var styleElement = options.insertStyleElement(options);
+  return {
+    update: function update(obj) {
+      apply(styleElement, options, obj);
+    },
+    remove: function remove() {
+      removeStyleElement(styleElement);
+    }
+  };
+}
+
+module.exports = domAPI;
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
+  \*********************************************************************/
+/***/ (function(module) {
+
+"use strict";
+
+
+/* istanbul ignore next  */
+function styleTagTransform(css, styleElement) {
+  if (styleElement.styleSheet) {
+    styleElement.styleSheet.cssText = css;
+  } else {
+    while (styleElement.firstChild) {
+      styleElement.removeChild(styleElement.firstChild);
+    }
+
+    styleElement.appendChild(document.createTextNode(css));
+  }
+}
+
+module.exports = styleTagTransform;
 
 /***/ }),
 

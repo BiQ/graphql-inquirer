@@ -1,7 +1,6 @@
 'use strict';
 
 require('webpack');
-require('@babel/polyfill/noConflict');
 var path = require('path');
 
 const env = process.env.NODE_ENV || 'development';
@@ -12,7 +11,7 @@ var config = {
   target: ['web', 'es5'],
 
   entry: {
-    application: ['@babel/polyfill/noConflict', './src/application.jsx'],
+    application: './src/application.jsx',
     example: './src/Example/index.jsx'
   },
 
@@ -71,12 +70,6 @@ var config = {
       }
 
     ]
-  },
-
-  devServer: {
-    contentBase: path.join(__dirname, '/example'),
-    publicPath: '/bin/',
-    port: 9090
   }
 };
 
