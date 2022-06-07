@@ -6,7 +6,7 @@ import LoadSpinner from 'UtilityPath/spinner.jsx';
 
 const EditorResult = (props) => {
 
-  const { 
+  const {
     activeResult,
     loading
   } = props;

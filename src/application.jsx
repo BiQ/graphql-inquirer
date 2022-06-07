@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import {
   Route,
   HashRouter,
@@ -59,10 +60,6 @@ class Inquirer extends React.Component {
         let sharedProps = {
           types,
           queries,
-          /*
-          mutations,
-          subscriptions,
-          */
           loading: self.state.loading
         };
 
@@ -90,30 +87,40 @@ class Inquirer extends React.Component {
     return (
       <Route path={`${self.props.match.url}`} component={(routeProps) => {
         return(
-        <div id="inquirer-app">
-          <div id="inquirer-header">GraphQL Inquirer</div>
+          <div id="inquirer-app">
+            <div id="inquirer-header">GraphQL Inquirer</div>
 
-          <Markup routeProps={routeProps} />
+            <Markup routeProps={routeProps} />
 
-        </div>);
+          </div>
+        );
       }} />
     );
   }
 
 }
 
+Inquirer.propTypes = {
+  fetcher: PropTypes.func
+};
+
 const InquirerWrapped = (props) => {
 
   let InquirerWithRouter = withRouter(Inquirer);
 
   return props.isInARouter
-          ? <InquirerWithRouter {...props} />
-          : <HashRouter><InquirerWithRouter {...props} /></HashRouter>;
+    ? <InquirerWithRouter {...props} />
+    : <HashRouter><InquirerWithRouter {...props} /></HashRouter>;
 
+};
+
+InquirerWrapped.propTypes = {
+  isInARouter: PropTypes.bool
 };
 
 export default InquirerWrapped;
 
+/* eslint-disable multiline-comment-style */
 /*
 APPLICATION SHAPE
 -----------------

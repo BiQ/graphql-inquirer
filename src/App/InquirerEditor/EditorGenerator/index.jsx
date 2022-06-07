@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Clipboard from 'react-clipboard.js';
 
-import { 
+import {
   GetTypeName,
-  RecursiveTypeString 
+  RecursiveTypeString
 } from 'UtilityPath/utility.jsx';
 
 const EditorGenerator = (props) => {
@@ -65,7 +65,7 @@ EditorGenerator.propTypes = {
 export default EditorGenerator;
 
 const SplitQuery = (query, inline=false, requestBody=false, operationType = null) => {
-  
+
   var newlines = true;
 
   if (requestBody) {
@@ -122,7 +122,7 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
             var varName = argName;
 
             var ii = 0;
-            while (varObj.hasOwnProperty(varName)) {
+            while (Object.prototype.hasOwnProperty.call(varObj,varName)) {
               varName = varName+ii;
               ii++;
             }
@@ -133,7 +133,7 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
             } else {
               varObj[varName] = {
                 value: argValue,
-                type: typeString 
+                type: typeString
               };
               varArray.push({
                 name: varName,
@@ -158,7 +158,7 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
         });
         if (subFieldString !== '') subFieldString += nChar;
       }
-      
+
 
       fieldString += field.name;
       if (argString !== '') fieldString += `(${argString})`;
@@ -180,7 +180,7 @@ const SplitQuery = (query, inline=false, requestBody=false, operationType = null
   let argTypeString = '';
   let argObject = {};
 
-  
+
   if (gotVars) {
     let firstArg = true;
     varArray.map((varInfo) => {

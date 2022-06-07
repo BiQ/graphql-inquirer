@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { RecursiveType } from 'UtilityPath/utility.jsx'; 
+import { RecursiveType } from 'UtilityPath/utility.jsx';
 
 const EditorToolbar = (props) => {
 
@@ -12,7 +12,7 @@ const EditorToolbar = (props) => {
     pickOutputFormat,
     buildOperation
   } = props;
-  
+
   return (
     <div className="editor-toolbar">
       <div className="action-toolbar">

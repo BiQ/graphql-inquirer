@@ -55,7 +55,11 @@ CreatorField.propTypes = {
   field: PropTypes.shape({
     name: PropTypes.string,
     description: PropTypes.string,
-    type: PropTypes.object
+    type: PropTypes.object,
+    include: PropTypes.bool,
+    fields: PropTypes.arrayOf(PropTypes.shape({
+      include: PropTypes.bool
+    }))
   }),
   toggle: PropTypes.func
 };

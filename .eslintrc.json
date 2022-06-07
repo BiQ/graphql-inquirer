@@ -1,0 +1,62 @@
+{
+  "env": {
+    "browser": true,
+    "commonjs": true,
+    "node": true,
+    "es6": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended"
+  ],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "requireConfigFile": false,
+    "sourceType": "module",
+    "ecmaVersion": 2018,
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    }
+  },
+  "rules": {
+    "indent": [
+      "error",
+      2,
+      {
+        "VariableDeclarator": {
+          "var": 2,
+          "let": 2,
+          "const": 3
+        },
+        "SwitchCase": 1,
+        "MemberExpression": "off"
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "always"
+    ],
+    "no-console": [
+      "warn"
+    ],
+    "multiline-comment-style": [
+      "warn",
+      "separate-lines"
+    ],
+    "no-warning-comments": "warn",
+    "no-trailing-spaces": "error",
+    "eol-last": ["error", "always"]
+  },
+  "plugins": [
+    "html",
+    "react"
+  ]
+}

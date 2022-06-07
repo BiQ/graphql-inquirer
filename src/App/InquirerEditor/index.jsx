@@ -31,7 +31,7 @@ class InquirerEditor extends React.Component {
       queries,
       mutations,
       subscriptions,
-      
+
       activeOperation: null,
       activeOperationType: null,
       activeResult: null,
@@ -76,7 +76,7 @@ class InquirerEditor extends React.Component {
     if (loading) {
       return <div>Loading...</div>;
     }
-    
+
     let activeOp = this.state.activeOperation;
 
     if (!activeOp) return <h1>No active operation</h1>;
@@ -87,27 +87,27 @@ class InquirerEditor extends React.Component {
     return (
       <div id="editor-container">
 
-        <EditorToolbar 
-          activeOp={this.state.activeOperation} 
-          paneMode={this.state.paneMode} 
+        <EditorToolbar
+          activeOp={this.state.activeOperation}
+          paneMode={this.state.paneMode}
           paneModeCallback={this.pickPaneMode.bind(this)}
           pickOutputFormat={this.pickOutputFormat.bind(this)}
           buildOperation={this.buildQuery.bind(this)}
         />
-      
+
         <div id="editor-panes">
           <SplitPane split={pane_class} minSize={50} maxSize={-50} defaultSize={pane_default_size}>
             <SplitPane split="vertical" minSize={50} maxSize={-50} defaultSize={'50%'}>
 
-              <EditorCreator 
-                name={activeOp.name} 
+              <EditorCreator
+                name={activeOp.name}
                 args={activeOp.args}
                 fields={activeOp.fields}
                 onInputChange={this.updateInput.bind(this)}
                 toggle={this.toggleField.bind(this)}
               />
 
-              <EditorGenerator 
+              <EditorGenerator
                 operation={this.state.activeOperation}
                 operationType={this.state.activeOperationType}
                 valid={this.state.activeOperation.valid}
@@ -120,7 +120,7 @@ class InquirerEditor extends React.Component {
 
           </SplitPane>
         </div>
-      </div> 
+      </div>
     );
   }
 
@@ -177,16 +177,16 @@ class InquirerEditor extends React.Component {
     if (params && params.action && params.name) {
       // set active query unless it is the current one
       if ((!activeOperation) || params.name !== activeOperation.name || params.action !== activeOperationType) {
-        
+
         let actionList = this.state[params.action];
-        
+
         if (actionList && Array.isArray(actionList)) {
           let operation = actionList.find((d) => (d.name === params.name));
           if (operation) this.setActiveOperation(operation, params.action);
         } else {
           throw new Error('Could not find '+params.name+' in '+params.action);
         }
-        
+
       }
     }
   }
@@ -195,7 +195,7 @@ class InquirerEditor extends React.Component {
   validateOperation(operation) {
 
     if (operation.args && Array.isArray(operation.args)) {
-      
+
       for (let i=0;i<operation.args.length;i++) {
         let arg = operation.args[i];
         let required = isOfKind(arg.type, 'NON_NULL');
@@ -270,7 +270,7 @@ class InquirerEditor extends React.Component {
     }
 
     obj.include = shouldInclude;
- 
+
     this.setState({
       activeOperation: {
         ...this.state.activeOperation,
@@ -300,13 +300,13 @@ class InquirerEditor extends React.Component {
         valid: this.validateOperation(this.state.activeOperation)
       }
     });
-    
+
     this.forceUpdate();
   }
 
   buildQuery(e) {
     e.preventDefault();
-    
+
     const nChar = '\n';
     const tChar = '  ';
 
@@ -321,12 +321,12 @@ class InquirerEditor extends React.Component {
     let singularType = singularTypeList[this.state.activeOperationType] || {lower:'unknown', upper: 'Unknown'};
 
     if (this.state.activeOperation && this.state.activeOperation != {}) {
-      
+
       var q = this.state.activeOperation;
       let operationName = GetTypeName(q.type)+singularType.upper;
-      
+
       if (q.name && q.type) {
-        
+
         qString += singularType.lower+' '+operationName;
 
         qString += ' {';
@@ -334,11 +334,11 @@ class InquirerEditor extends React.Component {
 
         // Recursive function
         const fieldString = (field, indent) => {
-          
+
           var theString = '';
 
           if (field.name && (field.include || field.valid)) {
-            
+
             theString += tChar.repeat(indent);
             theString += field.name;
 
@@ -349,10 +349,10 @@ class InquirerEditor extends React.Component {
               field.args.map((d) => {
                 let value = d.value || false;
                 let hasValue = (value && typeof(value) === 'string' && value != '');
-                
+
                 let typeName = GetTypeName(d.type);
                 let needQuotes = (typeName === 'String' || typeName === 'ID');
-                
+
                 let valueString = needQuotes ? `"${value}"` : `${value}`;
 
                 if (hasValue) {
@@ -372,7 +372,7 @@ class InquirerEditor extends React.Component {
             }
 
             theString += argString;
-            
+
             var subString = '';
 
             if (field.fields && Array.isArray(field.fields)) {
@@ -380,7 +380,7 @@ class InquirerEditor extends React.Component {
                 let d = field.fields[i];
                 subString += fieldString(d, indent+1);
               }
-            }            
+            }
             if (subString && subString != '') {
               theString += ' {';
               theString += nChar;
@@ -396,7 +396,7 @@ class InquirerEditor extends React.Component {
         qString += '}';
       }
     }
-    this.runOperation(qString); 
+    this.runOperation(qString);
   }
 
   runOperation(qString) {

@@ -25,10 +25,6 @@ const Sidebar = (props) => {
 
   const {
     queries,
-    /*
-    mutations,
-    subscriptions
-    */
   } = sharedProps;
 
   return (
@@ -36,10 +32,6 @@ const Sidebar = (props) => {
       return (
         <div id="inquirer-sidebar">
           <SidebarSection title="Queries" path="/queries" items={queries} loading={loading} root={trimSlash(match.url)} />
-          {/*
-          <SidebarSection title="Mutations" path="/mutations" items={mutations} root={trimSlash(match.url)} />
-          <SidebarSection title="Subscriptions" path="/subscriptions" items={subscriptions} root={trimSlash(match.url)} />
-          */}
         </div>
       );
     }} />

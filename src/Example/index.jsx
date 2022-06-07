@@ -20,7 +20,7 @@ const fetchFunc = (query) => {
 };
 
 // An example using the router within the Inquirer
-const App = <Inquirer fetcher={fetchFunc} />;
+const App = <Inquirer fetcher={fetchFunc} />; // eslint-disable-line no-unused-vars
 
 // An example of putting Inquirer inside an existing router
 const RoutedApp = (

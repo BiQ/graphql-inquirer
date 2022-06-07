@@ -7,10 +7,10 @@ const RecursiveType = (props) => {
   } = props;
 
   let className = (type.ofType ? type.kind : 'type-name');
-  let content = type.ofType 
-                  ? <RecursiveType type={type.ofType} />
-                  : type.name;
-    
+  let content = type.ofType
+    ? <RecursiveType type={type.ofType} />
+    : type.name;
+
   return (<span className={className}>{content}</span>);
 };
 
@@ -87,7 +87,7 @@ const trimSlash = (str) => {
   return str;
 };
 
-export { 
+export {
   RecursiveType,
   RecursiveTypeString,
   GetTypeName,
