@@ -33,7 +33,7 @@ const EditorResult = (props) => {
 };
 
 EditorResult.propTypes = {
-  activeResult: PropTypes.object,
+  activeResult: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   loading: PropTypes.bool
 };
 

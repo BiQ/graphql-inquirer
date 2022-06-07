@@ -20,10 +20,10 @@ const fetchFunc = (query) => {
 };
 
 // An example using the router within the Inquirer
-const App = <Inquirer fetcher={fetchFunc} />; // eslint-disable-line no-unused-vars
+const App = () => <Inquirer fetcher={fetchFunc} />; // eslint-disable-line no-unused-vars
 
 // An example of putting Inquirer inside an existing router
-const RoutedApp = (
+const RoutedApp = () => (
   <HashRouter>
     <Route path="/stuff/" component={() =>
       <Inquirer fetcher={fetchFunc} isInARouter />
@@ -32,5 +32,5 @@ const RoutedApp = (
 );
 
 window.onload = function(){
-  ReactDOM.render(RoutedApp, document.getElementById('stage'));
+  ReactDOM.render(<App />, document.getElementById('stage'));
 };
