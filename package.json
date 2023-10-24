@@ -1,6 +1,6 @@
 {
   "name": "graphql-inquirer",
-  "version": "0.7.3",
+  "version": "0.7.4",
   "description": "A visual browser for GraphQL APIs",
   "main": "bin/application.js",
   "scripts": {
