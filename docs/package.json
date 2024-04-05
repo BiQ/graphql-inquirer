@@ -1,0 +1,41 @@
+{
+  "name": "biq.github.com",
+  "version": "1.0.0",
+  "description": "BiQ github page",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js --verbose --display-reasons",
+    "watch": "webpack --config webpack.config.js --watch",
+    "serve": "webpack-dev-server --config webpack.config.js --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BiQ/BiQ.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BiQ/BiQ.github.io/issues"
+  },
+  "homepage": "https://github.com/BiQ/BiQ.github.io#readme",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^0.28.8",
+    "file-loader": "^1.1.6",
+    "graphql-inquirer": "git+ssh://git@github.com/BiQ/graphql-inquirer.git",
+    "node-sass": "^4.7.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "sass": "^1.0.0-beta.4",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.10.0"
+  }
+}
