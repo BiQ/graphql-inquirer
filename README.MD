@@ -1,6 +1,7 @@
 # GraphQL Inquirer
 
 A visual data browser for GraphQL APIs.
+[biq.github.io/graphql-inquirer](https://biq.github.io/graphql-inquirer)
 
 **Disclaimer:**  
 This project is still under development and may not perform as expected. Use at your own risk.
