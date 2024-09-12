@@ -13,7 +13,7 @@ const fetchFunc = (query) => {
   };
 
   //let req_url = 'https://1jzxrj179.lp.gql.zone/graphql';
-  let req_url = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
+  let req_url = 'https://beta.pokeapi.co/graphql/v1beta';
 
   return fetch(req_url, req_opts).then((response) => (response.json()));
 
